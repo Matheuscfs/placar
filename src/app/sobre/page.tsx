@@ -30,6 +30,10 @@ export default function AboutPage() {
           A API da ESPN usada aqui é pública, mas <strong>não é oficial</strong> e não tem garantia: pode mudar ou parar sem aviso. Os dados do openfootball são atualizados em lote e podem estar
           dias atrasados; a classificação vinda dele é calculada pelo Placar e não considera confronto direto nem punições.
         </p>
+        <p>
+          O <strong>&quot;Onde passa&quot;</strong> mostra onde cada competição costuma ser transmitida, a partir de uma lista que o Placar mantém e revisa à mão. Os direitos são divididos entre emissoras e
+          streamings e o canal muda de jogo para jogo, então confirme o do seu jogo.
+        </p>
         <p>O Placar não é uma fonte oficial de resultados. Para qualquer decisão que dependa do placar exato, confira na fonte oficial da competição.</p>
       </Section>
 

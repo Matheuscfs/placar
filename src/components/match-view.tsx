@@ -21,6 +21,7 @@ import { BlockSkeleton } from "./skeletons";
 import { StateMessage } from "./state-message";
 import { StatusCell } from "./status-cell";
 import { Tabs, panelProps, type TabItem } from "./tabs";
+import { broadcastFor } from "@/lib/domain/broadcasts";
 
 type TabId = "resumo" | "escalacoes" | "estatisticas";
 const TABS: TabItem<TabId>[] = [
@@ -72,21 +73,39 @@ function Scoreboard({ m }: { m: MatchDetail }) {
   );
 }
 
-function Facts({ m }: { m: MatchDetail }) {
+/** "Onde passa" só interessa antes e durante o jogo; depois de acabar ou se for adiado, some. */
+const showsBroadcast = (status: MatchDetail["status"]) => status === "scheduled" || status === "live" || status === "halftime";
+
+export function Facts({ m }: { m: MatchDetail }) {
   const facts: Array<[string, string]> = [];
   if (m.venue) facts.push(["Local", m.venue]);
   if (m.referee) facts.push(["Árbitro", m.referee]);
   if (m.attendance) facts.push(["Público", m.attendance.toLocaleString("pt-BR")]);
-  if (facts.length === 0) return null;
+  const broadcast = showsBroadcast(m.status) ? broadcastFor(m.leagueId) : null;
+  if (facts.length === 0 && !broadcast) return null;
   return (
-    <dl className="mt-3 grid grid-cols-[auto_1fr] gap-x-5 gap-y-1.5 text-[0.95rem]">
-      {facts.map(([k, v]) => (
-        <div key={k} className="contents">
-          <dt className="text-muted">{k}</dt>
-          <dd className="font-medium">{v}</dd>
-        </div>
-      ))}
-    </dl>
+    <>
+      {facts.length > 0 ? (
+        <dl className="mt-3 grid grid-cols-[auto_1fr] gap-x-5 gap-y-1.5 text-[0.95rem]">
+          {facts.map(([k, v]) => (
+            <div key={k} className="contents">
+              <dt className="text-muted">{k}</dt>
+              <dd className="font-medium">{v}</dd>
+            </div>
+          ))}
+        </dl>
+      ) : null}
+      {broadcast ? (
+        <section className="mt-4" aria-labelledby="onde-passa">
+          <h2 id="onde-passa" className="text-[0.95rem] font-semibold">Onde passa</h2>
+          <p className="mt-1 text-[0.95rem]">
+            <span className="text-muted">Costuma passar em </span>
+            <span className="font-medium">{broadcast.channels.join(", ")}</span>
+          </p>
+          {broadcast.note ? <p className="mt-1 max-w-[52ch] text-sm text-muted">{broadcast.note}</p> : null}
+        </section>
+      ) : null}
+    </>
   );
 }
 

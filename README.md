@@ -158,6 +158,13 @@ passados), para o CDN da Vercel absorver o tráfego. **Erros**: `400` parâmetro
 | `/favoritos` | times e ligas favoritos, e o interruptor dos avisos |
 | `/sobre`, `/offline` | de onde vêm os dados, limites, privacidade; tela mostrada sem conexão |
 
+**Onde passa.** A página do jogo mostra "Costuma passar em …" **antes e durante** o jogo. É um catálogo por
+competição, mantido à mão em `src/lib/domain/broadcasts.ts` (com data da conferência e fontes), porque nenhuma
+fonte gratuita informa a transmissão de cada jogo no Brasil (a ESPN devolve o campo vazio) e o Google não tem API
+para isso. O app **nunca** afirma o canal de um jogo específico: os direitos são divididos e mudam de jogo para
+jogo, e a tela diz para confirmar. Competição sem informação confiável (hoje, Bundesliga e Champions League)
+fica sem a linha, de propósito. **Revise o catálogo quando os direitos mudarem** (temporada nova, renovação).
+
 Ids de liga são os do catálogo (`src/lib/domain/leagues.ts`): `brasileirao-a`, `libertadores`, `premier-league`…
 
 Como ela se mantém rápida e honesta:
