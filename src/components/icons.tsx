@@ -1,0 +1,57 @@
+import type { SVGProps } from "react";
+
+/** Ícones de traço simples, herdam a cor do texto. Sempre decorativos: o significado vem do texto ao lado ou do aria-label do botão. */
+const base = (p: SVGProps<SVGSVGElement>) => ({ width: 20, height: 20, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 1.8, strokeLinecap: "round" as const, strokeLinejoin: "round" as const, "aria-hidden": true, focusable: false, ...p });
+
+export const StarIcon = (p: SVGProps<SVGSVGElement> & { filled?: boolean }) => {
+  const { filled, ...rest } = p;
+  return (
+    <svg {...base(rest)} fill={filled ? "currentColor" : "none"}>
+      <path d="M12 3.6l2.5 5.2 5.7.8-4.1 4 1 5.7L12 16.6l-5.1 2.7 1-5.7-4.1-4 5.7-.8L12 3.6z" />
+    </svg>
+  );
+};
+
+export const ChevronLeftIcon = (p: SVGProps<SVGSVGElement>) => (
+  <svg {...base(p)}>
+    <path d="M14.5 5.5L8 12l6.5 6.5" />
+  </svg>
+);
+
+export const CalendarIcon = (p: SVGProps<SVGSVGElement>) => (
+  <svg {...base(p)}>
+    <rect x="4" y="5.5" width="16" height="14" rx="2.5" />
+    <path d="M4 10h16M8.5 3.5v4M15.5 3.5v4" />
+  </svg>
+);
+
+export const RefreshIcon = (p: SVGProps<SVGSVGElement>) => (
+  <svg {...base(p)}>
+    <path d="M19.5 12a7.5 7.5 0 11-2.2-5.3M19.5 4.5v4h-4" />
+  </svg>
+);
+
+export const ArrowUpIcon = (p: SVGProps<SVGSVGElement>) => (
+  <svg {...base({ width: 14, height: 14, strokeWidth: 2.2, ...p })}>
+    <path d="M12 19V5M6 11l6-6 6 6" />
+  </svg>
+);
+
+export const ArrowDownIcon = (p: SVGProps<SVGSVGElement>) => (
+  <svg {...base({ width: 14, height: 14, strokeWidth: 2.2, ...p })}>
+    <path d="M12 5v14M6 13l6 6 6-6" />
+  </svg>
+);
+
+export const BallIcon = (p: SVGProps<SVGSVGElement>) => (
+  <svg {...base({ width: 14, height: 14, ...p })}>
+    <circle cx="12" cy="12" r="8.5" />
+    <path d="M12 8.2l3.6 2.6-1.4 4.2H9.8l-1.4-4.2L12 8.2z" />
+  </svg>
+);
+
+export const WifiOffIcon = (p: SVGProps<SVGSVGElement>) => (
+  <svg {...base(p)}>
+    <path d="M3 3l18 18M8.5 16.2a5 5 0 017 0M5.2 12.9a9.5 9.5 0 013.6-2.1M12 20h.01M10 6.2A14 14 0 0121 10M2.5 9.7a14 14 0 013-2.2" />
+  </svg>
+);

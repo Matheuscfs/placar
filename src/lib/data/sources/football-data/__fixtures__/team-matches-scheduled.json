@@ -1,0 +1,86 @@
+{
+ "matches": [
+  {
+   "season": {
+    "startDate": "2026-01-28"
+   },
+   "matchday": 32,
+   "stage": "REGULAR_SEASON",
+   "group": null,
+   "id": 904,
+   "competition": {
+    "code": "BSA",
+    "name": "Campeonato Brasileiro Série A"
+   },
+   "utcDate": "2026-10-24T22:00:00Z",
+   "status": "TIMED",
+   "homeTeam": {
+    "id": 1783,
+    "name": "CR Flamengo",
+    "shortName": "Flamengo",
+    "tla": "FLA",
+    "crest": "https://crests.football-data.org/1783.png"
+   },
+   "awayTeam": {
+    "id": 1779,
+    "name": "SC Corinthians Paulista",
+    "shortName": "Corinthians",
+    "tla": "COR",
+    "crest": "https://crests.football-data.org/1779.png"
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "season": {
+    "startDate": "2026-01-28"
+   },
+   "matchday": 33,
+   "stage": "REGULAR_SEASON",
+   "group": null,
+   "id": 905,
+   "competition": {
+    "code": "BSA",
+    "name": "Campeonato Brasileiro Série A"
+   },
+   "utcDate": "2026-11-01T22:00:00Z",
+   "status": "SCHEDULED",
+   "homeTeam": {
+    "id": 1779,
+    "name": "SC Corinthians Paulista",
+    "shortName": "Corinthians",
+    "tla": "COR",
+    "crest": "https://crests.football-data.org/1779.png"
+   },
+   "awayTeam": {
+    "id": 1769,
+    "name": "SE Palmeiras",
+    "shortName": "Palmeiras",
+    "tla": "PAL",
+    "crest": "https://crests.football-data.org/1769.png"
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  }
+ ]
+}

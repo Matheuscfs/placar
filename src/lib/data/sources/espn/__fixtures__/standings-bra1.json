@@ -1,0 +1,1696 @@
+{
+ "name": "Brazilian Serie A",
+ "season": {
+  "year": 2026
+ },
+ "children": [
+  {
+   "name": "2026",
+   "standings": {
+    "seasonDisplayName": "2026 Futebol Brasileiro",
+    "entries": [
+     {
+      "team": {
+       "id": "819",
+       "displayName": "Flamengo",
+       "shortDisplayName": "Flamengo",
+       "abbreviation": "FLA",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/819.png"
+        }
+       ]
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 31,
+        "displayValue": "31"
+       },
+       {
+        "name": "losses",
+        "value": 4,
+        "displayValue": "4"
+       },
+       {
+        "name": "pointDifferential",
+        "value": 36,
+        "displayValue": "+36"
+       },
+       {
+        "name": "points",
+        "value": 67,
+        "displayValue": "67"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 25,
+        "displayValue": "25"
+       },
+       {
+        "name": "pointsFor",
+        "value": 61,
+        "displayValue": "61"
+       },
+       {
+        "name": "ties",
+        "value": 7,
+        "displayValue": "7"
+       },
+       {
+        "name": "wins",
+        "value": 20,
+        "displayValue": "20"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 1,
+        "displayValue": "1"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "20-7-4"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "2029",
+       "displayName": "Palmeiras",
+       "shortDisplayName": "Palmeiras",
+       "abbreviation": "PAL",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/2029.png"
+        }
+       ]
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 31,
+        "displayValue": "31"
+       },
+       {
+        "name": "losses",
+        "value": 3,
+        "displayValue": "3"
+       },
+       {
+        "name": "pointDifferential",
+        "value": 32,
+        "displayValue": "+32"
+       },
+       {
+        "name": "points",
+        "value": 66,
+        "displayValue": "66"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 22,
+        "displayValue": "22"
+       },
+       {
+        "name": "pointsFor",
+        "value": 54,
+        "displayValue": "54"
+       },
+       {
+        "name": "ties",
+        "value": 9,
+        "displayValue": "9"
+       },
+       {
+        "name": "wins",
+        "value": 19,
+        "displayValue": "19"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 2,
+        "displayValue": "2"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "19-9-3"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "3458",
+       "displayName": "Athletico Paranaense",
+       "shortDisplayName": "Athletico-PR",
+       "abbreviation": "CAP",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/3458.png"
+        }
+       ]
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 31,
+        "displayValue": "31"
+       },
+       {
+        "name": "losses",
+        "value": 8,
+        "displayValue": "8"
+       },
+       {
+        "name": "pointDifferential",
+        "value": 12,
+        "displayValue": "+12"
+       },
+       {
+        "name": "points",
+        "value": 53,
+        "displayValue": "53"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 37,
+        "displayValue": "37"
+       },
+       {
+        "name": "pointsFor",
+        "value": 49,
+        "displayValue": "49"
+       },
+       {
+        "name": "ties",
+        "value": 8,
+        "displayValue": "8"
+       },
+       {
+        "name": "wins",
+        "value": 15,
+        "displayValue": "15"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 3,
+        "displayValue": "3"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "15-8-8"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "2022",
+       "displayName": "Cruzeiro",
+       "shortDisplayName": "Cruzeiro",
+       "abbreviation": "CRU",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/2022.png"
+        }
+       ]
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 31,
+        "displayValue": "31"
+       },
+       {
+        "name": "losses",
+        "value": 10,
+        "displayValue": "10"
+       },
+       {
+        "name": "pointDifferential",
+        "value": 4,
+        "displayValue": "+4"
+       },
+       {
+        "name": "points",
+        "value": 51,
+        "displayValue": "51"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 46,
+        "displayValue": "46"
+       },
+       {
+        "name": "pointsFor",
+        "value": 50,
+        "displayValue": "50"
+       },
+       {
+        "name": "ties",
+        "value": 6,
+        "displayValue": "6"
+       },
+       {
+        "name": "wins",
+        "value": 15,
+        "displayValue": "15"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 4,
+        "displayValue": "4"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "15-6-10"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "3445",
+       "displayName": "Fluminense",
+       "shortDisplayName": "Fluminense",
+       "abbreviation": "FLU",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/3445.png"
+        }
+       ]
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 31,
+        "displayValue": "31"
+       },
+       {
+        "name": "losses",
+        "value": 8,
+        "displayValue": "8"
+       },
+       {
+        "name": "pointDifferential",
+        "value": 10,
+        "displayValue": "+10"
+       },
+       {
+        "name": "points",
+        "value": 51,
+        "displayValue": "51"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 39,
+        "displayValue": "39"
+       },
+       {
+        "name": "pointsFor",
+        "value": 49,
+        "displayValue": "49"
+       },
+       {
+        "name": "ties",
+        "value": 9,
+        "displayValue": "9"
+       },
+       {
+        "name": "wins",
+        "value": 14,
+        "displayValue": "14"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 5,
+        "displayValue": "5"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "14-9-8"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "7632",
+       "displayName": "Atlético-MG",
+       "shortDisplayName": "Atlético-MG",
+       "abbreviation": "CAM",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/7632.png"
+        }
+       ]
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 31,
+        "displayValue": "31"
+       },
+       {
+        "name": "losses",
+        "value": 9,
+        "displayValue": "9"
+       },
+       {
+        "name": "pointDifferential",
+        "value": 7,
+        "displayValue": "+7"
+       },
+       {
+        "name": "points",
+        "value": 50,
+        "displayValue": "50"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 35,
+        "displayValue": "35"
+       },
+       {
+        "name": "pointsFor",
+        "value": 42,
+        "displayValue": "42"
+       },
+       {
+        "name": "ties",
+        "value": 8,
+        "displayValue": "8"
+       },
+       {
+        "name": "wins",
+        "value": 14,
+        "displayValue": "14"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 6,
+        "displayValue": "6"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "14-8-9"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "9967",
+       "displayName": "Bahia",
+       "shortDisplayName": "Bahia",
+       "abbreviation": "BAH",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/9967.png"
+        }
+       ]
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 31,
+        "displayValue": "31"
+       },
+       {
+        "name": "losses",
+        "value": 8,
+        "displayValue": "8"
+       },
+       {
+        "name": "pointDifferential",
+        "value": 5,
+        "displayValue": "+5"
+       },
+       {
+        "name": "points",
+        "value": 49,
+        "displayValue": "49"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 39,
+        "displayValue": "39"
+       },
+       {
+        "name": "pointsFor",
+        "value": 44,
+        "displayValue": "44"
+       },
+       {
+        "name": "ties",
+        "value": 10,
+        "displayValue": "10"
+       },
+       {
+        "name": "wins",
+        "value": 13,
+        "displayValue": "13"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 7,
+        "displayValue": "7"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "13-10-8"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "2674",
+       "displayName": "Santos",
+       "shortDisplayName": "Santos",
+       "abbreviation": "SAN",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/2674.png"
+        }
+       ]
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 31,
+        "displayValue": "31"
+       },
+       {
+        "name": "losses",
+        "value": 10,
+        "displayValue": "10"
+       },
+       {
+        "name": "pointDifferential",
+        "value": 2,
+        "displayValue": "+2"
+       },
+       {
+        "name": "points",
+        "value": 45,
+        "displayValue": "45"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 46,
+        "displayValue": "46"
+       },
+       {
+        "name": "pointsFor",
+        "value": 48,
+        "displayValue": "48"
+       },
+       {
+        "name": "ties",
+        "value": 9,
+        "displayValue": "9"
+       },
+       {
+        "name": "wins",
+        "value": 12,
+        "displayValue": "12"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 8,
+        "displayValue": "8"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "12-9-10"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "2026",
+       "displayName": "São Paulo",
+       "shortDisplayName": "São Paulo",
+       "abbreviation": "SAO",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/2026.png"
+        }
+       ]
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 31,
+        "displayValue": "31"
+       },
+       {
+        "name": "losses",
+        "value": 13,
+        "displayValue": "13"
+       },
+       {
+        "name": "pointDifferential",
+        "value": 1,
+        "displayValue": "+1"
+       },
+       {
+        "name": "points",
+        "value": 42,
+        "displayValue": "42"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 35,
+        "displayValue": "35"
+       },
+       {
+        "name": "pointsFor",
+        "value": 36,
+        "displayValue": "36"
+       },
+       {
+        "name": "ties",
+        "value": 6,
+        "displayValue": "6"
+       },
+       {
+        "name": "wins",
+        "value": 12,
+        "displayValue": "12"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 9,
+        "displayValue": "9"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "12-6-13"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "6079",
+       "displayName": "Red Bull Bragantino",
+       "shortDisplayName": "Bragantino",
+       "abbreviation": "BRA",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/6079.png"
+        }
+       ]
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 31,
+        "displayValue": "31"
+       },
+       {
+        "name": "losses",
+        "value": 12,
+        "displayValue": "12"
+       },
+       {
+        "name": "pointDifferential",
+        "value": 3,
+        "displayValue": "+3"
+       },
+       {
+        "name": "points",
+        "value": 41,
+        "displayValue": "41"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 36,
+        "displayValue": "36"
+       },
+       {
+        "name": "pointsFor",
+        "value": 39,
+        "displayValue": "39"
+       },
+       {
+        "name": "ties",
+        "value": 8,
+        "displayValue": "8"
+       },
+       {
+        "name": "wins",
+        "value": 11,
+        "displayValue": "11"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 10,
+        "displayValue": "10"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "11-8-12"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "6086",
+       "displayName": "Botafogo",
+       "shortDisplayName": "Botafogo",
+       "abbreviation": "BOT",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/6086.png"
+        }
+       ]
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 31,
+        "displayValue": "31"
+       },
+       {
+        "name": "losses",
+        "value": 12,
+        "displayValue": "12"
+       },
+       {
+        "name": "pointDifferential",
+        "value": -4,
+        "displayValue": "-4"
+       },
+       {
+        "name": "points",
+        "value": 39,
+        "displayValue": "39"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 48,
+        "displayValue": "48"
+       },
+       {
+        "name": "pointsFor",
+        "value": 44,
+        "displayValue": "44"
+       },
+       {
+        "name": "ties",
+        "value": 9,
+        "displayValue": "9"
+       },
+       {
+        "name": "wins",
+        "value": 10,
+        "displayValue": "10"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 11,
+        "displayValue": "11"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "10-9-12"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "3456",
+       "displayName": "Coritiba",
+       "shortDisplayName": "Coritiba",
+       "abbreviation": "CFC",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/3456.png"
+        }
+       ]
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 31,
+        "displayValue": "31"
+       },
+       {
+        "name": "losses",
+        "value": 12,
+        "displayValue": "12"
+       },
+       {
+        "name": "pointDifferential",
+        "value": -11,
+        "displayValue": "-11"
+       },
+       {
+        "name": "points",
+        "value": 39,
+        "displayValue": "39"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 49,
+        "displayValue": "49"
+       },
+       {
+        "name": "pointsFor",
+        "value": 38,
+        "displayValue": "38"
+       },
+       {
+        "name": "ties",
+        "value": 9,
+        "displayValue": "9"
+       },
+       {
+        "name": "wins",
+        "value": 10,
+        "displayValue": "10"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 12,
+        "displayValue": "12"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "10-9-12"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "3457",
+       "displayName": "Vitória",
+       "shortDisplayName": "Vitória",
+       "abbreviation": "VIT",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/3457.png"
+        }
+       ]
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 31,
+        "displayValue": "31"
+       },
+       {
+        "name": "losses",
+        "value": 14,
+        "displayValue": "14"
+       },
+       {
+        "name": "pointDifferential",
+        "value": -11,
+        "displayValue": "-11"
+       },
+       {
+        "name": "points",
+        "value": 37,
+        "displayValue": "37"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 45,
+        "displayValue": "45"
+       },
+       {
+        "name": "pointsFor",
+        "value": 34,
+        "displayValue": "34"
+       },
+       {
+        "name": "ties",
+        "value": 7,
+        "displayValue": "7"
+       },
+       {
+        "name": "wins",
+        "value": 10,
+        "displayValue": "10"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 13,
+        "displayValue": "13"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "10-7-14"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "9169",
+       "displayName": "Mirassol",
+       "shortDisplayName": "Mirassol",
+       "abbreviation": "MIR",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/9169.png"
+        }
+       ]
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 31,
+        "displayValue": "31"
+       },
+       {
+        "name": "losses",
+        "value": 13,
+        "displayValue": "13"
+       },
+       {
+        "name": "pointDifferential",
+        "value": -8,
+        "displayValue": "-8"
+       },
+       {
+        "name": "points",
+        "value": 36,
+        "displayValue": "36"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 44,
+        "displayValue": "44"
+       },
+       {
+        "name": "pointsFor",
+        "value": 36,
+        "displayValue": "36"
+       },
+       {
+        "name": "ties",
+        "value": 9,
+        "displayValue": "9"
+       },
+       {
+        "name": "wins",
+        "value": 9,
+        "displayValue": "9"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 14,
+        "displayValue": "14"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "9-9-13"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "3454",
+       "displayName": "Vasco da Gama",
+       "shortDisplayName": "Vasco",
+       "abbreviation": "VAS",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/3454.png"
+        }
+       ]
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 30,
+        "displayValue": "30"
+       },
+       {
+        "name": "losses",
+        "value": 13,
+        "displayValue": "13"
+       },
+       {
+        "name": "pointDifferential",
+        "value": -7,
+        "displayValue": "-7"
+       },
+       {
+        "name": "points",
+        "value": 35,
+        "displayValue": "35"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 43,
+        "displayValue": "43"
+       },
+       {
+        "name": "pointsFor",
+        "value": 36,
+        "displayValue": "36"
+       },
+       {
+        "name": "ties",
+        "value": 8,
+        "displayValue": "8"
+       },
+       {
+        "name": "wins",
+        "value": 9,
+        "displayValue": "9"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 15,
+        "displayValue": "15"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "9-8-13"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "874",
+       "displayName": "Corinthians",
+       "shortDisplayName": "Corinthians",
+       "abbreviation": "COR",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/874.png"
+        }
+       ]
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 31,
+        "displayValue": "31"
+       },
+       {
+        "name": "losses",
+        "value": 14,
+        "displayValue": "14"
+       },
+       {
+        "name": "pointDifferential",
+        "value": -7,
+        "displayValue": "-7"
+       },
+       {
+        "name": "points",
+        "value": 33,
+        "displayValue": "33"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 39,
+        "displayValue": "39"
+       },
+       {
+        "name": "pointsFor",
+        "value": 32,
+        "displayValue": "32"
+       },
+       {
+        "name": "ties",
+        "value": 9,
+        "displayValue": "9"
+       },
+       {
+        "name": "wins",
+        "value": 8,
+        "displayValue": "8"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 16,
+        "displayValue": "16"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "8-9-14"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "1936",
+       "displayName": "Internacional",
+       "shortDisplayName": "Internacional",
+       "abbreviation": "INT",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/1936.png"
+        }
+       ]
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 31,
+        "displayValue": "31"
+       },
+       {
+        "name": "losses",
+        "value": 13,
+        "displayValue": "13"
+       },
+       {
+        "name": "pointDifferential",
+        "value": -7,
+        "displayValue": "-7"
+       },
+       {
+        "name": "points",
+        "value": 32,
+        "displayValue": "32"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 40,
+        "displayValue": "40"
+       },
+       {
+        "name": "pointsFor",
+        "value": 33,
+        "displayValue": "33"
+       },
+       {
+        "name": "ties",
+        "value": 11,
+        "displayValue": "11"
+       },
+       {
+        "name": "wins",
+        "value": 7,
+        "displayValue": "7"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 17,
+        "displayValue": "17"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "7-11-13"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "6273",
+       "displayName": "Grêmio",
+       "shortDisplayName": "Grêmio",
+       "abbreviation": "GRE",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/6273.png"
+        }
+       ]
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 31,
+        "displayValue": "31"
+       },
+       {
+        "name": "losses",
+        "value": 14,
+        "displayValue": "14"
+       },
+       {
+        "name": "pointDifferential",
+        "value": -10,
+        "displayValue": "-10"
+       },
+       {
+        "name": "points",
+        "value": 31,
+        "displayValue": "31"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 44,
+        "displayValue": "44"
+       },
+       {
+        "name": "pointsFor",
+        "value": 34,
+        "displayValue": "34"
+       },
+       {
+        "name": "ties",
+        "value": 10,
+        "displayValue": "10"
+       },
+       {
+        "name": "wins",
+        "value": 7,
+        "displayValue": "7"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 18,
+        "displayValue": "18"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "7-10-14"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "4936",
+       "displayName": "Remo",
+       "shortDisplayName": "Remo",
+       "abbreviation": "REMO",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/4936.png"
+        }
+       ]
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 31,
+        "displayValue": "31"
+       },
+       {
+        "name": "losses",
+        "value": 15,
+        "displayValue": "15"
+       },
+       {
+        "name": "pointDifferential",
+        "value": -15,
+        "displayValue": "-15"
+       },
+       {
+        "name": "points",
+        "value": 26,
+        "displayValue": "26"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 49,
+        "displayValue": "49"
+       },
+       {
+        "name": "pointsFor",
+        "value": 34,
+        "displayValue": "34"
+       },
+       {
+        "name": "ties",
+        "value": 11,
+        "displayValue": "11"
+       },
+       {
+        "name": "wins",
+        "value": 5,
+        "displayValue": "5"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 19,
+        "displayValue": "19"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "5-11-15"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "9318",
+       "displayName": "Chapecoense",
+       "shortDisplayName": "Chapecoense",
+       "abbreviation": "CHA",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/9318.png"
+        }
+       ]
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 30,
+        "displayValue": "30"
+       },
+       {
+        "name": "losses",
+        "value": 18,
+        "displayValue": "18"
+       },
+       {
+        "name": "pointDifferential",
+        "value": -32,
+        "displayValue": "-32"
+       },
+       {
+        "name": "points",
+        "value": 18,
+        "displayValue": "18"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 62,
+        "displayValue": "62"
+       },
+       {
+        "name": "pointsFor",
+        "value": 30,
+        "displayValue": "30"
+       },
+       {
+        "name": "ties",
+        "value": 9,
+        "displayValue": "9"
+       },
+       {
+        "name": "wins",
+        "value": 3,
+        "displayValue": "3"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 20,
+        "displayValue": "20"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "3-9-18"
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

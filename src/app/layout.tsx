@@ -1,0 +1,49 @@
+import type { Metadata, Viewport } from "next";
+import { Archivo } from "next/font/google";
+import { AppFooter } from "@/components/app-footer";
+import { AppHeader } from "@/components/app-header";
+import { FavoritesCookieSync } from "@/components/favorites-cookie-sync";
+import { OfflineBanner } from "@/components/offline-banner";
+import { RegisterServiceWorker } from "@/components/register-sw";
+import "./globals.css";
+
+// Uma família só. O eixo de largura (`wdth`) serve ao placar: dígitos expandidos, como numa placa de estádio.
+const archivo = Archivo({ subsets: ["latin"], axes: ["wdth"], variable: "--font-archivo", display: "swap" });
+
+export const metadata: Metadata = {
+  title: { default: "Placar — futebol ao vivo", template: "%s — Placar" },
+  description: "Placares de futebol ao vivo, jogos do dia e classificação, sem ruído.",
+  applicationName: "Placar",
+  appleWebApp: { capable: true, title: "Placar", statusBarStyle: "default" },
+  formatDetection: { telephone: false },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#12151c" },
+  ],
+};
+
+export default function RootLayout({ children }: LayoutProps<"/">) {
+  return (
+    <html lang="pt-BR" className={archivo.variable}>
+      <body>
+        <a href="#conteudo" className="skip-link">
+          Ir para o conteúdo
+        </a>
+        <AppHeader />
+        <OfflineBanner />
+        <main id="conteudo" tabIndex={-1} className="mx-auto w-full max-w-[40rem] px-5 outline-none">
+          {children}
+        </main>
+        <AppFooter />
+        <RegisterServiceWorker />
+        <FavoritesCookieSync />
+      </body>
+    </html>
+  );
+}

@@ -1,0 +1,457 @@
+{
+ "team": {
+  "id": "874",
+  "abbreviation": "COR",
+  "location": "Corinthians",
+  "name": "Corinthians",
+  "displayName": "Corinthians",
+  "clubhouse": "https://www.espn.com/soccer/club/_/id/874/corinthians",
+  "color": "000000",
+  "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/874.png",
+  "recordSummary": "8-9-14",
+  "seasonSummary": "2026",
+  "standingSummary": "16th in Brazilian Serie A",
+  "isNational": false,
+  "groups": {
+   "id": "1"
+  }
+ },
+ "events": [
+  {
+   "id": "401841316",
+   "date": "2026-11-18T20:00Z",
+   "name": "Botafogo at Corinthians",
+   "shortName": "BOT @ COR",
+   "season": {
+    "year": 2026,
+    "displayName": "2026 Futebol Brasileiro"
+   },
+   "seasonType": {
+    "id": "1",
+    "type": 13907,
+    "name": "2026 Brasileiro Serie A ",
+    "abbreviation": "2026 Serie A"
+   },
+   "timeValid": false,
+   "competitions": [
+    {
+     "id": "401841316",
+     "date": "2026-11-18T20:00Z",
+     "attendance": 0,
+     "timeValid": false,
+     "neutralSite": false,
+     "boxscoreAvailable": true,
+     "ticketsAvailable": false,
+     "venue": {
+      "fullName": "Neo Química Arena",
+      "address": {
+       "city": "Sao Paulo",
+       "country": "Brazil"
+      }
+     },
+     "competitors": [
+      {
+       "id": "874",
+       "type": "team",
+       "order": 0,
+       "homeAway": "home",
+       "winner": false,
+       "team": {
+        "id": "874",
+        "location": "Corinthians",
+        "abbreviation": "COR",
+        "displayName": "Corinthians",
+        "shortDisplayName": "Corinthians",
+        "logos": [
+         {
+          "href": "https://a.espncdn.com/i/teamlogos/soccer/500/874.png",
+          "rel": [
+           "full",
+           "default"
+          ]
+         }
+        ]
+       }
+      },
+      {
+       "id": "6086",
+       "type": "team",
+       "order": 1,
+       "homeAway": "away",
+       "winner": false,
+       "team": {
+        "id": "6086",
+        "location": "Botafogo",
+        "abbreviation": "BOT",
+        "displayName": "Botafogo",
+        "shortDisplayName": "Botafogo",
+        "logos": [
+         {
+          "href": "https://a.espncdn.com/i/teamlogos/soccer/500/6086.png",
+          "rel": [
+           "full",
+           "default"
+          ]
+         }
+        ]
+       }
+      }
+     ],
+     "notes": [],
+     "status": {
+      "clock": 0,
+      "addedClock": 0,
+      "displayClock": "0'",
+      "period": 0,
+      "type": {
+       "id": "1",
+       "name": "STATUS_SCHEDULED",
+       "state": "pre",
+       "completed": false,
+       "description": "Scheduled",
+       "detail": "11/18 - TBD",
+       "shortDetail": "TBD"
+      }
+     }
+    }
+   ],
+   "league": {
+    "id": "630",
+    "alternateId": "85",
+    "name": "Brazilian Serie A",
+    "abbreviation": "Brazil Serie A",
+    "shortName": "Brazil Serie A",
+    "midsizeName": "BRA.1",
+    "slug": "bra.1",
+    "isTournament": false
+   }
+  },
+  {
+   "id": "401841319",
+   "date": "2026-11-21T20:00Z",
+   "name": "Corinthians at Atlético-MG",
+   "shortName": "COR @ CAM",
+   "season": {
+    "year": 2026,
+    "displayName": "2026 Futebol Brasileiro"
+   },
+   "seasonType": {
+    "id": "1",
+    "type": 13907,
+    "name": "2026 Brasileiro Serie A ",
+    "abbreviation": "2026 Serie A"
+   },
+   "timeValid": false,
+   "competitions": [
+    {
+     "id": "401841319",
+     "date": "2026-11-21T20:00Z",
+     "attendance": 0,
+     "timeValid": false,
+     "neutralSite": false,
+     "boxscoreAvailable": true,
+     "ticketsAvailable": false,
+     "venue": {
+      "fullName": "Arena MRV",
+      "address": {
+       "city": "Belo Horizonte",
+       "country": "Brazil"
+      }
+     },
+     "competitors": [
+      {
+       "id": "7632",
+       "type": "team",
+       "order": 0,
+       "homeAway": "home",
+       "winner": false,
+       "team": {
+        "id": "7632",
+        "location": "Atlético-MG",
+        "abbreviation": "CAM",
+        "displayName": "Atlético-MG",
+        "shortDisplayName": "Atlético-MG",
+        "logos": [
+         {
+          "href": "https://a.espncdn.com/i/teamlogos/soccer/500/7632.png",
+          "rel": [
+           "full",
+           "default"
+          ]
+         }
+        ]
+       }
+      },
+      {
+       "id": "874",
+       "type": "team",
+       "order": 1,
+       "homeAway": "away",
+       "winner": false,
+       "team": {
+        "id": "874",
+        "location": "Corinthians",
+        "abbreviation": "COR",
+        "displayName": "Corinthians",
+        "shortDisplayName": "Corinthians",
+        "logos": [
+         {
+          "href": "https://a.espncdn.com/i/teamlogos/soccer/500/874.png",
+          "rel": [
+           "full",
+           "default"
+          ]
+         }
+        ]
+       }
+      }
+     ],
+     "notes": [],
+     "status": {
+      "clock": 0,
+      "addedClock": 0,
+      "displayClock": "0'",
+      "period": 0,
+      "type": {
+       "id": "1",
+       "name": "STATUS_SCHEDULED",
+       "state": "pre",
+       "completed": false,
+       "description": "Scheduled",
+       "detail": "11/21 - TBD",
+       "shortDetail": "TBD"
+      }
+     }
+    }
+   ],
+   "league": {
+    "id": "630",
+    "alternateId": "85",
+    "name": "Brazilian Serie A",
+    "abbreviation": "Brazil Serie A",
+    "shortName": "Brazil Serie A",
+    "midsizeName": "BRA.1",
+    "slug": "bra.1",
+    "isTournament": false
+   }
+  },
+  {
+   "id": "401841334",
+   "date": "2026-11-28T20:00Z",
+   "name": "Grêmio at Corinthians",
+   "shortName": "GRE @ COR",
+   "season": {
+    "year": 2026,
+    "displayName": "2026 Futebol Brasileiro"
+   },
+   "seasonType": {
+    "id": "1",
+    "type": 13907,
+    "name": "2026 Brasileiro Serie A ",
+    "abbreviation": "2026 Serie A"
+   },
+   "timeValid": false,
+   "competitions": [
+    {
+     "id": "401841334",
+     "date": "2026-11-28T20:00Z",
+     "attendance": 0,
+     "timeValid": false,
+     "neutralSite": false,
+     "boxscoreAvailable": true,
+     "ticketsAvailable": false,
+     "venue": {
+      "fullName": "Neo Química Arena",
+      "address": {
+       "city": "Sao Paulo",
+       "country": "Brazil"
+      }
+     },
+     "competitors": [
+      {
+       "id": "874",
+       "type": "team",
+       "order": 0,
+       "homeAway": "home",
+       "winner": false,
+       "team": {
+        "id": "874",
+        "location": "Corinthians",
+        "abbreviation": "COR",
+        "displayName": "Corinthians",
+        "shortDisplayName": "Corinthians",
+        "logos": [
+         {
+          "href": "https://a.espncdn.com/i/teamlogos/soccer/500/874.png",
+          "rel": [
+           "full",
+           "default"
+          ]
+         }
+        ]
+       }
+      },
+      {
+       "id": "6273",
+       "type": "team",
+       "order": 1,
+       "homeAway": "away",
+       "winner": false,
+       "team": {
+        "id": "6273",
+        "location": "Grêmio",
+        "abbreviation": "GRE",
+        "displayName": "Grêmio",
+        "shortDisplayName": "Grêmio",
+        "logos": [
+         {
+          "href": "https://a.espncdn.com/i/teamlogos/soccer/500/6273.png",
+          "rel": [
+           "full",
+           "default"
+          ]
+         }
+        ]
+       }
+      }
+     ],
+     "notes": [],
+     "status": {
+      "clock": 0,
+      "addedClock": 0,
+      "displayClock": "0'",
+      "period": 0,
+      "type": {
+       "id": "1",
+       "name": "STATUS_SCHEDULED",
+       "state": "pre",
+       "completed": false,
+       "description": "Scheduled",
+       "detail": "11/28 - TBD",
+       "shortDetail": "TBD"
+      }
+     }
+    }
+   ],
+   "league": {
+    "id": "630",
+    "alternateId": "85",
+    "name": "Brazilian Serie A",
+    "abbreviation": "Brazil Serie A",
+    "shortName": "Brazil Serie A",
+    "midsizeName": "BRA.1",
+    "slug": "bra.1",
+    "isTournament": false
+   }
+  },
+  {
+   "id": "401841345",
+   "date": "2026-12-02T20:00Z",
+   "name": "Corinthians at Remo",
+   "shortName": "COR @ REMO",
+   "season": {
+    "year": 2026,
+    "displayName": "2026 Futebol Brasileiro"
+   },
+   "seasonType": {
+    "id": "1",
+    "type": 13907,
+    "name": "2026 Brasileiro Serie A ",
+    "abbreviation": "2026 Serie A"
+   },
+   "timeValid": false,
+   "competitions": [
+    {
+     "id": "401841345",
+     "date": "2026-12-02T20:00Z",
+     "attendance": 0,
+     "timeValid": false,
+     "neutralSite": false,
+     "boxscoreAvailable": true,
+     "ticketsAvailable": false,
+     "venue": {
+      "fullName": "Estadio Evandro Almeida (Baenao)",
+      "address": {
+       "city": "Belém",
+       "country": "Brazil"
+      }
+     },
+     "competitors": [
+      {
+       "id": "4936",
+       "type": "team",
+       "order": 0,
+       "homeAway": "home",
+       "winner": false,
+       "team": {
+        "id": "4936",
+        "location": "Remo",
+        "abbreviation": "REMO",
+        "displayName": "Remo",
+        "shortDisplayName": "Remo",
+        "logos": [
+         {
+          "href": "https://a.espncdn.com/i/teamlogos/soccer/500/4936.png",
+          "rel": [
+           "full",
+           "default"
+          ]
+         }
+        ]
+       }
+      },
+      {
+       "id": "874",
+       "type": "team",
+       "order": 1,
+       "homeAway": "away",
+       "winner": false,
+       "team": {
+        "id": "874",
+        "location": "Corinthians",
+        "abbreviation": "COR",
+        "displayName": "Corinthians",
+        "shortDisplayName": "Corinthians",
+        "logos": [
+         {
+          "href": "https://a.espncdn.com/i/teamlogos/soccer/500/874.png",
+          "rel": [
+           "full",
+           "default"
+          ]
+         }
+        ]
+       }
+      }
+     ],
+     "notes": [],
+     "status": {
+      "clock": 0,
+      "addedClock": 0,
+      "displayClock": "0'",
+      "period": 0,
+      "type": {
+       "id": "1",
+       "name": "STATUS_SCHEDULED",
+       "state": "pre",
+       "completed": false,
+       "description": "Scheduled",
+       "detail": "12/2 - TBD",
+       "shortDetail": "TBD"
+      }
+     }
+    }
+   ],
+   "league": {
+    "id": "630",
+    "alternateId": "85",
+    "name": "Brazilian Serie A",
+    "abbreviation": "Brazil Serie A",
+    "shortName": "Brazil Serie A",
+    "midsizeName": "BRA.1",
+    "slug": "bra.1",
+    "isTournament": false
+   }
+  }
+ ]
+}

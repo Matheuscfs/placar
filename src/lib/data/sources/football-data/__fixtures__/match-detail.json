@@ -1,0 +1,236 @@
+{
+ "season": {
+  "startDate": "2026-01-28"
+ },
+ "matchday": 31,
+ "stage": "REGULAR_SEASON",
+ "group": null,
+ "id": 1001,
+ "competition": {
+  "code": "BSA",
+  "name": "Campeonato Brasileiro Série A"
+ },
+ "utcDate": "2026-10-19T23:00:00Z",
+ "status": "FINISHED",
+ "minute": 90,
+ "injuryTime": 13,
+ "attendance": 41230,
+ "venue": "Neo Química Arena",
+ "homeTeam": {
+  "id": 1779,
+  "name": "SC Corinthians Paulista",
+  "shortName": "Corinthians",
+  "tla": "COR",
+  "crest": "https://crests.football-data.org/1779.png",
+  "coach": {
+   "id": 1,
+   "name": "Dorival Júnior"
+  },
+  "formation": "4-2-3-1",
+  "lineup": [
+   {
+    "id": 1,
+    "name": "Hugo Souza",
+    "position": "Goalkeeper",
+    "shirtNumber": 1
+   },
+   {
+    "id": 2,
+    "name": "Gustavo Henrique",
+    "position": "Centre-Back",
+    "shirtNumber": 13
+   },
+   {
+    "id": 3,
+    "name": "Yuri Alberto",
+    "position": "Centre-Forward",
+    "shirtNumber": 9
+   },
+   {
+    "id": 4,
+    "name": "Sem Posição",
+    "position": null,
+    "shirtNumber": 99
+   }
+  ],
+  "bench": [
+   {
+    "id": 5,
+    "name": "Matheus Donelli",
+    "position": "Goalkeeper",
+    "shirtNumber": 12
+   }
+  ],
+  "statistics": {
+   "corner_kicks": 9,
+   "free_kicks": 12,
+   "goal_kicks": 5,
+   "offsides": 1,
+   "fouls": 10,
+   "ball_possession": 68,
+   "saves": 4,
+   "throw_ins": 20,
+   "shots": 21,
+   "shots_on_goal": 6,
+   "shots_off_goal": 15,
+   "yellow_cards": 1,
+   "yellow_red_cards": 0,
+   "red_cards": 0
+  }
+ },
+ "awayTeam": {
+  "id": 4251,
+  "name": "EC Vitória",
+  "shortName": "Vitória",
+  "tla": "VIT",
+  "crest": "https://crests.football-data.org/4251.png",
+  "coach": {
+   "id": 2,
+   "name": "Thiago Carpini"
+  },
+  "formation": "4-1-4-1",
+  "lineup": [
+   {
+    "id": 6,
+    "name": "Lucas Arcanjo",
+    "position": "Goalkeeper",
+    "shirtNumber": 1
+   }
+  ],
+  "bench": [],
+  "statistics": {
+   "corner_kicks": 1,
+   "offsides": 3,
+   "fouls": 14,
+   "ball_possession": 32,
+   "saves": 5,
+   "shots": 5,
+   "shots_on_goal": 5,
+   "yellow_cards": 3,
+   "yellow_red_cards": 0,
+   "red_cards": 1
+  }
+ },
+ "score": {
+  "winner": "DRAW",
+  "duration": "REGULAR",
+  "fullTime": {
+   "home": 1,
+   "away": 1
+  },
+  "halfTime": {
+   "home": 0,
+   "away": 1
+  }
+ },
+ "goals": [
+  {
+   "minute": 66,
+   "injuryTime": null,
+   "type": "PENALTY",
+   "team": {
+    "id": 1779,
+    "name": "SC Corinthians Paulista"
+   },
+   "scorer": {
+    "id": 3,
+    "name": "Yuri Alberto"
+   },
+   "assist": null,
+   "score": {
+    "home": 1,
+    "away": 1
+   }
+  },
+  {
+   "minute": 45,
+   "injuryTime": 1,
+   "type": "REGULAR",
+   "team": {
+    "id": 4251,
+    "name": "EC Vitória"
+   },
+   "scorer": {
+    "id": 7,
+    "name": "Renê"
+   },
+   "assist": {
+    "id": 8,
+    "name": "Matheuzinho"
+   },
+   "score": {
+    "home": 0,
+    "away": 1
+   }
+  }
+ ],
+ "bookings": [
+  {
+   "minute": 53,
+   "team": {
+    "id": 4251,
+    "name": "EC Vitória"
+   },
+   "player": {
+    "id": 7,
+    "name": "Renê"
+   },
+   "card": "YELLOW"
+  },
+  {
+   "minute": 88,
+   "team": {
+    "id": 4251,
+    "name": "EC Vitória"
+   },
+   "player": {
+    "id": 9,
+    "name": "Zé Vitor"
+   },
+   "card": "RED"
+  },
+  {
+   "minute": 60,
+   "team": {
+    "id": 1779,
+    "name": "SC Corinthians Paulista"
+   },
+   "player": {
+    "id": 10,
+    "name": "Rodrigo Garro"
+   },
+   "card": "YELLOW_RED"
+  }
+ ],
+ "substitutions": [
+  {
+   "minute": 67,
+   "team": {
+    "id": 1779,
+    "name": "SC Corinthians Paulista"
+   },
+   "playerOut": {
+    "id": 11,
+    "name": "Vitinho"
+   },
+   "playerIn": {
+    "id": 12,
+    "name": "Kaio César"
+   }
+  }
+ ],
+ "referees": [
+  {
+   "id": 1,
+   "name": "Auxiliar Um",
+   "type": "ASSISTANT_REFEREE_N1",
+   "nationality": "Brazil"
+  },
+  {
+   "id": 2,
+   "name": "Árbitro Principal",
+   "type": "REFEREE",
+   "nationality": "Brazil"
+  }
+ ]
+}

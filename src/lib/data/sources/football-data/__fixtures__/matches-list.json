@@ -1,0 +1,491 @@
+{
+ "filters": {
+  "dateFrom": "2026-10-19",
+  "dateTo": "2026-10-24"
+ },
+ "resultSet": {
+  "count": 12
+ },
+ "matches": [
+  {
+   "season": {
+    "startDate": "2026-01-28"
+   },
+   "matchday": 31,
+   "stage": "REGULAR_SEASON",
+   "group": null,
+   "id": 1001,
+   "competition": {
+    "code": "BSA",
+    "name": "Campeonato Brasileiro Série A"
+   },
+   "utcDate": "2026-10-19T23:00:00Z",
+   "status": "FINISHED",
+   "homeTeam": {
+    "id": 1779,
+    "name": "SC Corinthians Paulista",
+    "shortName": "Corinthians",
+    "tla": "COR",
+    "crest": "https://crests.football-data.org/1779.png"
+   },
+   "awayTeam": {
+    "id": 4251,
+    "name": "EC Vitória",
+    "shortName": "Vitória",
+    "tla": "VIT",
+    "crest": "https://crests.football-data.org/4251.png"
+   },
+   "venue": "Neo Química Arena",
+   "score": {
+    "winner": "DRAW",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 1
+    }
+   }
+  },
+  {
+   "season": {
+    "startDate": "2026-01-28"
+   },
+   "matchday": 31,
+   "stage": "REGULAR_SEASON",
+   "group": null,
+   "id": 1002,
+   "competition": {
+    "code": "BSA",
+    "name": "Campeonato Brasileiro Série A"
+   },
+   "utcDate": "2026-10-22T00:30:00Z",
+   "status": "IN_PLAY",
+   "minute": 67,
+   "injuryTime": null,
+   "homeTeam": {
+    "id": 1783,
+    "name": "CR Flamengo",
+    "shortName": "Flamengo",
+    "tla": "FLA",
+    "crest": "https://crests.football-data.org/1783.png"
+   },
+   "awayTeam": {
+    "id": 1769,
+    "name": "SE Palmeiras",
+    "shortName": "Palmeiras",
+    "tla": "PAL",
+    "crest": "https://crests.football-data.org/1769.png"
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 2,
+     "away": 1
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "season": {
+    "startDate": "2026-01-28"
+   },
+   "matchday": 31,
+   "stage": "REGULAR_SEASON",
+   "group": null,
+   "id": 1003,
+   "competition": {
+    "code": "BSA",
+    "name": "Campeonato Brasileiro Série A"
+   },
+   "utcDate": "2026-10-22T00:30:00Z",
+   "status": "PAUSED",
+   "homeTeam": {
+    "id": 1779,
+    "name": "SC Corinthians Paulista",
+    "shortName": "Corinthians",
+    "tla": "COR",
+    "crest": "https://crests.football-data.org/1779.png"
+   },
+   "awayTeam": {
+    "id": 1783,
+    "name": "CR Flamengo",
+    "shortName": "Flamengo",
+    "tla": "FLA",
+    "crest": "https://crests.football-data.org/1783.png"
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 0
+    },
+    "halfTime": {
+     "home": 0,
+     "away": 0
+    }
+   }
+  },
+  {
+   "season": {
+    "startDate": "2026-01-28"
+   },
+   "matchday": 32,
+   "stage": "REGULAR_SEASON",
+   "group": null,
+   "id": 1004,
+   "competition": {
+    "code": "BSA",
+    "name": "Campeonato Brasileiro Série A"
+   },
+   "utcDate": "2026-10-24T22:00:00Z",
+   "status": "TIMED",
+   "homeTeam": {
+    "id": 1783,
+    "name": "CR Flamengo",
+    "shortName": "Flamengo",
+    "tla": "FLA",
+    "crest": "https://crests.football-data.org/1783.png"
+   },
+   "awayTeam": {
+    "id": 1779,
+    "name": "SC Corinthians Paulista",
+    "shortName": "Corinthians",
+    "tla": "COR",
+    "crest": "https://crests.football-data.org/1779.png"
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "season": {
+    "startDate": "2026-01-28"
+   },
+   "matchday": 31,
+   "stage": "REGULAR_SEASON",
+   "group": null,
+   "id": 1005,
+   "competition": {
+    "code": "BSA",
+    "name": "Campeonato Brasileiro Série A"
+   },
+   "utcDate": "2026-10-21T22:00:00Z",
+   "status": "POSTPONED",
+   "homeTeam": {
+    "id": 1769,
+    "name": "SE Palmeiras",
+    "shortName": "Palmeiras",
+    "tla": "PAL",
+    "crest": "https://crests.football-data.org/1769.png"
+   },
+   "awayTeam": {
+    "id": 4251,
+    "name": "EC Vitória",
+    "shortName": "Vitória",
+    "tla": "VIT",
+    "crest": "https://crests.football-data.org/4251.png"
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": null,
+     "away": null
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 1006,
+   "competition": {
+    "code": "CL",
+    "name": "UEFA Champions League"
+   },
+   "season": {
+    "startDate": "2026-09-01"
+   },
+   "stage": "QUARTER_FINALS",
+   "matchday": null,
+   "group": null,
+   "utcDate": "2026-10-21T19:00:00Z",
+   "status": "FINISHED",
+   "homeTeam": {
+    "id": 5,
+    "name": "FC Bayern München",
+    "shortName": "Bayern",
+    "tla": "FCB",
+    "crest": "https://crests.football-data.org/5.png"
+   },
+   "awayTeam": {
+    "id": 65,
+    "name": "Manchester City FC",
+    "shortName": "Man City",
+    "tla": "MCI",
+    "crest": "https://crests.football-data.org/65.png"
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "PENALTY_SHOOTOUT",
+    "fullTime": {
+     "home": 7,
+     "away": 6
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    },
+    "regularTime": {
+     "home": 1,
+     "away": 1
+    },
+    "extraTime": {
+     "home": 0,
+     "away": 0
+    },
+    "penalties": {
+     "home": 6,
+     "away": 5
+    }
+   }
+  },
+  {
+   "id": 1007,
+   "competition": {
+    "code": "PL",
+    "name": "Premier League"
+   },
+   "season": {
+    "startDate": "2026-08-01"
+   },
+   "stage": "REGULAR_SEASON",
+   "matchday": 9,
+   "group": null,
+   "utcDate": "2026-10-20T19:00:00Z",
+   "status": "FINISHED",
+   "homeTeam": {
+    "id": 57,
+    "name": "Arsenal FC",
+    "shortName": "Arsenal",
+    "tla": "ARS",
+    "crest": "https://crests.football-data.org/57.png"
+   },
+   "awayTeam": {
+    "id": 65,
+    "name": "Manchester City FC",
+    "shortName": "Man City",
+    "tla": "MCI",
+    "crest": "https://crests.football-data.org/65.png"
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "EXTRA_TIME",
+    "fullTime": {
+     "home": 3,
+     "away": 2
+    },
+    "halfTime": {
+     "home": 1,
+     "away": 1
+    },
+    "regularTime": {
+     "home": 2,
+     "away": 2
+    },
+    "extraTime": {
+     "home": 1,
+     "away": 0
+    }
+   }
+  },
+  {
+   "id": 1008,
+   "competition": {
+    "code": "ELC",
+    "name": "Championship"
+   },
+   "season": {
+    "startDate": "2026-01-28"
+   },
+   "stage": "REGULAR_SEASON",
+   "matchday": 1,
+   "utcDate": "2026-10-20T19:00:00Z",
+   "status": "SCHEDULED",
+   "homeTeam": {
+    "id": 57,
+    "name": "Arsenal FC",
+    "shortName": "Arsenal",
+    "tla": "ARS",
+    "crest": "https://crests.football-data.org/57.png"
+   },
+   "awayTeam": {
+    "id": 65,
+    "name": "Manchester City FC",
+    "shortName": "Man City",
+    "tla": "MCI",
+    "crest": "https://crests.football-data.org/65.png"
+   },
+   "score": {
+    "fullTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "id": 1009,
+   "competition": {
+    "code": "BSA",
+    "name": "Campeonato Brasileiro Série A"
+   },
+   "season": {
+    "startDate": "2026-01-28"
+   },
+   "utcDate": "2026-10-20T19:00:00Z",
+   "status": "SCHEDULED",
+   "homeTeam": {
+    "id": 1779,
+    "name": "SC Corinthians Paulista",
+    "shortName": "Corinthians",
+    "tla": "COR",
+    "crest": "https://crests.football-data.org/1779.png"
+   },
+   "score": {}
+  },
+  {
+   "id": 1010,
+   "competition": {
+    "code": "BL1",
+    "name": "Bundesliga"
+   },
+   "season": {
+    "startDate": "2026-08-01"
+   },
+   "stage": "REGULAR_SEASON",
+   "matchday": 8,
+   "group": null,
+   "utcDate": "2026-10-18T16:30:00Z",
+   "status": "FINISHED",
+   "homeTeam": {
+    "id": 4,
+    "name": "Borussia Dortmund",
+    "shortName": "Dortmund",
+    "tla": "BVB",
+    "crest": "https://crests.football-data.org/4.png"
+   },
+   "awayTeam": {
+    "id": 5,
+    "name": "FC Bayern München",
+    "shortName": "Bayern",
+    "tla": "FCB",
+    "crest": "https://crests.football-data.org/5.png"
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "homeTeam": 2,
+     "awayTeam": 0
+    },
+    "halfTime": {
+     "homeTeam": 1,
+     "awayTeam": 0
+    }
+   }
+  },
+  {
+   "season": {
+    "startDate": "2026-01-28"
+   },
+   "matchday": 31,
+   "stage": "REGULAR_SEASON",
+   "group": null,
+   "id": 1011,
+   "competition": {
+    "code": "BSA",
+    "name": "Campeonato Brasileiro Série A"
+   },
+   "utcDate": "2026-10-22T00:30:00Z",
+   "status": "EXTRA_TIME",
+   "minute": 105,
+   "injuryTime": 2,
+   "homeTeam": {
+    "id": 1769,
+    "name": "SE Palmeiras",
+    "shortName": "Palmeiras",
+    "tla": "PAL",
+    "crest": "https://crests.football-data.org/1769.png"
+   },
+   "awayTeam": {
+    "id": 1779,
+    "name": "SC Corinthians Paulista",
+    "shortName": "Corinthians",
+    "tla": "COR",
+    "crest": "https://crests.football-data.org/1779.png"
+   },
+   "score": {
+    "duration": "EXTRA_TIME",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    }
+   }
+  },
+  {
+   "season": {
+    "startDate": "2026-01-28"
+   },
+   "matchday": 31,
+   "stage": "REGULAR_SEASON",
+   "group": null,
+   "id": 1012,
+   "competition": {
+    "code": "BSA",
+    "name": "Campeonato Brasileiro Série A"
+   },
+   "utcDate": "2026-10-17T22:00:00Z",
+   "status": "AWARDED",
+   "homeTeam": {
+    "id": 4251,
+    "name": "EC Vitória",
+    "shortName": "Vitória",
+    "tla": "VIT",
+    "crest": "https://crests.football-data.org/4251.png"
+   },
+   "awayTeam": {
+    "id": 1783,
+    "name": "CR Flamengo",
+    "shortName": "Flamengo",
+    "tla": "FLA",
+    "crest": "https://crests.football-data.org/1783.png"
+   },
+   "score": {
+    "winner": "HOME_TEAM",
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 3,
+     "away": 0
+    }
+   }
+  }
+ ]
+}

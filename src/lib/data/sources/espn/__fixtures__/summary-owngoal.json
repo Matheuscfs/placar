@@ -1,0 +1,2224 @@
+{
+ "header": {
+  "id": "748472",
+  "season": {
+   "year": 2025,
+   "current": false,
+   "type": 13561,
+   "name": "2025-26 LALIGA"
+  },
+  "timeValid": true,
+  "competitions": [
+   {
+    "id": "748472",
+    "date": "2026-04-22T18:00Z",
+    "neutralSite": false,
+    "conferenceCompetition": false,
+    "boxscoreAvailable": true,
+    "commentaryAvailable": true,
+    "liveAvailable": false,
+    "recent": false,
+    "boxscoreSource": "full",
+    "playByPlaySource": "full",
+    "competitors": [
+     {
+      "id": "89",
+      "order": 0,
+      "homeAway": "home",
+      "winner": false,
+      "team": {
+       "id": "89",
+       "location": "Real Sociedad",
+       "name": "Real Sociedad",
+       "abbreviation": "RSO",
+       "displayName": "Real Sociedad",
+       "shortDisplayName": "Real Sociedad",
+       "color": "3366CC",
+       "alternateColor": "000000",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/89.png",
+         "rel": [
+          "full",
+          "default"
+         ]
+        }
+       ],
+       "groups": {
+        "name": "2025-26 LALIGA"
+       },
+       "form": "DDWWL"
+      },
+      "score": "0",
+      "linescores": [
+       {
+        "displayValue": "0"
+       },
+       {
+        "displayValue": "0"
+       }
+      ],
+      "record": [
+       {
+        "type": "total",
+        "summary": "11-9-12",
+        "displayValue": "11-9-12"
+       },
+       {
+        "type": "points",
+        "summary": "42",
+        "displayValue": "42"
+       }
+      ],
+      "possession": false
+     },
+     {
+      "id": "2922",
+      "order": 1,
+      "homeAway": "away",
+      "winner": true,
+      "team": {
+       "id": "2922",
+       "location": "Getafe",
+       "name": "Getafe",
+       "abbreviation": "GET",
+       "displayName": "Getafe",
+       "shortDisplayName": "Getafe",
+       "color": "0000ff",
+       "alternateColor": "7F1734",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/2922.png",
+         "rel": [
+          "full",
+          "default"
+         ]
+        }
+       ],
+       "groups": {
+        "name": "2025-26 LALIGA"
+       },
+       "form": "DDLWL"
+      },
+      "score": "1",
+      "linescores": [
+       {
+        "displayValue": "1"
+       },
+       {
+        "displayValue": "0"
+       }
+      ],
+      "record": [
+       {
+        "type": "total",
+        "summary": "13-5-14",
+        "displayValue": "13-5-14"
+       },
+       {
+        "type": "points",
+        "summary": "44",
+        "displayValue": "44"
+       }
+      ],
+      "possession": false
+     }
+    ],
+    "notes": [],
+    "status": {
+     "type": {
+      "id": "28",
+      "name": "STATUS_FULL_TIME",
+      "state": "post",
+      "completed": true,
+      "description": "Full Time",
+      "detail": "FT",
+      "shortDetail": "FT"
+     }
+    },
+    "details": [
+     {
+      "clock": {
+       "value": 1731,
+       "displayValue": "29'"
+      },
+      "scoringPlay": true,
+      "team": {
+       "id": "2922",
+       "location": "Getafe",
+       "name": "Getafe",
+       "abbreviation": "GET",
+       "displayName": "Getafe"
+      },
+      "participants": [
+       {
+        "athlete": {
+         "id": "388601",
+         "displayName": "Jon Gorrotxategi",
+         "shortName": "J. Gorrotxategi"
+        }
+       }
+      ],
+      "addedClock": {
+       "value": 0,
+       "displayValue": ""
+      },
+      "redCard": false,
+      "penaltyKick": false,
+      "ownGoal": true
+     }
+    ],
+    "groups": {
+     "id": "1",
+     "name": "2000/2001 Spanish Primera División\r\n",
+     "abbreviation": "2000/2001"
+    },
+    "isFinal": false,
+    "isThirdPlace": false,
+    "altGameNote": "LALIGA",
+    "boxscoreMinutes": false,
+    "shotMapAvailable": false
+   }
+  ],
+  "league": {
+   "id": "740",
+   "name": "Spanish LALIGA",
+   "abbreviation": "LALIGA",
+   "shortName": "LALIGA",
+   "midsizeName": "ESP.1",
+   "slug": "esp.1",
+   "isTournament": false,
+   "logos": [
+    {
+     "href": "https://a.espncdn.com/i/leaguelogos/soccer/500/15.png",
+     "rel": [
+      "full",
+      "default"
+     ]
+    }
+   ]
+  }
+ },
+ "keyEvents": [
+  {
+   "id": "47519529",
+   "type": {
+    "id": "80",
+    "text": "Kickoff",
+    "type": "kickoff"
+   },
+   "period": {
+    "number": 1
+   },
+   "clock": {
+    "value": 0,
+    "displayValue": ""
+   },
+   "scoringPlay": false,
+   "wallclock": "2026-04-22T18:00:58Z",
+   "shootout": false,
+   "goalPositionX": 0
+  },
+  {
+   "id": "47519664",
+   "type": {
+    "id": "140",
+    "text": "Penalty - Hit Woodwork",
+    "type": "penalty---hit-woodwork"
+   },
+   "text": "Penalty missed! Still Real Sociedad 0, Getafe 0. Brais Méndez (Real Sociedad) hits the right post with a left footed shot.",
+   "shortText": "Brais Méndez Penalty - Hit Woodw",
+   "period": {
+    "number": 1
+   },
+   "clock": {
+    "value": 837,
+    "displayValue": "14'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "89",
+    "displayName": "Real Sociedad"
+   },
+   "participants": [
+    {
+     "athlete": {
+      "id": "262729",
+      "displayName": "Brais Méndez"
+     }
+    }
+   ],
+   "wallclock": "2026-04-22T18:14:55Z",
+   "shootout": false,
+   "goalPositionX": 0
+  },
+  {
+   "id": "47519839",
+   "type": {
+    "id": "94",
+    "text": "Yellow Card",
+    "type": "yellow-card"
+   },
+   "text": "Abdel Abqar (Getafe) is shown the yellow card for a bad foul.",
+   "shortText": "Abdel Abqar Yellow Card",
+   "period": {
+    "number": 1
+   },
+   "clock": {
+    "value": 1596,
+    "displayValue": "27'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "2922",
+    "displayName": "Getafe"
+   },
+   "participants": [
+    {
+     "athlete": {
+      "id": "277876",
+      "displayName": "Abdel Abqar"
+     }
+    }
+   ],
+   "wallclock": "2026-04-22T18:27:34Z",
+   "shootout": false,
+   "goalPositionX": 0
+  },
+  {
+   "id": "47519867",
+   "type": {
+    "id": "97",
+    "text": "Own Goal",
+    "type": "own-goal"
+   },
+   "text": "Own Goal by Jon Gorrotxategi, Real Sociedad. Real Sociedad 0, Getafe 1.",
+   "shortText": "Jon Gorrotxategi Own Goal",
+   "period": {
+    "number": 1
+   },
+   "clock": {
+    "value": 1731,
+    "displayValue": "29'"
+   },
+   "scoringPlay": true,
+   "team": {
+    "id": "2922",
+    "displayName": "Getafe"
+   },
+   "participants": [
+    {
+     "athlete": {
+      "id": "388601",
+      "displayName": "Jon Gorrotxategi"
+     }
+    }
+   ],
+   "wallclock": "2026-04-22T18:29:49Z",
+   "shootout": false,
+   "goalPositionX": 0
+  },
+  {
+   "id": "47519891",
+   "type": {
+    "id": "94",
+    "text": "Yellow Card",
+    "type": "yellow-card"
+   },
+   "text": "Orri Óskarsson (Real Sociedad) is shown the yellow card for a bad foul.",
+   "shortText": "Orri Óskarsson Yellow Card",
+   "period": {
+    "number": 1
+   },
+   "clock": {
+    "value": 1838,
+    "displayValue": "31'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "89",
+    "displayName": "Real Sociedad"
+   },
+   "participants": [
+    {
+     "athlete": {
+      "id": "341367",
+      "displayName": "Orri Óskarsson"
+     }
+    }
+   ],
+   "wallclock": "2026-04-22T18:31:36Z",
+   "shootout": false,
+   "goalPositionX": 0
+  },
+  {
+   "id": "47519970",
+   "type": {
+    "id": "94",
+    "text": "Yellow Card",
+    "type": "yellow-card"
+   },
+   "text": "Juan Iglesias (Getafe) is shown the yellow card.",
+   "shortText": "Juan Iglesias Yellow Card",
+   "period": {
+    "number": 1
+   },
+   "clock": {
+    "value": 2213,
+    "displayValue": "37'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "2922",
+    "displayName": "Getafe"
+   },
+   "participants": [
+    {
+     "athlete": {
+      "id": "279738",
+      "displayName": "Juan Iglesias"
+     }
+    }
+   ],
+   "wallclock": "2026-04-22T18:37:51Z",
+   "shootout": false,
+   "goalPositionX": 0
+  },
+  {
+   "id": "47520076",
+   "type": {
+    "id": "94",
+    "text": "Yellow Card",
+    "type": "yellow-card"
+   },
+   "text": "Pablo Marín (Real Sociedad) is shown the yellow card for a bad foul.",
+   "shortText": "Pablo Marín Yellow Card",
+   "period": {
+    "number": 1
+   },
+   "clock": {
+    "value": 2672,
+    "displayValue": "45'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "89",
+    "displayName": "Real Sociedad"
+   },
+   "participants": [
+    {
+     "athlete": {
+      "id": "326900",
+      "displayName": "Pablo Marín"
+     }
+    }
+   ],
+   "wallclock": "2026-04-22T18:45:31Z",
+   "shootout": false,
+   "goalPositionX": 0
+  },
+  {
+   "id": "47520170",
+   "type": {
+    "id": "81",
+    "text": "Halftime",
+    "type": "halftime"
+   },
+   "text": "First Half ends, Real Sociedad 0, Getafe 1.",
+   "period": {
+    "number": 1
+   },
+   "clock": {
+    "value": 2700,
+    "displayValue": "45'+6'"
+   },
+   "scoringPlay": false,
+   "wallclock": "2026-04-22T18:51:53Z",
+   "shootout": false,
+   "goalPositionX": 0
+  },
+  {
+   "id": "47520384",
+   "type": {
+    "id": "76",
+    "text": "Substitution",
+    "type": "substitution"
+   },
+   "text": "Substitution, Real Sociedad. Jon Aramburu replaces Aritz Elustondo.",
+   "shortText": "Jon Aramburu Substitution",
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 2700,
+    "displayValue": "45'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "89",
+    "displayName": "Real Sociedad"
+   },
+   "participants": [
+    {
+     "athlete": {
+      "id": "318063",
+      "displayName": "Jon Aramburu"
+     }
+    },
+    {
+     "athlete": {
+      "id": "214742",
+      "displayName": "Aritz Elustondo"
+     }
+    }
+   ],
+   "wallclock": "2026-04-22T19:07:56Z",
+   "shootout": false,
+   "goalPositionX": 0
+  },
+  {
+   "id": "47520435",
+   "type": {
+    "id": "82",
+    "text": "Start 2nd Half",
+    "type": "start-2nd-half"
+   },
+   "text": "Second Half begins Real Sociedad 0, Getafe 1.",
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 2700,
+    "displayValue": "45'"
+   },
+   "scoringPlay": false,
+   "wallclock": "2026-04-22T19:08:28Z",
+   "shootout": false,
+   "goalPositionX": 0
+  },
+  {
+   "id": "47520641",
+   "type": {
+    "id": "76",
+    "text": "Substitution",
+    "type": "substitution"
+   },
+   "text": "Substitution, Real Sociedad. Ander Barrenetxea replaces Pablo Marín.",
+   "shortText": "Ander Barrenetxea Substitution",
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 3311,
+    "displayValue": "56'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "89",
+    "displayName": "Real Sociedad"
+   },
+   "participants": [
+    {
+     "athlete": {
+      "id": "283941",
+      "displayName": "Ander Barrenetxea"
+     }
+    },
+    {
+     "athlete": {
+      "id": "326900",
+      "displayName": "Pablo Marín"
+     }
+    }
+   ],
+   "wallclock": "2026-04-22T19:18:40Z",
+   "shootout": false,
+   "goalPositionX": 0
+  },
+  {
+   "id": "47520642",
+   "type": {
+    "id": "76",
+    "text": "Substitution",
+    "type": "substitution"
+   },
+   "text": "Substitution, Real Sociedad. Mikel Oyarzabal replaces Brais Méndez.",
+   "shortText": "Mikel Oyarzabal Substitution",
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 3313,
+    "displayValue": "56'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "89",
+    "displayName": "Real Sociedad"
+   },
+   "participants": [
+    {
+     "athlete": {
+      "id": "229018",
+      "displayName": "Mikel Oyarzabal"
+     }
+    },
+    {
+     "athlete": {
+      "id": "262729",
+      "displayName": "Brais Méndez"
+     }
+    }
+   ],
+   "wallclock": "2026-04-22T19:18:42Z",
+   "shootout": false,
+   "goalPositionX": 0
+  },
+  {
+   "id": "47520898",
+   "type": {
+    "id": "94",
+    "text": "Yellow Card",
+    "type": "yellow-card"
+   },
+   "text": "Duje Caleta-Car (Real Sociedad) is shown the yellow card for a bad foul.",
+   "shortText": "Duje Caleta-Car Yellow Card",
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 4016,
+    "displayValue": "67'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "89",
+    "displayName": "Real Sociedad"
+   },
+   "participants": [
+    {
+     "athlete": {
+      "id": "194766",
+      "displayName": "Duje Caleta-Car"
+     }
+    }
+   ],
+   "wallclock": "2026-04-22T19:30:25Z",
+   "shootout": false,
+   "goalPositionX": 0
+  },
+  {
+   "id": "47520899",
+   "type": {
+    "id": "76",
+    "text": "Substitution",
+    "type": "substitution"
+   },
+   "text": "Substitution, Getafe. Javi Muñoz replaces Mario Martín because of an injury.",
+   "shortText": "Javi Muñoz Substitution",
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 4040,
+    "displayValue": "68'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "2922",
+    "displayName": "Getafe"
+   },
+   "participants": [
+    {
+     "athlete": {
+      "id": "214275",
+      "displayName": "Javi Muñoz"
+     }
+    },
+    {
+     "athlete": {
+      "id": "357147",
+      "displayName": "Mario Martín"
+     }
+    }
+   ],
+   "wallclock": "2026-04-22T19:30:49Z",
+   "shootout": false,
+   "goalPositionX": 0
+  },
+  {
+   "id": "47521082",
+   "type": {
+    "id": "76",
+    "text": "Substitution",
+    "type": "substitution"
+   },
+   "text": "Substitution, Real Sociedad. Wesley replaces Aihen Muñoz.",
+   "shortText": "Wesley Ribeiro Substitution",
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 4659,
+    "displayValue": "78'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "89",
+    "displayName": "Real Sociedad"
+   },
+   "participants": [
+    {
+     "athlete": {
+      "id": "304533",
+      "displayName": "Wesley Ribeiro"
+     }
+    },
+    {
+     "athlete": {
+      "id": "283891",
+      "displayName": "Aihen Muñoz"
+     }
+    }
+   ],
+   "wallclock": "2026-04-22T19:41:07Z",
+   "shootout": false,
+   "goalPositionX": 0
+  },
+  {
+   "id": "47521103",
+   "type": {
+    "id": "76",
+    "text": "Substitution",
+    "type": "substitution"
+   },
+   "text": "Substitution, Getafe. Diego Rico replaces Kiko Femenía.",
+   "shortText": "Diego Rico Substitution",
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 4756,
+    "displayValue": "80'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "2922",
+    "displayName": "Getafe"
+   },
+   "participants": [
+    {
+     "athlete": {
+      "id": "193943",
+      "displayName": "Diego Rico"
+     }
+    },
+    {
+     "athlete": {
+      "id": "125749",
+      "displayName": "Kiko Femenía"
+     }
+    }
+   ],
+   "wallclock": "2026-04-22T19:42:45Z",
+   "shootout": false,
+   "goalPositionX": 0
+  },
+  {
+   "id": "47521109",
+   "type": {
+    "id": "76",
+    "text": "Substitution",
+    "type": "substitution"
+   },
+   "text": "Substitution, Getafe. Allan Nyom replaces Abdel Abqar.",
+   "shortText": "Allan Nyom Substitution",
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 4760,
+    "displayValue": "80'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "2922",
+    "displayName": "Getafe"
+   },
+   "participants": [
+    {
+     "athlete": {
+      "id": "136945",
+      "displayName": "Allan Nyom"
+     }
+    },
+    {
+     "athlete": {
+      "id": "277876",
+      "displayName": "Abdel Abqar"
+     }
+    }
+   ],
+   "wallclock": "2026-04-22T19:42:49Z",
+   "shootout": false,
+   "goalPositionX": 0
+  },
+  {
+   "id": "47521234",
+   "type": {
+    "id": "76",
+    "text": "Substitution",
+    "type": "substitution"
+   },
+   "text": "Substitution, Getafe. Adrián Liso replaces Luis Vázquez.",
+   "shortText": "Adrián Liso Substitution",
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 5216,
+    "displayValue": "87'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "2922",
+    "displayName": "Getafe"
+   },
+   "participants": [
+    {
+     "athlete": {
+      "id": "381682",
+      "displayName": "Adrián Liso"
+     }
+    },
+    {
+     "athlete": {
+      "id": "285032",
+      "displayName": "Luis Vázquez"
+     }
+    }
+   ],
+   "wallclock": "2026-04-22T19:50:25Z",
+   "shootout": false,
+   "goalPositionX": 0
+  },
+  {
+   "id": "47521257",
+   "type": {
+    "id": "76",
+    "text": "Substitution",
+    "type": "substitution"
+   },
+   "text": "Substitution, Real Sociedad. Beñat Turrientes replaces Carlos Soler.",
+   "shortText": "Beñat Turrientes Substitution",
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 5230,
+    "displayValue": "88'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "89",
+    "displayName": "Real Sociedad"
+   },
+   "participants": [
+    {
+     "athlete": {
+      "id": "297371",
+      "displayName": "Beñat Turrientes"
+     }
+    },
+    {
+     "athlete": {
+      "id": "235072",
+      "displayName": "Carlos Soler"
+     }
+    }
+   ],
+   "wallclock": "2026-04-22T19:50:39Z",
+   "shootout": false,
+   "goalPositionX": 0
+  },
+  {
+   "id": "47521258",
+   "type": {
+    "id": "76",
+    "text": "Substitution",
+    "type": "substitution"
+   },
+   "text": "Substitution, Real Sociedad. Jon Karrikaburu replaces Jon Gorrotxategi.",
+   "shortText": "Jon Karrikaburu Substitution",
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 5232,
+    "displayValue": "88'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "89",
+    "displayName": "Real Sociedad"
+   },
+   "participants": [
+    {
+     "athlete": {
+      "id": "324350",
+      "displayName": "Jon Karrikaburu"
+     }
+    },
+    {
+     "athlete": {
+      "id": "388601",
+      "displayName": "Jon Gorrotxategi"
+     }
+    }
+   ],
+   "wallclock": "2026-04-22T19:50:41Z",
+   "shootout": false,
+   "goalPositionX": 0
+  },
+  {
+   "id": "47521335",
+   "type": {
+    "id": "94",
+    "text": "Yellow Card",
+    "type": "yellow-card"
+   },
+   "text": "Mauro Arambarri (Getafe) is shown the yellow card for a bad foul.",
+   "shortText": "Mauro Arambarri Yellow Card",
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 5400,
+    "displayValue": "90'+2'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "2922",
+    "displayName": "Getafe"
+   },
+   "participants": [
+    {
+     "athlete": {
+      "id": "199775",
+      "displayName": "Mauro Arambarri"
+     }
+    }
+   ],
+   "wallclock": "2026-04-22T19:55:24Z",
+   "shootout": false,
+   "goalPositionX": 0
+  },
+  {
+   "id": "47521337",
+   "type": {
+    "id": "94",
+    "text": "Yellow Card",
+    "type": "yellow-card"
+   },
+   "text": "Allan Nyom (Getafe) is shown the yellow card.",
+   "shortText": "Allan Nyom Yellow Card",
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 5400,
+    "displayValue": "90'+3'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "2922",
+    "displayName": "Getafe"
+   },
+   "participants": [
+    {
+     "athlete": {
+      "id": "136945",
+      "displayName": "Allan Nyom"
+     }
+    }
+   ],
+   "wallclock": "2026-04-22T19:56:26Z",
+   "shootout": false,
+   "goalPositionX": 0
+  },
+  {
+   "id": "47521410",
+   "type": {
+    "id": "94",
+    "text": "Yellow Card",
+    "type": "yellow-card"
+   },
+   "text": "Álex Remiro (Real Sociedad) is shown the yellow card.",
+   "shortText": "Álex Remiro Yellow Card",
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 5400,
+    "displayValue": "90'+7'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "89",
+    "displayName": "Real Sociedad"
+   },
+   "participants": [
+    {
+     "athlete": {
+      "id": "217319",
+      "displayName": "Álex Remiro"
+     }
+    }
+   ],
+   "wallclock": "2026-04-22T19:59:39Z",
+   "shootout": false,
+   "goalPositionX": 0
+  },
+  {
+   "id": "47521409",
+   "type": {
+    "id": "94",
+    "text": "Yellow Card",
+    "type": "yellow-card"
+   },
+   "text": "Luis Milla (Getafe) is shown the yellow card.",
+   "shortText": "Luis Milla Yellow Card",
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 5400,
+    "displayValue": "90'+7'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "2922",
+    "displayName": "Getafe"
+   },
+   "participants": [
+    {
+     "athlete": {
+      "id": "264211",
+      "displayName": "Luis Milla"
+     }
+    }
+   ],
+   "wallclock": "2026-04-22T19:59:41Z",
+   "shootout": false,
+   "goalPositionX": 0
+  },
+  {
+   "id": "47521406",
+   "type": {
+    "id": "83",
+    "text": "End Regular Time",
+    "type": "end-regular-time"
+   },
+   "text": "Second Half ends, Real Sociedad 0, Getafe 1.",
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 5400,
+    "displayValue": "90'+7'"
+   },
+   "scoringPlay": false,
+   "wallclock": "2026-04-22T20:00:01Z",
+   "shootout": false,
+   "goalPositionX": 0
+  }
+ ],
+ "gameInfo": {
+  "venue": {
+   "id": "10631",
+   "fullName": "Reale Arena",
+   "shortName": "Reale Arena",
+   "address": {
+    "city": "San Sebastian",
+    "country": "Spain"
+   },
+   "images": []
+  },
+  "attendance": 31464,
+  "officials": [
+   {
+    "fullName": "Mateo Busquets Ferrer",
+    "displayName": "Mateo Busquets Ferrer",
+    "order": 1
+   }
+  ]
+ },
+ "boxscore": {
+  "teams": [
+   {
+    "team": {
+     "id": "89",
+     "slug": "esp.real_sociedad",
+     "location": "Real Sociedad",
+     "name": "Real Sociedad",
+     "abbreviation": "RSO",
+     "displayName": "Real Sociedad",
+     "shortDisplayName": "Real Sociedad",
+     "color": "3366CC",
+     "alternateColor": "000000",
+     "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/89.png",
+     "uniform": {
+      "type": "home",
+      "color": "FFFFFF",
+      "alternateColor": "0000FF"
+     }
+    },
+    "statistics": [
+     {
+      "name": "foulsCommitted",
+      "displayValue": "13",
+      "label": "Fouls"
+     },
+     {
+      "name": "yellowCards",
+      "displayValue": "4",
+      "label": "Yellow Cards"
+     },
+     {
+      "name": "redCards",
+      "displayValue": "0",
+      "label": "Red Cards"
+     },
+     {
+      "name": "offsides",
+      "displayValue": "5",
+      "label": "Offsides"
+     },
+     {
+      "name": "wonCorners",
+      "displayValue": "6",
+      "label": "Corner Kicks"
+     },
+     {
+      "name": "saves",
+      "displayValue": "0",
+      "label": "Saves"
+     },
+     {
+      "name": "possessionPct",
+      "displayValue": "66.5",
+      "label": "Possession"
+     },
+     {
+      "name": "totalShots",
+      "displayValue": "13",
+      "label": "SHOTS"
+     },
+     {
+      "name": "shotsOnTarget",
+      "displayValue": "4",
+      "label": "ON GOAL"
+     },
+     {
+      "name": "shotPct",
+      "displayValue": "0.3",
+      "label": "On Target %"
+     },
+     {
+      "name": "penaltyKickGoals",
+      "displayValue": "0",
+      "label": "Penalty Goals"
+     },
+     {
+      "name": "penaltyKickShots",
+      "displayValue": "1",
+      "label": "Penalty Kicks Taken"
+     },
+     {
+      "name": "accuratePasses",
+      "displayValue": "422",
+      "label": "Accurate Passes"
+     },
+     {
+      "name": "totalPasses",
+      "displayValue": "507",
+      "label": "Passes"
+     },
+     {
+      "name": "passPct",
+      "displayValue": "0.8",
+      "label": "Pass Completion %"
+     },
+     {
+      "name": "accurateCrosses",
+      "displayValue": "4",
+      "label": "Accurate Crosses"
+     },
+     {
+      "name": "totalCrosses",
+      "displayValue": "13",
+      "label": "Crosses"
+     },
+     {
+      "name": "crossPct",
+      "displayValue": "0.3",
+      "label": "Cross %"
+     },
+     {
+      "name": "totalLongBalls",
+      "displayValue": "44",
+      "label": "Long Balls"
+     },
+     {
+      "name": "accurateLongBalls",
+      "displayValue": "21",
+      "label": "Accurate Long Balls"
+     },
+     {
+      "name": "longballPct",
+      "displayValue": "0.5",
+      "label": "Long Balls %"
+     },
+     {
+      "name": "blockedShots",
+      "displayValue": "4",
+      "label": "Blocked Shots"
+     },
+     {
+      "name": "effectiveTackles",
+      "displayValue": "13",
+      "label": "Effective Tackles"
+     },
+     {
+      "name": "totalTackles",
+      "displayValue": "17",
+      "label": "Tackles"
+     },
+     {
+      "name": "tacklePct",
+      "displayValue": "0.8",
+      "label": "Tackle %"
+     },
+     {
+      "name": "interceptions",
+      "displayValue": "9",
+      "label": "Interceptions"
+     },
+     {
+      "name": "effectiveClearance",
+      "displayValue": "36",
+      "label": "Effective Clearances"
+     },
+     {
+      "name": "totalClearance",
+      "displayValue": "36",
+      "label": "Clearances"
+     }
+    ],
+    "displayOrder": 1,
+    "homeAway": "home"
+   },
+   {
+    "team": {
+     "id": "2922",
+     "slug": "esp.getafe",
+     "location": "Getafe",
+     "name": "Getafe",
+     "abbreviation": "GET",
+     "displayName": "Getafe",
+     "shortDisplayName": "Getafe",
+     "color": "0000ff",
+     "alternateColor": "7F1734",
+     "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2922.png",
+     "uniform": {
+      "type": "away",
+      "color": "d91926"
+     }
+    },
+    "statistics": [
+     {
+      "name": "foulsCommitted",
+      "displayValue": "22",
+      "label": "Fouls"
+     },
+     {
+      "name": "yellowCards",
+      "displayValue": "5",
+      "label": "Yellow Cards"
+     },
+     {
+      "name": "redCards",
+      "displayValue": "0",
+      "label": "Red Cards"
+     },
+     {
+      "name": "offsides",
+      "displayValue": "1",
+      "label": "Offsides"
+     },
+     {
+      "name": "wonCorners",
+      "displayValue": "3",
+      "label": "Corner Kicks"
+     },
+     {
+      "name": "saves",
+      "displayValue": "3",
+      "label": "Saves"
+     },
+     {
+      "name": "possessionPct",
+      "displayValue": "33.5",
+      "label": "Possession"
+     },
+     {
+      "name": "totalShots",
+      "displayValue": "5",
+      "label": "SHOTS"
+     },
+     {
+      "name": "shotsOnTarget",
+      "displayValue": "0",
+      "label": "ON GOAL"
+     },
+     {
+      "name": "shotPct",
+      "displayValue": "0.0",
+      "label": "On Target %"
+     },
+     {
+      "name": "penaltyKickGoals",
+      "displayValue": "0",
+      "label": "Penalty Goals"
+     },
+     {
+      "name": "penaltyKickShots",
+      "displayValue": "0",
+      "label": "Penalty Kicks Taken"
+     },
+     {
+      "name": "accuratePasses",
+      "displayValue": "156",
+      "label": "Accurate Passes"
+     },
+     {
+      "name": "totalPasses",
+      "displayValue": "251",
+      "label": "Passes"
+     },
+     {
+      "name": "passPct",
+      "displayValue": "0.6",
+      "label": "Pass Completion %"
+     },
+     {
+      "name": "accurateCrosses",
+      "displayValue": "1",
+      "label": "Accurate Crosses"
+     },
+     {
+      "name": "totalCrosses",
+      "displayValue": "13",
+      "label": "Crosses"
+     },
+     {
+      "name": "crossPct",
+      "displayValue": "0.1",
+      "label": "Cross %"
+     },
+     {
+      "name": "totalLongBalls",
+      "displayValue": "70",
+      "label": "Long Balls"
+     },
+     {
+      "name": "accurateLongBalls",
+      "displayValue": "27",
+      "label": "Accurate Long Balls"
+     },
+     {
+      "name": "longballPct",
+      "displayValue": "0.4",
+      "label": "Long Balls %"
+     },
+     {
+      "name": "blockedShots",
+      "displayValue": "1",
+      "label": "Blocked Shots"
+     },
+     {
+      "name": "effectiveTackles",
+      "displayValue": "12",
+      "label": "Effective Tackles"
+     },
+     {
+      "name": "totalTackles",
+      "displayValue": "18",
+      "label": "Tackles"
+     },
+     {
+      "name": "tacklePct",
+      "displayValue": "0.7",
+      "label": "Tackle %"
+     },
+     {
+      "name": "interceptions",
+      "displayValue": "15",
+      "label": "Interceptions"
+     },
+     {
+      "name": "effectiveClearance",
+      "displayValue": "22",
+      "label": "Effective Clearances"
+     },
+     {
+      "name": "totalClearance",
+      "displayValue": "22",
+      "label": "Clearances"
+     }
+    ],
+    "displayOrder": 2,
+    "homeAway": "away"
+   }
+  ]
+ },
+ "rosters": [
+  {
+   "homeAway": "home",
+   "winner": false,
+   "team": {
+    "id": "89",
+    "abbreviation": "RSO",
+    "displayName": "Real Sociedad",
+    "color": "3366CC",
+    "alternateColor": "000000",
+    "logos": [
+     {
+      "href": "https://a.espncdn.com/i/teamlogos/soccer/500/89.png",
+      "rel": [
+       "full",
+       "default"
+      ]
+     }
+    ]
+   },
+   "roster": [
+    {
+     "starter": true,
+     "jersey": "1",
+     "athlete": {
+      "id": "217319",
+      "displayName": "Álex Remiro",
+      "shortName": "Á. Remiro"
+     },
+     "position": {
+      "name": "Goalkeeper",
+      "displayName": "Goalkeeper",
+      "abbreviation": "G"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "1"
+    },
+    {
+     "starter": true,
+     "jersey": "16",
+     "athlete": {
+      "id": "194766",
+      "displayName": "Duje Caleta-Car",
+      "shortName": "D. Caleta-Car"
+     },
+     "position": {
+      "name": "Center Left Defender",
+      "displayName": "Center Left Defender",
+      "abbreviation": "CD-L"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "6"
+    },
+    {
+     "starter": true,
+     "jersey": "31",
+     "athlete": {
+      "id": "366885",
+      "displayName": "Jon Martín",
+      "shortName": "J. Martín"
+     },
+     "position": {
+      "name": "Center Right Defender",
+      "displayName": "Center Right Defender",
+      "abbreviation": "CD-R"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "5"
+    },
+    {
+     "starter": true,
+     "jersey": "3",
+     "athlete": {
+      "id": "283891",
+      "displayName": "Aihen Muñoz",
+      "shortName": "A. Muñoz"
+     },
+     "position": {
+      "name": "Left Back",
+      "displayName": "Left Back",
+      "abbreviation": "LB"
+     },
+     "subbedIn": false,
+     "subbedOut": true,
+     "formationPlace": "3"
+    },
+    {
+     "starter": true,
+     "jersey": "6",
+     "athlete": {
+      "id": "214742",
+      "displayName": "Aritz Elustondo",
+      "shortName": "A. Elustondo"
+     },
+     "position": {
+      "name": "Right Back",
+      "displayName": "Right Back",
+      "abbreviation": "RB"
+     },
+     "subbedIn": false,
+     "subbedOut": true,
+     "formationPlace": "2"
+    },
+    {
+     "starter": true,
+     "jersey": "23",
+     "athlete": {
+      "id": "262729",
+      "displayName": "Brais Méndez",
+      "shortName": "B. Méndez"
+     },
+     "position": {
+      "name": "Attacking Midfielder",
+      "displayName": "Attacking Midfielder",
+      "abbreviation": "AM"
+     },
+     "subbedIn": false,
+     "subbedOut": true,
+     "formationPlace": "10"
+    },
+    {
+     "starter": true,
+     "jersey": "18",
+     "athlete": {
+      "id": "235072",
+      "displayName": "Carlos Soler",
+      "shortName": "C. Soler"
+     },
+     "position": {
+      "name": "Left Midfielder",
+      "displayName": "Left Midfielder",
+      "abbreviation": "LM"
+     },
+     "subbedIn": false,
+     "subbedOut": true,
+     "formationPlace": "4"
+    },
+    {
+     "starter": true,
+     "jersey": "4",
+     "athlete": {
+      "id": "388601",
+      "displayName": "Jon Gorrotxategi",
+      "shortName": "J. Gorrotxategi"
+     },
+     "position": {
+      "name": "Right Midfielder",
+      "displayName": "Right Midfielder",
+      "abbreviation": "RM"
+     },
+     "subbedIn": false,
+     "subbedOut": true,
+     "formationPlace": "8"
+    },
+    {
+     "starter": true,
+     "jersey": "9",
+     "athlete": {
+      "id": "341367",
+      "displayName": "Orri Óskarsson",
+      "shortName": "O. Óskarsson"
+     },
+     "position": {
+      "name": "Forward",
+      "displayName": "Forward",
+      "abbreviation": "F"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "9"
+    },
+    {
+     "starter": true,
+     "jersey": "15",
+     "athlete": {
+      "id": "326900",
+      "displayName": "Pablo Marín",
+      "shortName": "P. Marín"
+     },
+     "position": {
+      "name": "Attacking Midfielder Left",
+      "displayName": "Attacking Midfielder Left",
+      "abbreviation": "AM-L"
+     },
+     "subbedIn": false,
+     "subbedOut": true,
+     "formationPlace": "11"
+    },
+    {
+     "starter": true,
+     "jersey": "14",
+     "athlete": {
+      "id": "256587",
+      "displayName": "Takefusa Kubo",
+      "shortName": "T. Kubo"
+     },
+     "position": {
+      "name": "Attacking Midfielder Right",
+      "displayName": "Attacking Midfielder Right",
+      "abbreviation": "AM-R"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "7"
+    },
+    {
+     "starter": false,
+     "jersey": "46",
+     "athlete": {
+      "id": "410486",
+      "displayName": "Ibai Aguirre",
+      "shortName": "I. Aguirre"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "13",
+     "athlete": {
+      "id": "312011",
+      "displayName": "Unai Marrero",
+      "shortName": "U. Marrero"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "7",
+     "athlete": {
+      "id": "283941",
+      "displayName": "Ander Barrenetxea",
+      "shortName": "A. Barrenetxea"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": true,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "38",
+     "athlete": {
+      "id": "396607",
+      "displayName": "Luken Beitia",
+      "shortName": "L. Beitia"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "22",
+     "athlete": {
+      "id": "304533",
+      "displayName": "Wesley Ribeiro",
+      "shortName": "W. Ribeiro"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": true,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "12",
+     "athlete": {
+      "id": "236185",
+      "displayName": "Yangel Herrera",
+      "shortName": "Y. Herrera"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "19",
+     "athlete": {
+      "id": "324350",
+      "displayName": "Jon Karrikaburu",
+      "shortName": "J. Karrikaburu"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": true,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "2",
+     "athlete": {
+      "id": "318063",
+      "displayName": "Jon Aramburu",
+      "shortName": "J. Aramburu"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": true,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "21",
+     "athlete": {
+      "id": "307487",
+      "displayName": "Arsen Zakharyan",
+      "shortName": "A. Zakharyan"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "8",
+     "athlete": {
+      "id": "297371",
+      "displayName": "Beñat Turrientes",
+      "shortName": "B. Turrientes"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": true,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "10",
+     "athlete": {
+      "id": "229018",
+      "displayName": "Mikel Oyarzabal",
+      "shortName": "M. Oyarzabal"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": true,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "24",
+     "athlete": {
+      "id": "306263",
+      "displayName": "Luka Sucic",
+      "shortName": "L. Sucic"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "0"
+    }
+   ],
+   "uniform": {
+    "type": "home",
+    "color": "FFFFFF",
+    "alternateColor": "0000FF"
+   },
+   "formation": "4-2-3-1"
+  },
+  {
+   "homeAway": "away",
+   "winner": true,
+   "team": {
+    "id": "2922",
+    "abbreviation": "GET",
+    "displayName": "Getafe",
+    "color": "0000ff",
+    "alternateColor": "7F1734",
+    "logos": [
+     {
+      "href": "https://a.espncdn.com/i/teamlogos/soccer/500/2922.png",
+      "rel": [
+       "full",
+       "default"
+      ]
+     }
+    ]
+   },
+   "roster": [
+    {
+     "starter": true,
+     "jersey": "13",
+     "athlete": {
+      "id": "196339",
+      "displayName": "David Soria",
+      "shortName": "D. Soria"
+     },
+     "position": {
+      "name": "Goalkeeper",
+      "displayName": "Goalkeeper",
+      "abbreviation": "G"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "1"
+    },
+    {
+     "starter": true,
+     "jersey": "3",
+     "athlete": {
+      "id": "277876",
+      "displayName": "Abdel Abqar",
+      "shortName": "A. Abqar"
+     },
+     "position": {
+      "name": "Center Defender",
+      "displayName": "Center Defender",
+      "abbreviation": "CD"
+     },
+     "subbedIn": false,
+     "subbedOut": true,
+     "formationPlace": "5"
+    },
+    {
+     "starter": true,
+     "jersey": "2",
+     "athlete": {
+      "id": "181355",
+      "displayName": "Djené",
+      "shortName": "Djené"
+     },
+     "position": {
+      "name": "Center Left Defender",
+      "displayName": "Center Left Defender",
+      "abbreviation": "CD-L"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "4"
+    },
+    {
+     "starter": true,
+     "jersey": "15",
+     "athlete": {
+      "id": "359826",
+      "displayName": "Sebastián Boselli",
+      "shortName": "S. Boselli"
+     },
+     "position": {
+      "name": "Center Right Defender",
+      "displayName": "Center Right Defender",
+      "abbreviation": "CD-R"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "6"
+    },
+    {
+     "starter": true,
+     "jersey": "21",
+     "athlete": {
+      "id": "279738",
+      "displayName": "Juan Iglesias",
+      "shortName": "J. Iglesias"
+     },
+     "position": {
+      "name": "Left Back",
+      "displayName": "Left Back",
+      "abbreviation": "LB"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "3"
+    },
+    {
+     "starter": true,
+     "jersey": "17",
+     "athlete": {
+      "id": "125749",
+      "displayName": "Kiko Femenía",
+      "shortName": "K. Femenía"
+     },
+     "position": {
+      "name": "Right Back",
+      "displayName": "Right Back",
+      "abbreviation": "RB"
+     },
+     "subbedIn": false,
+     "subbedOut": true,
+     "formationPlace": "2"
+    },
+    {
+     "starter": true,
+     "jersey": "5",
+     "athlete": {
+      "id": "264211",
+      "displayName": "Luis Milla",
+      "shortName": "L. Milla"
+     },
+     "position": {
+      "name": "Center Midfielder",
+      "displayName": "Center Midfielder",
+      "abbreviation": "CM"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "8"
+    },
+    {
+     "starter": true,
+     "jersey": "8",
+     "athlete": {
+      "id": "199775",
+      "displayName": "Mauro Arambarri",
+      "shortName": "M. Arambarri"
+     },
+     "position": {
+      "name": "Center Left Midfielder",
+      "displayName": "Center Left Midfielder",
+      "abbreviation": "CM-L"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "11"
+    },
+    {
+     "starter": true,
+     "jersey": "6",
+     "athlete": {
+      "id": "357147",
+      "displayName": "Mario Martín",
+      "shortName": "M. Martín"
+     },
+     "position": {
+      "name": "Center Right Midfielder",
+      "displayName": "Center Right Midfielder",
+      "abbreviation": "CM-R"
+     },
+     "subbedIn": false,
+     "subbedOut": true,
+     "formationPlace": "7"
+    },
+    {
+     "starter": true,
+     "jersey": "10",
+     "athlete": {
+      "id": "284854",
+      "displayName": "Martín Satriano",
+      "shortName": "M. Satriano"
+     },
+     "position": {
+      "name": "Center Left Forward",
+      "displayName": "Center Left Forward",
+      "abbreviation": "CF-L"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "9"
+    },
+    {
+     "starter": true,
+     "jersey": "19",
+     "athlete": {
+      "id": "285032",
+      "displayName": "Luis Vázquez",
+      "shortName": "L. Vázquez"
+     },
+     "position": {
+      "name": "Center Right Forward",
+      "displayName": "Center Right Forward",
+      "abbreviation": "CF-R"
+     },
+     "subbedIn": false,
+     "subbedOut": true,
+     "formationPlace": "10"
+    },
+    {
+     "starter": false,
+     "jersey": "26",
+     "athlete": {
+      "id": "406832",
+      "displayName": "Davinchi",
+      "shortName": "Davinchi"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "20",
+     "athlete": {
+      "id": "238991",
+      "displayName": "Veljko Birmancevic",
+      "shortName": "V. Birmancevic"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "44",
+     "athlete": {
+      "id": "417541",
+      "displayName": "Adrián Riquelme",
+      "shortName": "A. Riquelme"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "16",
+     "athlete": {
+      "id": "193943",
+      "displayName": "Diego Rico",
+      "shortName": "D. Rico"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": true,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "1",
+     "athlete": {
+      "id": "344245",
+      "displayName": "Jirí Letácek",
+      "shortName": "J. Letácek"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "12",
+     "athlete": {
+      "id": "136945",
+      "displayName": "Allan Nyom",
+      "shortName": "A. Nyom"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": true,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "23",
+     "athlete": {
+      "id": "381682",
+      "displayName": "Adrián Liso",
+      "shortName": "A. Liso"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": true,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "18",
+     "athlete": {
+      "id": "354342",
+      "displayName": "Álex Sancris",
+      "shortName": "Á. Sancris"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "14",
+     "athlete": {
+      "id": "214275",
+      "displayName": "Javi Muñoz",
+      "shortName": "J. Muñoz"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": true,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "41",
+     "athlete": {
+      "id": "415194",
+      "displayName": "Jorge Montes",
+      "shortName": "J. Montes"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "35",
+     "athlete": {
+      "id": "367961",
+      "displayName": "Jorge Benito",
+      "shortName": "J. Benito"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "11",
+     "athlete": {
+      "id": "275674",
+      "displayName": "Abu Kamara",
+      "shortName": "A. Kamara"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "0"
+    }
+   ],
+   "uniform": {
+    "type": "away",
+    "color": "d91926"
+   },
+   "formation": "5-3-2"
+  }
+ ]
+}

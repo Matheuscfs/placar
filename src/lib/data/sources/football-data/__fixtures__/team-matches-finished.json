@@ -1,0 +1,127 @@
+{
+ "matches": [
+  {
+   "season": {
+    "startDate": "2026-01-28"
+   },
+   "matchday": 28,
+   "stage": "REGULAR_SEASON",
+   "group": null,
+   "id": 901,
+   "competition": {
+    "code": "BSA",
+    "name": "Campeonato Brasileiro Série A"
+   },
+   "utcDate": "2026-09-27T22:00:00Z",
+   "status": "FINISHED",
+   "homeTeam": {
+    "id": 1779,
+    "name": "SC Corinthians Paulista",
+    "shortName": "Corinthians",
+    "tla": "COR",
+    "crest": "https://crests.football-data.org/1779.png"
+   },
+   "awayTeam": {
+    "id": 1783,
+    "name": "CR Flamengo",
+    "shortName": "Flamengo",
+    "tla": "FLA",
+    "crest": "https://crests.football-data.org/1783.png"
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 0,
+     "away": 2
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "season": {
+    "startDate": "2026-01-28"
+   },
+   "matchday": 29,
+   "stage": "REGULAR_SEASON",
+   "group": null,
+   "id": 902,
+   "competition": {
+    "code": "BSA",
+    "name": "Campeonato Brasileiro Série A"
+   },
+   "utcDate": "2026-10-05T22:00:00Z",
+   "status": "FINISHED",
+   "homeTeam": {
+    "id": 1769,
+    "name": "SE Palmeiras",
+    "shortName": "Palmeiras",
+    "tla": "PAL",
+    "crest": "https://crests.football-data.org/1769.png"
+   },
+   "awayTeam": {
+    "id": 1779,
+    "name": "SC Corinthians Paulista",
+    "shortName": "Corinthians",
+    "tla": "COR",
+    "crest": "https://crests.football-data.org/1779.png"
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  },
+  {
+   "season": {
+    "startDate": "2026-01-28"
+   },
+   "matchday": 31,
+   "stage": "REGULAR_SEASON",
+   "group": null,
+   "id": 903,
+   "competition": {
+    "code": "BSA",
+    "name": "Campeonato Brasileiro Série A"
+   },
+   "utcDate": "2026-10-19T23:00:00Z",
+   "status": "FINISHED",
+   "homeTeam": {
+    "id": 1779,
+    "name": "SC Corinthians Paulista",
+    "shortName": "Corinthians",
+    "tla": "COR",
+    "crest": "https://crests.football-data.org/1779.png"
+   },
+   "awayTeam": {
+    "id": 4251,
+    "name": "EC Vitória",
+    "shortName": "Vitória",
+    "tla": "VIT",
+    "crest": "https://crests.football-data.org/4251.png"
+   },
+   "score": {
+    "winner": null,
+    "duration": "REGULAR",
+    "fullTime": {
+     "home": 1,
+     "away": 1
+    },
+    "halfTime": {
+     "home": null,
+     "away": null
+    }
+   }
+  }
+ ]
+}

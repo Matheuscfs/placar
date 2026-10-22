@@ -1,0 +1,1736 @@
+{
+ "name": "English Premier League",
+ "season": {
+  "year": 2026
+ },
+ "children": [
+  {
+   "name": "2026-27 English Premier League",
+   "standings": {
+    "seasonDisplayName": "2026-27 English Premier League",
+    "entries": [
+     {
+      "team": {
+       "id": "382",
+       "displayName": "Manchester City",
+       "shortDisplayName": "Man City",
+       "abbreviation": "MNC",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/382.png"
+        }
+       ]
+      },
+      "note": {
+       "color": "#81D6AC",
+       "description": "Champions League",
+       "rank": 1
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 7,
+        "displayValue": "7"
+       },
+       {
+        "name": "losses",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "pointDifferential",
+        "value": 12,
+        "displayValue": "+12"
+       },
+       {
+        "name": "points",
+        "value": 21,
+        "displayValue": "21"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 7,
+        "displayValue": "7"
+       },
+       {
+        "name": "pointsFor",
+        "value": 19,
+        "displayValue": "19"
+       },
+       {
+        "name": "ties",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "wins",
+        "value": 7,
+        "displayValue": "7"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 1,
+        "displayValue": "1"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "7-0-0"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "359",
+       "displayName": "Arsenal",
+       "shortDisplayName": "Arsenal",
+       "abbreviation": "ARS",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/359.png"
+        }
+       ]
+      },
+      "note": {
+       "color": "#81D6AC",
+       "description": "Champions League",
+       "rank": 2
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 7,
+        "displayValue": "7"
+       },
+       {
+        "name": "losses",
+        "value": 1,
+        "displayValue": "1"
+       },
+       {
+        "name": "pointDifferential",
+        "value": 6,
+        "displayValue": "+6"
+       },
+       {
+        "name": "points",
+        "value": 18,
+        "displayValue": "18"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 5,
+        "displayValue": "5"
+       },
+       {
+        "name": "pointsFor",
+        "value": 11,
+        "displayValue": "11"
+       },
+       {
+        "name": "ties",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "wins",
+        "value": 6,
+        "displayValue": "6"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 2,
+        "displayValue": "2"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "6-0-1"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "331",
+       "displayName": "Brighton & Hove Albion",
+       "shortDisplayName": "Brighton",
+       "abbreviation": "BHA",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/331.png"
+        }
+       ]
+      },
+      "note": {
+       "color": "#81D6AC",
+       "description": "Champions League",
+       "rank": 3
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 7,
+        "displayValue": "7"
+       },
+       {
+        "name": "losses",
+        "value": 1,
+        "displayValue": "1"
+       },
+       {
+        "name": "pointDifferential",
+        "value": 18,
+        "displayValue": "+18"
+       },
+       {
+        "name": "points",
+        "value": 16,
+        "displayValue": "16"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 5,
+        "displayValue": "5"
+       },
+       {
+        "name": "pointsFor",
+        "value": 23,
+        "displayValue": "23"
+       },
+       {
+        "name": "ties",
+        "value": 1,
+        "displayValue": "1"
+       },
+       {
+        "name": "wins",
+        "value": 5,
+        "displayValue": "5"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 3,
+        "displayValue": "3"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "5-1-1"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "363",
+       "displayName": "Chelsea",
+       "shortDisplayName": "Chelsea",
+       "abbreviation": "CHE",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/363.png"
+        }
+       ]
+      },
+      "note": {
+       "color": "#81D6AC",
+       "description": "Champions League",
+       "rank": 4
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 7,
+        "displayValue": "7"
+       },
+       {
+        "name": "losses",
+        "value": 2,
+        "displayValue": "2"
+       },
+       {
+        "name": "pointDifferential",
+        "value": 4,
+        "displayValue": "+4"
+       },
+       {
+        "name": "points",
+        "value": 13,
+        "displayValue": "13"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 13,
+        "displayValue": "13"
+       },
+       {
+        "name": "pointsFor",
+        "value": 17,
+        "displayValue": "17"
+       },
+       {
+        "name": "ties",
+        "value": 1,
+        "displayValue": "1"
+       },
+       {
+        "name": "wins",
+        "value": 4,
+        "displayValue": "4"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 4,
+        "displayValue": "4"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "4-1-2"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "364",
+       "displayName": "Liverpool",
+       "shortDisplayName": "Liverpool",
+       "abbreviation": "LIV",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/364.png"
+        }
+       ]
+      },
+      "note": {
+       "color": "##B5E7CE",
+       "description": "Europa League",
+       "rank": 5
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 7,
+        "displayValue": "7"
+       },
+       {
+        "name": "losses",
+        "value": 1,
+        "displayValue": "1"
+       },
+       {
+        "name": "pointDifferential",
+        "value": 1,
+        "displayValue": "+1"
+       },
+       {
+        "name": "points",
+        "value": 12,
+        "displayValue": "12"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 8,
+        "displayValue": "8"
+       },
+       {
+        "name": "pointsFor",
+        "value": 9,
+        "displayValue": "9"
+       },
+       {
+        "name": "ties",
+        "value": 3,
+        "displayValue": "3"
+       },
+       {
+        "name": "wins",
+        "value": 3,
+        "displayValue": "3"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 5,
+        "displayValue": "5"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "3-3-1"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "337",
+       "displayName": "Brentford",
+       "shortDisplayName": "Brentford",
+       "abbreviation": "BRE",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/337.png"
+        }
+       ]
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 7,
+        "displayValue": "7"
+       },
+       {
+        "name": "losses",
+        "value": 1,
+        "displayValue": "1"
+       },
+       {
+        "name": "pointDifferential",
+        "value": 5,
+        "displayValue": "+5"
+       },
+       {
+        "name": "points",
+        "value": 10,
+        "displayValue": "10"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 8,
+        "displayValue": "8"
+       },
+       {
+        "name": "pointsFor",
+        "value": 13,
+        "displayValue": "13"
+       },
+       {
+        "name": "ties",
+        "value": 4,
+        "displayValue": "4"
+       },
+       {
+        "name": "wins",
+        "value": 2,
+        "displayValue": "2"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 6,
+        "displayValue": "6"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "2-4-1"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "357",
+       "displayName": "Leeds United",
+       "shortDisplayName": "Leeds",
+       "abbreviation": "LEE",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png"
+        }
+       ]
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 7,
+        "displayValue": "7"
+       },
+       {
+        "name": "losses",
+        "value": 1,
+        "displayValue": "1"
+       },
+       {
+        "name": "pointDifferential",
+        "value": 3,
+        "displayValue": "+3"
+       },
+       {
+        "name": "points",
+        "value": 10,
+        "displayValue": "10"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 6,
+        "displayValue": "6"
+       },
+       {
+        "name": "pointsFor",
+        "value": 9,
+        "displayValue": "9"
+       },
+       {
+        "name": "ties",
+        "value": 4,
+        "displayValue": "4"
+       },
+       {
+        "name": "wins",
+        "value": 2,
+        "displayValue": "2"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 7,
+        "displayValue": "7"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "2-4-1"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "368",
+       "displayName": "Everton",
+       "shortDisplayName": "Everton",
+       "abbreviation": "EVE",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/368.png"
+        }
+       ]
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 7,
+        "displayValue": "7"
+       },
+       {
+        "name": "losses",
+        "value": 1,
+        "displayValue": "1"
+       },
+       {
+        "name": "pointDifferential",
+        "value": 1,
+        "displayValue": "+1"
+       },
+       {
+        "name": "points",
+        "value": 10,
+        "displayValue": "10"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 7,
+        "displayValue": "7"
+       },
+       {
+        "name": "pointsFor",
+        "value": 8,
+        "displayValue": "8"
+       },
+       {
+        "name": "ties",
+        "value": 4,
+        "displayValue": "4"
+       },
+       {
+        "name": "wins",
+        "value": 2,
+        "displayValue": "2"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 8,
+        "displayValue": "8"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "2-4-1"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "306",
+       "displayName": "Hull City",
+       "shortDisplayName": "Hull",
+       "abbreviation": "HUL",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/306.png"
+        }
+       ]
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 7,
+        "displayValue": "7"
+       },
+       {
+        "name": "losses",
+        "value": 2,
+        "displayValue": "2"
+       },
+       {
+        "name": "pointDifferential",
+        "value": 1,
+        "displayValue": "+1"
+       },
+       {
+        "name": "points",
+        "value": 9,
+        "displayValue": "9"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 7,
+        "displayValue": "7"
+       },
+       {
+        "name": "pointsFor",
+        "value": 8,
+        "displayValue": "8"
+       },
+       {
+        "name": "ties",
+        "value": 3,
+        "displayValue": "3"
+       },
+       {
+        "name": "wins",
+        "value": 2,
+        "displayValue": "2"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 9,
+        "displayValue": "9"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "2-3-2"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "373",
+       "displayName": "Ipswich Town",
+       "shortDisplayName": "Ipswich",
+       "abbreviation": "IPS",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/373.png"
+        }
+       ]
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 7,
+        "displayValue": "7"
+       },
+       {
+        "name": "losses",
+        "value": 4,
+        "displayValue": "4"
+       },
+       {
+        "name": "pointDifferential",
+        "value": -4,
+        "displayValue": "-4"
+       },
+       {
+        "name": "points",
+        "value": 9,
+        "displayValue": "9"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 15,
+        "displayValue": "15"
+       },
+       {
+        "name": "pointsFor",
+        "value": 11,
+        "displayValue": "11"
+       },
+       {
+        "name": "ties",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "wins",
+        "value": 3,
+        "displayValue": "3"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 10,
+        "displayValue": "10"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "3-0-4"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "361",
+       "displayName": "Newcastle United",
+       "shortDisplayName": "Newcastle",
+       "abbreviation": "NEW",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/361.png"
+        }
+       ]
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 7,
+        "displayValue": "7"
+       },
+       {
+        "name": "losses",
+        "value": 3,
+        "displayValue": "3"
+       },
+       {
+        "name": "pointDifferential",
+        "value": -4,
+        "displayValue": "-4"
+       },
+       {
+        "name": "points",
+        "value": 8,
+        "displayValue": "8"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 14,
+        "displayValue": "14"
+       },
+       {
+        "name": "pointsFor",
+        "value": 10,
+        "displayValue": "10"
+       },
+       {
+        "name": "ties",
+        "value": 2,
+        "displayValue": "2"
+       },
+       {
+        "name": "wins",
+        "value": 2,
+        "displayValue": "2"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 11,
+        "displayValue": "11"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "2-2-3"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "362",
+       "displayName": "Aston Villa",
+       "shortDisplayName": "Aston Villa",
+       "abbreviation": "AVL",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/362.png"
+        }
+       ]
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 7,
+        "displayValue": "7"
+       },
+       {
+        "name": "losses",
+        "value": 3,
+        "displayValue": "3"
+       },
+       {
+        "name": "pointDifferential",
+        "value": -4,
+        "displayValue": "-4"
+       },
+       {
+        "name": "points",
+        "value": 8,
+        "displayValue": "8"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 11,
+        "displayValue": "11"
+       },
+       {
+        "name": "pointsFor",
+        "value": 7,
+        "displayValue": "7"
+       },
+       {
+        "name": "ties",
+        "value": 2,
+        "displayValue": "2"
+       },
+       {
+        "name": "wins",
+        "value": 2,
+        "displayValue": "2"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 12,
+        "displayValue": "12"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "2-2-3"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "360",
+       "displayName": "Manchester United",
+       "shortDisplayName": "Man United",
+       "abbreviation": "MAN",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/360.png"
+        }
+       ]
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 7,
+        "displayValue": "7"
+       },
+       {
+        "name": "losses",
+        "value": 2,
+        "displayValue": "2"
+       },
+       {
+        "name": "pointDifferential",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "points",
+        "value": 7,
+        "displayValue": "7"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 10,
+        "displayValue": "10"
+       },
+       {
+        "name": "pointsFor",
+        "value": 10,
+        "displayValue": "10"
+       },
+       {
+        "name": "ties",
+        "value": 4,
+        "displayValue": "4"
+       },
+       {
+        "name": "wins",
+        "value": 1,
+        "displayValue": "1"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 13,
+        "displayValue": "13"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "1-4-2"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "384",
+       "displayName": "Crystal Palace",
+       "shortDisplayName": "C Palace",
+       "abbreviation": "CRY",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/384.png"
+        }
+       ]
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 7,
+        "displayValue": "7"
+       },
+       {
+        "name": "losses",
+        "value": 4,
+        "displayValue": "4"
+       },
+       {
+        "name": "pointDifferential",
+        "value": -8,
+        "displayValue": "-8"
+       },
+       {
+        "name": "points",
+        "value": 7,
+        "displayValue": "7"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 17,
+        "displayValue": "17"
+       },
+       {
+        "name": "pointsFor",
+        "value": 9,
+        "displayValue": "9"
+       },
+       {
+        "name": "ties",
+        "value": 1,
+        "displayValue": "1"
+       },
+       {
+        "name": "wins",
+        "value": 2,
+        "displayValue": "2"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 14,
+        "displayValue": "14"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "2-1-4"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "349",
+       "displayName": "AFC Bournemouth",
+       "shortDisplayName": "Bournemouth",
+       "abbreviation": "BOU",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/349.png"
+        }
+       ]
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 7,
+        "displayValue": "7"
+       },
+       {
+        "name": "losses",
+        "value": 3,
+        "displayValue": "3"
+       },
+       {
+        "name": "pointDifferential",
+        "value": -4,
+        "displayValue": "-4"
+       },
+       {
+        "name": "points",
+        "value": 6,
+        "displayValue": "6"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 13,
+        "displayValue": "13"
+       },
+       {
+        "name": "pointsFor",
+        "value": 9,
+        "displayValue": "9"
+       },
+       {
+        "name": "ties",
+        "value": 3,
+        "displayValue": "3"
+       },
+       {
+        "name": "wins",
+        "value": 1,
+        "displayValue": "1"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 15,
+        "displayValue": "15"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "1-3-3"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "367",
+       "displayName": "Tottenham Hotspur",
+       "shortDisplayName": "Spurs",
+       "abbreviation": "TOT",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/367.png"
+        }
+       ]
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 7,
+        "displayValue": "7"
+       },
+       {
+        "name": "losses",
+        "value": 3,
+        "displayValue": "3"
+       },
+       {
+        "name": "pointDifferential",
+        "value": -4,
+        "displayValue": "-4"
+       },
+       {
+        "name": "points",
+        "value": 6,
+        "displayValue": "6"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 10,
+        "displayValue": "10"
+       },
+       {
+        "name": "pointsFor",
+        "value": 6,
+        "displayValue": "6"
+       },
+       {
+        "name": "ties",
+        "value": 3,
+        "displayValue": "3"
+       },
+       {
+        "name": "wins",
+        "value": 1,
+        "displayValue": "1"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 16,
+        "displayValue": "16"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "1-3-3"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "388",
+       "displayName": "Coventry City",
+       "shortDisplayName": "Coventry",
+       "abbreviation": "COV",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/388.png"
+        }
+       ]
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 7,
+        "displayValue": "7"
+       },
+       {
+        "name": "losses",
+        "value": 5,
+        "displayValue": "5"
+       },
+       {
+        "name": "pointDifferential",
+        "value": -8,
+        "displayValue": "-8"
+       },
+       {
+        "name": "points",
+        "value": 6,
+        "displayValue": "6"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 14,
+        "displayValue": "14"
+       },
+       {
+        "name": "pointsFor",
+        "value": 6,
+        "displayValue": "6"
+       },
+       {
+        "name": "ties",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "wins",
+        "value": 2,
+        "displayValue": "2"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 17,
+        "displayValue": "17"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "2-0-5"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "370",
+       "displayName": "Fulham",
+       "shortDisplayName": "Fulham",
+       "abbreviation": "FUL",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/370.png"
+        }
+       ]
+      },
+      "note": {
+       "color": "#FF7F84",
+       "description": "Relegation",
+       "rank": 18
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 7,
+        "displayValue": "7"
+       },
+       {
+        "name": "losses",
+        "value": 4,
+        "displayValue": "4"
+       },
+       {
+        "name": "pointDifferential",
+        "value": -3,
+        "displayValue": "-3"
+       },
+       {
+        "name": "points",
+        "value": 5,
+        "displayValue": "5"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 10,
+        "displayValue": "10"
+       },
+       {
+        "name": "pointsFor",
+        "value": 7,
+        "displayValue": "7"
+       },
+       {
+        "name": "ties",
+        "value": 2,
+        "displayValue": "2"
+       },
+       {
+        "name": "wins",
+        "value": 1,
+        "displayValue": "1"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 18,
+        "displayValue": "18"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "1-2-4"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "393",
+       "displayName": "Nottingham Forest",
+       "shortDisplayName": "Nottm Forest",
+       "abbreviation": "NFO",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/393.png"
+        }
+       ]
+      },
+      "note": {
+       "color": "#FF7F84",
+       "description": "Relegation",
+       "rank": 19
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 7,
+        "displayValue": "7"
+       },
+       {
+        "name": "losses",
+        "value": 4,
+        "displayValue": "4"
+       },
+       {
+        "name": "pointDifferential",
+        "value": -4,
+        "displayValue": "-4"
+       },
+       {
+        "name": "points",
+        "value": 5,
+        "displayValue": "5"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 9,
+        "displayValue": "9"
+       },
+       {
+        "name": "pointsFor",
+        "value": 5,
+        "displayValue": "5"
+       },
+       {
+        "name": "ties",
+        "value": 2,
+        "displayValue": "2"
+       },
+       {
+        "name": "wins",
+        "value": 1,
+        "displayValue": "1"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 19,
+        "displayValue": "19"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "1-2-4"
+       }
+      ]
+     },
+     {
+      "team": {
+       "id": "366",
+       "displayName": "Sunderland",
+       "shortDisplayName": "Sunderland",
+       "abbreviation": "SUN",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png"
+        }
+       ]
+      },
+      "note": {
+       "color": "#FF7F84",
+       "description": "Relegation",
+       "rank": 20
+      },
+      "stats": [
+       {
+        "name": "gamesPlayed",
+        "value": 7,
+        "displayValue": "7"
+       },
+       {
+        "name": "losses",
+        "value": 5,
+        "displayValue": "5"
+       },
+       {
+        "name": "pointDifferential",
+        "value": -8,
+        "displayValue": "-8"
+       },
+       {
+        "name": "points",
+        "value": 4,
+        "displayValue": "4"
+       },
+       {
+        "name": "pointsAgainst",
+        "value": 14,
+        "displayValue": "14"
+       },
+       {
+        "name": "pointsFor",
+        "value": 6,
+        "displayValue": "6"
+       },
+       {
+        "name": "ties",
+        "value": 1,
+        "displayValue": "1"
+       },
+       {
+        "name": "wins",
+        "value": 1,
+        "displayValue": "1"
+       },
+       {
+        "name": "advanced",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "deductions",
+        "value": 0,
+        "displayValue": ""
+       },
+       {
+        "name": "ppg",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "rank",
+        "value": 20,
+        "displayValue": "20"
+       },
+       {
+        "name": "rankChange",
+        "value": 0,
+        "displayValue": "0"
+       },
+       {
+        "name": "overall",
+        "displayValue": "1-1-5"
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

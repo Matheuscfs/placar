@@ -1,0 +1,19 @@
+{
+ "team": {
+  "id": "874",
+  "displayName": "Corinthians",
+  "shortDisplayName": "Corinthians",
+  "abbreviation": "COR",
+  "color": "000000",
+  "logos": [
+   {
+    "href": "https://a.espncdn.com/i/teamlogos/soccer/500/874.png",
+    "rel": [
+     "full",
+     "default"
+    ]
+   }
+  ],
+  "standingSummary": "16th in Brazilian Serie A"
+ }
+}

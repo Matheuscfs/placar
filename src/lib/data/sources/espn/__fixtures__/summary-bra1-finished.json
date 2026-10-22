@@ -1,0 +1,2232 @@
+{
+ "header": {
+  "id": "401841272",
+  "season": {
+   "year": 2026,
+   "current": true,
+   "type": 13907,
+   "name": "2026 Brasileiro Serie A "
+  },
+  "timeValid": true,
+  "competitions": [
+   {
+    "id": "401841272",
+    "date": "2026-10-19T23:00Z",
+    "neutralSite": false,
+    "conferenceCompetition": false,
+    "boxscoreAvailable": true,
+    "commentaryAvailable": true,
+    "liveAvailable": false,
+    "recent": false,
+    "boxscoreSource": "full",
+    "playByPlaySource": "full",
+    "competitors": [
+     {
+      "id": "874",
+      "order": 0,
+      "homeAway": "home",
+      "winner": false,
+      "team": {
+       "id": "874",
+       "location": "Corinthians",
+       "name": "Corinthians",
+       "abbreviation": "COR",
+       "displayName": "Corinthians",
+       "shortDisplayName": "Corinthians",
+       "color": "000000",
+       "alternateColor": "fafafc",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/874.png",
+         "rel": [
+          "full",
+          "default"
+         ]
+        }
+       ],
+       "groups": {
+        "name": "2026"
+       },
+       "form": "DLLLL"
+      },
+      "score": "1",
+      "linescores": [
+       {
+        "displayValue": "0"
+       },
+       {
+        "displayValue": "1"
+       }
+      ],
+      "record": [
+       {
+        "type": "total",
+        "summary": "8-9-14",
+        "displayValue": "8-9-14"
+       },
+       {
+        "type": "points",
+        "summary": "33",
+        "displayValue": "33"
+       }
+      ],
+      "possession": false
+     },
+     {
+      "id": "3457",
+      "order": 1,
+      "homeAway": "away",
+      "winner": false,
+      "team": {
+       "id": "3457",
+       "location": "Vitória",
+       "name": "Vitória",
+       "abbreviation": "VIT",
+       "displayName": "Vitória",
+       "shortDisplayName": "Vitória",
+       "color": "C6101C",
+       "alternateColor": "C60000",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/soccer/500/3457.png",
+         "rel": [
+          "full",
+          "default"
+         ]
+        }
+       ],
+       "groups": {
+        "name": "2026"
+       },
+       "form": "DLWLD"
+      },
+      "score": "1",
+      "linescores": [
+       {
+        "displayValue": "1"
+       },
+       {
+        "displayValue": "0"
+       }
+      ],
+      "record": [
+       {
+        "type": "total",
+        "summary": "10-7-14",
+        "displayValue": "10-7-14"
+       },
+       {
+        "type": "points",
+        "summary": "37",
+        "displayValue": "37"
+       }
+      ],
+      "possession": false
+     }
+    ],
+    "notes": [],
+    "status": {
+     "type": {
+      "id": "28",
+      "name": "STATUS_FULL_TIME",
+      "state": "post",
+      "completed": true,
+      "description": "Full Time",
+      "detail": "FT",
+      "shortDetail": "FT"
+     }
+    },
+    "details": [
+     {
+      "clock": {
+       "value": 2700,
+       "displayValue": "45'+1'"
+      },
+      "scoringPlay": true,
+      "team": {
+       "id": "3457",
+       "location": "Vitória",
+       "name": "Vitória",
+       "abbreviation": "VIT",
+       "displayName": "Vitória"
+      },
+      "participants": [
+       {
+        "athlete": {
+         "id": "379359",
+         "displayName": "Renê",
+         "shortName": "Renê"
+        }
+       }
+      ],
+      "addedClock": {
+       "value": 15,
+       "displayValue": "1"
+      },
+      "redCard": false,
+      "penaltyKick": false,
+      "ownGoal": false
+     },
+     {
+      "clock": {
+       "value": 3935,
+       "displayValue": "66'"
+      },
+      "scoringPlay": true,
+      "team": {
+       "id": "874",
+       "location": "Corinthians",
+       "name": "Corinthians",
+       "abbreviation": "COR",
+       "displayName": "Corinthians"
+      },
+      "participants": [
+       {
+        "athlete": {
+         "id": "266666",
+         "displayName": "Yuri Alberto",
+         "shortName": "Y. Alberto"
+        }
+       }
+      ],
+      "addedClock": {
+       "value": 0,
+       "displayValue": ""
+      },
+      "redCard": false,
+      "penaltyKick": true,
+      "ownGoal": false
+     }
+    ],
+    "groups": {
+     "id": "1",
+     "name": "Group A",
+     "abbreviation": "Group A"
+    },
+    "isFinal": false,
+    "isThirdPlace": false,
+    "altGameNote": "Brazil Serie A",
+    "boxscoreMinutes": false,
+    "shotMapAvailable": true
+   }
+  ],
+  "league": {
+   "id": "630",
+   "name": "Brazilian Serie A",
+   "abbreviation": "Brazil Serie A",
+   "shortName": "Brazil Serie A",
+   "midsizeName": "BRA.1",
+   "slug": "bra.1",
+   "isTournament": false,
+   "logos": [
+    {
+     "href": "https://a.espncdn.com/i/leaguelogos/soccer/500/85.png",
+     "rel": [
+      "full",
+      "default"
+     ]
+    }
+   ]
+  }
+ },
+ "keyEvents": [
+  {
+   "id": "53969390",
+   "type": {
+    "id": "80",
+    "text": "Kickoff",
+    "type": "kickoff"
+   },
+   "text": "First Half begins.",
+   "period": {
+    "number": 1
+   },
+   "clock": {
+    "value": 0,
+    "displayValue": ""
+   },
+   "scoringPlay": false,
+   "wallclock": "2026-10-19T23:03:34Z",
+   "shootout": false
+  },
+  {
+   "id": "53970392",
+   "type": {
+    "id": "129",
+    "text": "Start Delay",
+    "type": "start-delay"
+   },
+   "text": "Delay in match because of an injury Mateus Silva (Vitória).",
+   "period": {
+    "number": 1
+   },
+   "clock": {
+    "value": 1126,
+    "displayValue": "19'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "3457",
+    "displayName": "Vitória"
+   },
+   "wallclock": "2026-10-19T23:22:21Z",
+   "shootout": false
+  },
+  {
+   "id": "53970393",
+   "type": {
+    "id": "129",
+    "text": "Start Delay",
+    "type": "start-delay"
+   },
+   "text": "Delay in match because of an injury Fabrizio Angileri (Corinthians).",
+   "period": {
+    "number": 1
+   },
+   "clock": {
+    "value": 1126,
+    "displayValue": "19'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "874",
+    "displayName": "Corinthians"
+   },
+   "wallclock": "2026-10-19T23:22:21Z",
+   "shootout": false
+  },
+  {
+   "id": "53970417",
+   "type": {
+    "id": "130",
+    "text": "End Delay",
+    "type": "end-delay"
+   },
+   "text": "Delay over. They are ready to continue.",
+   "period": {
+    "number": 1
+   },
+   "clock": {
+    "value": 1197,
+    "displayValue": "20'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "874",
+    "displayName": "Corinthians"
+   },
+   "wallclock": "2026-10-19T23:23:31Z",
+   "shootout": false
+  },
+  {
+   "id": "53970418",
+   "type": {
+    "id": "130",
+    "text": "End Delay",
+    "type": "end-delay"
+   },
+   "period": {
+    "number": 1
+   },
+   "clock": {
+    "value": 1197,
+    "displayValue": "20'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "3457",
+    "displayName": "Vitória"
+   },
+   "wallclock": "2026-10-19T23:23:32Z",
+   "shootout": false
+  },
+  {
+   "id": "53971611",
+   "type": {
+    "id": "70",
+    "text": "Goal",
+    "type": "goal"
+   },
+   "text": "Goal! Corinthians 0, Vitória 1. Renê (Vitória) left footed shot from very close range to the centre of the goal following a corner.",
+   "shortText": "Renê Goal",
+   "period": {
+    "number": 1
+   },
+   "clock": {
+    "value": 2700,
+    "displayValue": "45'+1'"
+   },
+   "scoringPlay": true,
+   "team": {
+    "id": "3457",
+    "displayName": "Vitória"
+   },
+   "participants": [
+    {
+     "athlete": {
+      "id": "379359",
+      "displayName": "Renê"
+     }
+    }
+   ],
+   "wallclock": "2026-10-19T23:48:50Z",
+   "shootout": false
+  },
+  {
+   "id": "53971740",
+   "type": {
+    "id": "81",
+    "text": "Halftime",
+    "type": "halftime"
+   },
+   "text": "First Half ends, Corinthians 0, Vitória 1.",
+   "period": {
+    "number": 1
+   },
+   "clock": {
+    "value": 2700,
+    "displayValue": "45'+3'"
+   },
+   "scoringPlay": false,
+   "wallclock": "2026-10-19T23:51:33Z",
+   "shootout": false
+  },
+  {
+   "id": "53972155",
+   "type": {
+    "id": "82",
+    "text": "Start 2nd Half",
+    "type": "start-2nd-half"
+   },
+   "text": "Second Half begins Corinthians 0, Vitória 1.",
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 2700,
+    "displayValue": "45'"
+   },
+   "scoringPlay": false,
+   "wallclock": "2026-10-20T00:08:05Z",
+   "shootout": false
+  },
+  {
+   "id": "53972334",
+   "type": {
+    "id": "94",
+    "text": "Yellow Card",
+    "type": "yellow-card"
+   },
+   "text": "Renê (Vitória) is shown the yellow card for a bad foul.",
+   "shortText": "Renê Yellow Card",
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 3129,
+    "displayValue": "53'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "3457",
+    "displayName": "Vitória"
+   },
+   "participants": [
+    {
+     "athlete": {
+      "id": "379359",
+      "displayName": "Renê"
+     }
+    }
+   ],
+   "wallclock": "2026-10-20T00:15:15Z",
+   "shootout": false
+  },
+  {
+   "id": "53972420",
+   "type": {
+    "id": "129",
+    "text": "Start Delay",
+    "type": "start-delay"
+   },
+   "text": "Delay in match (Corinthians).",
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 3230,
+    "displayValue": "54'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "874",
+    "displayName": "Corinthians"
+   },
+   "wallclock": "2026-10-20T00:16:55Z",
+   "shootout": false
+  },
+  {
+   "id": "53972419",
+   "type": {
+    "id": "129",
+    "text": "Start Delay",
+    "type": "start-delay"
+   },
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 3230,
+    "displayValue": "54'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "3457",
+    "displayName": "Vitória"
+   },
+   "wallclock": "2026-10-20T00:16:56Z",
+   "shootout": false
+  },
+  {
+   "id": "53972421",
+   "type": {
+    "id": "130",
+    "text": "End Delay",
+    "type": "end-delay"
+   },
+   "text": "Delay over. They are ready to continue.",
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 3231,
+    "displayValue": "54'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "874",
+    "displayName": "Corinthians"
+   },
+   "wallclock": "2026-10-20T00:16:56Z",
+   "shootout": false
+  },
+  {
+   "id": "53972501",
+   "type": {
+    "id": "130",
+    "text": "End Delay",
+    "type": "end-delay"
+   },
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 3231,
+    "displayValue": "54'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "3457",
+    "displayName": "Vitória"
+   },
+   "wallclock": "2026-10-20T00:16:57Z",
+   "shootout": false
+  },
+  {
+   "id": "53972808",
+   "type": {
+    "id": "129",
+    "text": "Start Delay",
+    "type": "start-delay"
+   },
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 3700,
+    "displayValue": "62'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "874",
+    "displayName": "Corinthians"
+   },
+   "wallclock": "2026-10-20T00:24:46Z",
+   "shootout": false
+  },
+  {
+   "id": "53972821",
+   "type": {
+    "id": "130",
+    "text": "End Delay",
+    "type": "end-delay"
+   },
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 3807,
+    "displayValue": "64'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "874",
+    "displayName": "Corinthians"
+   },
+   "wallclock": "2026-10-20T00:26:32Z",
+   "shootout": false
+  },
+  {
+   "id": "53972851",
+   "type": {
+    "id": "98",
+    "text": "Penalty - Scored",
+    "type": "penalty---scored"
+   },
+   "text": "Goal! Corinthians 1, Vitória 1. Yuri Alberto (Corinthians) converts the penalty with a right footed shot to the bottom left corner.",
+   "shortText": "Yuri Alberto Penalty - Scored",
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 3935,
+    "displayValue": "66'"
+   },
+   "scoringPlay": true,
+   "team": {
+    "id": "874",
+    "displayName": "Corinthians"
+   },
+   "participants": [
+    {
+     "athlete": {
+      "id": "266666",
+      "displayName": "Yuri Alberto"
+     }
+    }
+   ],
+   "wallclock": "2026-10-20T00:28:40Z",
+   "shootout": false
+  },
+  {
+   "id": "53972942",
+   "type": {
+    "id": "76",
+    "text": "Substitution",
+    "type": "substitution"
+   },
+   "text": "Substitution, Corinthians. Kaio César replaces Vitinho.",
+   "shortText": "Kaio Substitution",
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 3982,
+    "displayValue": "67'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "874",
+    "displayName": "Corinthians"
+   },
+   "participants": [
+    {
+     "athlete": {
+      "id": "347456",
+      "displayName": "Kaio"
+     }
+    },
+    {
+     "athlete": {
+      "id": "171652",
+      "displayName": "Vitinho"
+     }
+    }
+   ],
+   "wallclock": "2026-10-20T00:29:27Z",
+   "shootout": false
+  },
+  {
+   "id": "53973267",
+   "type": {
+    "id": "76",
+    "text": "Substitution",
+    "type": "substitution"
+   },
+   "text": "Substitution, Corinthians. Matheus Bidu replaces Jesse Lingard.",
+   "shortText": "Matheus Bidu Substitution",
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 4736,
+    "displayValue": "79'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "874",
+    "displayName": "Corinthians"
+   },
+   "participants": [
+    {
+     "athlete": {
+      "id": "287774",
+      "displayName": "Matheus Bidu"
+     }
+    },
+    {
+     "athlete": {
+      "id": "169136",
+      "displayName": "Jesse Lingard"
+     }
+    }
+   ],
+   "wallclock": "2026-10-20T00:42:01Z",
+   "shootout": false
+  },
+  {
+   "id": "53973304",
+   "type": {
+    "id": "76",
+    "text": "Substitution",
+    "type": "substitution"
+   },
+   "text": "Substitution, Corinthians. Charles replaces André.",
+   "shortText": "Charles Substitution",
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 4741,
+    "displayValue": "80'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "874",
+    "displayName": "Corinthians"
+   },
+   "participants": [
+    {
+     "athlete": {
+      "id": "240557",
+      "displayName": "Charles"
+     }
+    },
+    {
+     "athlete": {
+      "id": "409662",
+      "displayName": "André"
+     }
+    }
+   ],
+   "wallclock": "2026-10-20T00:42:06Z",
+   "shootout": false
+  },
+  {
+   "id": "53973305",
+   "type": {
+    "id": "76",
+    "text": "Substitution",
+    "type": "substitution"
+   },
+   "text": "Substitution, Vitória. Zé Vitor replaces Matheuzinho.",
+   "shortText": "Zé Vitor Substitution",
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 4746,
+    "displayValue": "80'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "3457",
+    "displayName": "Vitória"
+   },
+   "participants": [
+    {
+     "athlete": {
+      "id": "383950",
+      "displayName": "Zé Vitor"
+     }
+    },
+    {
+     "athlete": {
+      "id": "218972",
+      "displayName": "Matheus"
+     }
+    }
+   ],
+   "wallclock": "2026-10-20T00:42:12Z",
+   "shootout": false
+  },
+  {
+   "id": "53973306",
+   "type": {
+    "id": "76",
+    "text": "Substitution",
+    "type": "substitution"
+   },
+   "text": "Substitution, Vitória. Lucas Silva replaces Diego Tarzia.",
+   "shortText": "Lucas Substitution",
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 4768,
+    "displayValue": "80'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "3457",
+    "displayName": "Vitória"
+   },
+   "participants": [
+    {
+     "athlete": {
+      "id": "253009",
+      "displayName": "Lucas"
+     }
+    },
+    {
+     "athlete": {
+      "id": "379661",
+      "displayName": "Diego Tarzia"
+     }
+    }
+   ],
+   "wallclock": "2026-10-20T00:42:33Z",
+   "shootout": false
+  },
+  {
+   "id": "53973444",
+   "type": {
+    "id": "76",
+    "text": "Substitution",
+    "type": "substitution"
+   },
+   "text": "Substitution, Vitória. Fabrício replaces Renê.",
+   "shortText": "Fabrício Santos Substitution",
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 5060,
+    "displayValue": "85'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "3457",
+    "displayName": "Vitória"
+   },
+   "participants": [
+    {
+     "athlete": {
+      "id": "285395",
+      "displayName": "Fabrício Santos"
+     }
+    },
+    {
+     "athlete": {
+      "id": "379359",
+      "displayName": "Renê"
+     }
+    }
+   ],
+   "wallclock": "2026-10-20T00:47:26Z",
+   "shootout": false
+  },
+  {
+   "id": "53973595",
+   "type": {
+    "id": "129",
+    "text": "Start Delay",
+    "type": "start-delay"
+   },
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 5319,
+    "displayValue": "89'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "874",
+    "displayName": "Corinthians"
+   },
+   "wallclock": "2026-10-20T00:51:45Z",
+   "shootout": false
+  },
+  {
+   "id": "53973621",
+   "type": {
+    "id": "130",
+    "text": "End Delay",
+    "type": "end-delay"
+   },
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 5400,
+    "displayValue": "90'+2'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "874",
+    "displayName": "Corinthians"
+   },
+   "wallclock": "2026-10-20T00:54:46Z",
+   "shootout": false
+  },
+  {
+   "id": "53973665",
+   "type": {
+    "id": "76",
+    "text": "Substitution",
+    "type": "substitution"
+   },
+   "text": "Substitution, Corinthians. Gui Negão replaces Yuri Alberto.",
+   "shortText": "Gui Negão Substitution",
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 5400,
+    "displayValue": "90'+3'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "874",
+    "displayName": "Corinthians"
+   },
+   "participants": [
+    {
+     "athlete": {
+      "id": "382959",
+      "displayName": "Gui Negão"
+     }
+    },
+    {
+     "athlete": {
+      "id": "266666",
+      "displayName": "Yuri Alberto"
+     }
+    }
+   ],
+   "wallclock": "2026-10-20T00:56:05Z",
+   "shootout": false
+  },
+  {
+   "id": "53973666",
+   "type": {
+    "id": "76",
+    "text": "Substitution",
+    "type": "substitution"
+   },
+   "text": "Substitution, Vitória. Walace replaces Caíque Gonçalves.",
+   "shortText": "Walace Substitution",
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 5400,
+    "displayValue": "90'+4'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "3457",
+    "displayName": "Vitória"
+   },
+   "participants": [
+    {
+     "athlete": {
+      "id": "204113",
+      "displayName": "Walace"
+     }
+    },
+    {
+     "athlete": {
+      "id": "252315",
+      "displayName": "Caique"
+     }
+    }
+   ],
+   "wallclock": "2026-10-20T00:56:23Z",
+   "shootout": false
+  },
+  {
+   "id": "53973687",
+   "type": {
+    "id": "76",
+    "text": "Substitution",
+    "type": "substitution"
+   },
+   "text": "Substitution, Vitória. Ignacio Laquintana replaces Erick.",
+   "shortText": "Ignacio Laquintana Substitution",
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 5400,
+    "displayValue": "90'+4'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "3457",
+    "displayName": "Vitória"
+   },
+   "participants": [
+    {
+     "athlete": {
+      "id": "285233",
+      "displayName": "Ignacio Laquintana"
+     }
+    },
+    {
+     "athlete": {
+      "id": "256044",
+      "displayName": "Erick"
+     }
+    }
+   ],
+   "wallclock": "2026-10-20T00:56:33Z",
+   "shootout": false
+  },
+  {
+   "id": "53973831",
+   "type": {
+    "id": "83",
+    "text": "End Regular Time",
+    "type": "end-regular-time"
+   },
+   "text": "Second Half ends, Corinthians 1, Vitória 1.",
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 5400,
+    "displayValue": "90'+13'"
+   },
+   "scoringPlay": false,
+   "wallclock": "2026-10-20T01:08:32Z",
+   "shootout": false
+  },
+  {
+   "id": "53973866",
+   "type": {
+    "id": "94",
+    "text": "Yellow Card",
+    "type": "yellow-card"
+   },
+   "text": "Rodrigo Garro (Corinthians) is shown the yellow card.",
+   "shortText": "Rodrigo Garro Yellow Card",
+   "period": {
+    "number": 2
+   },
+   "clock": {
+    "value": 5400,
+    "displayValue": "90'+13'"
+   },
+   "scoringPlay": false,
+   "team": {
+    "id": "874",
+    "displayName": "Corinthians"
+   },
+   "participants": [
+    {
+     "athlete": {
+      "id": "270562",
+      "displayName": "Rodrigo Garro"
+     }
+    }
+   ],
+   "wallclock": "2026-10-20T01:05:11Z",
+   "shootout": false
+  }
+ ],
+ "gameInfo": {
+  "venue": {
+   "id": "5375",
+   "fullName": "Neo Química Arena",
+   "shortName": "Neo Química Arena",
+   "address": {
+    "city": "Sao Paulo",
+    "country": "Brazil"
+   },
+   "images": []
+  },
+  "attendance": 0
+ },
+ "boxscore": {
+  "teams": [
+   {
+    "team": {
+     "id": "874",
+     "slug": "bra.corinthians",
+     "location": "Corinthians",
+     "name": "Corinthians",
+     "abbreviation": "COR",
+     "displayName": "Corinthians",
+     "shortDisplayName": "Corinthians",
+     "color": "000000",
+     "alternateColor": "fafafc",
+     "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/874.png",
+     "uniform": {
+      "type": "home",
+      "color": "ffffff",
+      "alternateColor": "000000"
+     }
+    },
+    "statistics": [
+     {
+      "name": "foulsCommitted",
+      "displayValue": "10",
+      "label": "Fouls"
+     },
+     {
+      "name": "yellowCards",
+      "displayValue": "1",
+      "label": "Yellow Cards"
+     },
+     {
+      "name": "redCards",
+      "displayValue": "0",
+      "label": "Red Cards"
+     },
+     {
+      "name": "offsides",
+      "displayValue": "1",
+      "label": "Offsides"
+     },
+     {
+      "name": "wonCorners",
+      "displayValue": "9",
+      "label": "Corner Kicks"
+     },
+     {
+      "name": "saves",
+      "displayValue": "4",
+      "label": "Saves"
+     },
+     {
+      "name": "possessionPct",
+      "displayValue": "68.1",
+      "label": "Possession"
+     },
+     {
+      "name": "totalShots",
+      "displayValue": "21",
+      "label": "SHOTS"
+     },
+     {
+      "name": "shotsOnTarget",
+      "displayValue": "6",
+      "label": "ON GOAL"
+     },
+     {
+      "name": "shotPct",
+      "displayValue": "0.3",
+      "label": "On Target %"
+     },
+     {
+      "name": "penaltyKickGoals",
+      "displayValue": "0",
+      "label": "Penalty Goals"
+     },
+     {
+      "name": "penaltyKickShots",
+      "displayValue": "1",
+      "label": "Penalty Kicks Taken"
+     },
+     {
+      "name": "accuratePasses",
+      "displayValue": "562",
+      "label": "Accurate Passes"
+     },
+     {
+      "name": "totalPasses",
+      "displayValue": "637",
+      "label": "Passes"
+     },
+     {
+      "name": "passPct",
+      "displayValue": "0.9",
+      "label": "Pass Completion %"
+     },
+     {
+      "name": "accurateCrosses",
+      "displayValue": "7",
+      "label": "Accurate Crosses"
+     },
+     {
+      "name": "totalCrosses",
+      "displayValue": "30",
+      "label": "Crosses"
+     },
+     {
+      "name": "crossPct",
+      "displayValue": "0.2",
+      "label": "Cross %"
+     },
+     {
+      "name": "totalLongBalls",
+      "displayValue": "42",
+      "label": "Long Balls"
+     },
+     {
+      "name": "accurateLongBalls",
+      "displayValue": "18",
+      "label": "Accurate Long Balls"
+     },
+     {
+      "name": "longballPct",
+      "displayValue": "0.4",
+      "label": "Long Balls %"
+     },
+     {
+      "name": "blockedShots",
+      "displayValue": "8",
+      "label": "Blocked Shots"
+     },
+     {
+      "name": "effectiveTackles",
+      "displayValue": "12",
+      "label": "Effective Tackles"
+     },
+     {
+      "name": "totalTackles",
+      "displayValue": "19",
+      "label": "Tackles"
+     },
+     {
+      "name": "tacklePct",
+      "displayValue": "0.6",
+      "label": "Tackle %"
+     },
+     {
+      "name": "interceptions",
+      "displayValue": "5",
+      "label": "Interceptions"
+     },
+     {
+      "name": "effectiveClearance",
+      "displayValue": "14",
+      "label": "Effective Clearances"
+     },
+     {
+      "name": "totalClearance",
+      "displayValue": "14",
+      "label": "Clearances"
+     }
+    ],
+    "displayOrder": 1,
+    "homeAway": "home"
+   },
+   {
+    "team": {
+     "id": "3457",
+     "slug": "bra.ec_vitoria",
+     "location": "Vitória",
+     "name": "Vitória",
+     "abbreviation": "VIT",
+     "displayName": "Vitória",
+     "shortDisplayName": "Vitória",
+     "color": "C6101C",
+     "alternateColor": "C60000",
+     "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3457.png",
+     "uniform": {
+      "type": "home",
+      "color": "000000",
+      "alternateColor": "ff0000"
+     }
+    },
+    "statistics": [
+     {
+      "name": "foulsCommitted",
+      "displayValue": "14",
+      "label": "Fouls"
+     },
+     {
+      "name": "yellowCards",
+      "displayValue": "1",
+      "label": "Yellow Cards"
+     },
+     {
+      "name": "redCards",
+      "displayValue": "0",
+      "label": "Red Cards"
+     },
+     {
+      "name": "offsides",
+      "displayValue": "4",
+      "label": "Offsides"
+     },
+     {
+      "name": "wonCorners",
+      "displayValue": "1",
+      "label": "Corner Kicks"
+     },
+     {
+      "name": "saves",
+      "displayValue": "5",
+      "label": "Saves"
+     },
+     {
+      "name": "possessionPct",
+      "displayValue": "31.9",
+      "label": "Possession"
+     },
+     {
+      "name": "totalShots",
+      "displayValue": "5",
+      "label": "SHOTS"
+     },
+     {
+      "name": "shotsOnTarget",
+      "displayValue": "5",
+      "label": "ON GOAL"
+     },
+     {
+      "name": "shotPct",
+      "displayValue": "1.0",
+      "label": "On Target %"
+     },
+     {
+      "name": "penaltyKickGoals",
+      "displayValue": "0",
+      "label": "Penalty Goals"
+     },
+     {
+      "name": "penaltyKickShots",
+      "displayValue": "0",
+      "label": "Penalty Kicks Taken"
+     },
+     {
+      "name": "accuratePasses",
+      "displayValue": "235",
+      "label": "Accurate Passes"
+     },
+     {
+      "name": "totalPasses",
+      "displayValue": "306",
+      "label": "Passes"
+     },
+     {
+      "name": "passPct",
+      "displayValue": "0.8",
+      "label": "Pass Completion %"
+     },
+     {
+      "name": "accurateCrosses",
+      "displayValue": "0",
+      "label": "Accurate Crosses"
+     },
+     {
+      "name": "totalCrosses",
+      "displayValue": "4",
+      "label": "Crosses"
+     },
+     {
+      "name": "crossPct",
+      "displayValue": "0.0",
+      "label": "Cross %"
+     },
+     {
+      "name": "totalLongBalls",
+      "displayValue": "55",
+      "label": "Long Balls"
+     },
+     {
+      "name": "accurateLongBalls",
+      "displayValue": "23",
+      "label": "Accurate Long Balls"
+     },
+     {
+      "name": "longballPct",
+      "displayValue": "0.4",
+      "label": "Long Balls %"
+     },
+     {
+      "name": "blockedShots",
+      "displayValue": "0",
+      "label": "Blocked Shots"
+     },
+     {
+      "name": "effectiveTackles",
+      "displayValue": "8",
+      "label": "Effective Tackles"
+     },
+     {
+      "name": "totalTackles",
+      "displayValue": "21",
+      "label": "Tackles"
+     },
+     {
+      "name": "tacklePct",
+      "displayValue": "0.4",
+      "label": "Tackle %"
+     },
+     {
+      "name": "interceptions",
+      "displayValue": "8",
+      "label": "Interceptions"
+     },
+     {
+      "name": "effectiveClearance",
+      "displayValue": "38",
+      "label": "Effective Clearances"
+     },
+     {
+      "name": "totalClearance",
+      "displayValue": "38",
+      "label": "Clearances"
+     }
+    ],
+    "displayOrder": 2,
+    "homeAway": "away"
+   }
+  ]
+ },
+ "rosters": [
+  {
+   "homeAway": "home",
+   "winner": false,
+   "team": {
+    "id": "874",
+    "abbreviation": "COR",
+    "displayName": "Corinthians",
+    "color": "000000",
+    "alternateColor": "fafafc",
+    "logos": [
+     {
+      "href": "https://a.espncdn.com/i/teamlogos/soccer/500/874.png",
+      "rel": [
+       "full",
+       "default"
+      ]
+     }
+    ]
+   },
+   "roster": [
+    {
+     "starter": true,
+     "jersey": "1",
+     "athlete": {
+      "id": "257051",
+      "displayName": "Hugo Souza",
+      "shortName": "Hugo Souza"
+     },
+     "position": {
+      "name": "Goalkeeper",
+      "displayName": "Goalkeeper",
+      "abbreviation": "G"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "1"
+    },
+    {
+     "starter": true,
+     "jersey": "13",
+     "athlete": {
+      "id": "168981",
+      "displayName": "Gustavo Henrique",
+      "shortName": "Gustavo Henrique"
+     },
+     "position": {
+      "name": "Center Left Defender",
+      "displayName": "Center Left Defender",
+      "abbreviation": "CD-L"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "6"
+    },
+    {
+     "starter": true,
+     "jersey": "3",
+     "athlete": {
+      "id": "192226",
+      "displayName": "Gabriel Paulista",
+      "shortName": "G. Paulista"
+     },
+     "position": {
+      "name": "Center Right Defender",
+      "displayName": "Center Right Defender",
+      "abbreviation": "CD-R"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "5"
+    },
+    {
+     "starter": true,
+     "jersey": "26",
+     "athlete": {
+      "id": "195756",
+      "displayName": "Fabrizio Angileri",
+      "shortName": "F. Angileri"
+     },
+     "position": {
+      "name": "Left Back",
+      "displayName": "Left Back",
+      "abbreviation": "LB"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "3"
+    },
+    {
+     "starter": true,
+     "jersey": "2",
+     "athlete": {
+      "id": "272533",
+      "displayName": "Mateuzinho",
+      "shortName": "Mateuzinho"
+     },
+     "position": {
+      "name": "Right Back",
+      "displayName": "Right Back",
+      "abbreviation": "RB"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "2"
+    },
+    {
+     "starter": true,
+     "jersey": "8",
+     "athlete": {
+      "id": "270562",
+      "displayName": "Rodrigo Garro",
+      "shortName": "R. Garro"
+     },
+     "position": {
+      "name": "Attacking Midfielder",
+      "displayName": "Attacking Midfielder",
+      "abbreviation": "AM"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "10"
+    },
+    {
+     "starter": true,
+     "jersey": "7",
+     "athlete": {
+      "id": "338898",
+      "displayName": "Breno Bidon",
+      "shortName": "B. Bidon"
+     },
+     "position": {
+      "name": "Left Midfielder",
+      "displayName": "Left Midfielder",
+      "abbreviation": "LM"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "4"
+    },
+    {
+     "starter": true,
+     "jersey": "49",
+     "athlete": {
+      "id": "409662",
+      "displayName": "André",
+      "shortName": "André"
+     },
+     "position": {
+      "name": "Right Midfielder",
+      "displayName": "Right Midfielder",
+      "abbreviation": "RM"
+     },
+     "subbedIn": false,
+     "subbedOut": true,
+     "formationPlace": "8"
+    },
+    {
+     "starter": true,
+     "jersey": "9",
+     "athlete": {
+      "id": "266666",
+      "displayName": "Yuri Alberto",
+      "shortName": "Y. Alberto"
+     },
+     "position": {
+      "name": "Forward",
+      "displayName": "Forward",
+      "abbreviation": "F"
+     },
+     "subbedIn": false,
+     "subbedOut": true,
+     "formationPlace": "9"
+    },
+    {
+     "starter": true,
+     "jersey": "77",
+     "athlete": {
+      "id": "169136",
+      "displayName": "Jesse Lingard",
+      "shortName": "J. Lingard"
+     },
+     "position": {
+      "name": "Attacking Midfielder Left",
+      "displayName": "Attacking Midfielder Left",
+      "abbreviation": "AM-L"
+     },
+     "subbedIn": false,
+     "subbedOut": true,
+     "formationPlace": "11"
+    },
+    {
+     "starter": true,
+     "jersey": "11",
+     "athlete": {
+      "id": "171652",
+      "displayName": "Vitinho",
+      "shortName": "Vitinho"
+     },
+     "position": {
+      "name": "Attacking Midfielder Right",
+      "displayName": "Attacking Midfielder Right",
+      "abbreviation": "AM-R"
+     },
+     "subbedIn": false,
+     "subbedOut": true,
+     "formationPlace": "7"
+    },
+    {
+     "starter": false,
+     "jersey": "29",
+     "athlete": {
+      "id": "223437",
+      "displayName": "Allan",
+      "shortName": "Allan"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "19",
+     "athlete": {
+      "id": "148189",
+      "displayName": "André Carrillo",
+      "shortName": "A. Carrillo"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "37",
+     "athlete": {
+      "id": "347456",
+      "displayName": "Kaio",
+      "shortName": "Kaio"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": true,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "18",
+     "athlete": {
+      "id": "234070",
+      "displayName": "Pedro Raúl",
+      "shortName": "Pedro Raúl"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "21",
+     "athlete": {
+      "id": "287774",
+      "displayName": "Matheus Bidu",
+      "shortName": "M. Bidu"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": true,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "56",
+     "athlete": {
+      "id": "382959",
+      "displayName": "Gui Negão",
+      "shortName": "G. Negão"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": true,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "4",
+     "athlete": {
+      "id": "361471",
+      "displayName": "João Pedro",
+      "shortName": "João Pedro"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "51",
+     "athlete": {
+      "id": "361442",
+      "displayName": "Kauê Camargo",
+      "shortName": "K. Camargo"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "20",
+     "athlete": {
+      "id": "359849",
+      "displayName": "Pedro Milans",
+      "shortName": "P. Milans"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "5",
+     "athlete": {
+      "id": "194090",
+      "displayName": "André Ramalho",
+      "shortName": "A. Ramalho"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "61",
+     "athlete": {
+      "id": "382944",
+      "displayName": "Dieguinho",
+      "shortName": "Dieguinho"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "35",
+     "athlete": {
+      "id": "240557",
+      "displayName": "Charles",
+      "shortName": "Charles"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": true,
+     "subbedOut": false,
+     "formationPlace": "0"
+    }
+   ],
+   "uniform": {
+    "type": "home",
+    "color": "ffffff",
+    "alternateColor": "000000"
+   },
+   "formation": "4-2-3-1"
+  },
+  {
+   "homeAway": "away",
+   "winner": false,
+   "team": {
+    "id": "3457",
+    "abbreviation": "VIT",
+    "displayName": "Vitória",
+    "color": "C6101C",
+    "alternateColor": "C60000",
+    "logos": [
+     {
+      "href": "https://a.espncdn.com/i/teamlogos/soccer/500/3457.png",
+      "rel": [
+       "full",
+       "default"
+      ]
+     }
+    ]
+   },
+   "roster": [
+    {
+     "starter": true,
+     "jersey": "1",
+     "athlete": {
+      "id": "287941",
+      "displayName": "Lucas Arcanjo",
+      "shortName": "Lucas Arcanjo"
+     },
+     "position": {
+      "name": "Goalkeeper",
+      "displayName": "Goalkeeper",
+      "abbreviation": "G"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "1"
+    },
+    {
+     "starter": true,
+     "jersey": "36",
+     "athlete": {
+      "id": "266676",
+      "displayName": "Luan Cândido",
+      "shortName": "L. Cândido"
+     },
+     "position": {
+      "name": "Center Left Defender",
+      "displayName": "Center Left Defender",
+      "abbreviation": "CD-L"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "6"
+    },
+    {
+     "starter": true,
+     "jersey": "2",
+     "athlete": {
+      "id": "200206",
+      "displayName": "Emanuel Britez",
+      "shortName": "E. Britez"
+     },
+     "position": {
+      "name": "Center Right Defender",
+      "displayName": "Center Right Defender",
+      "abbreviation": "CD-R"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "5"
+    },
+    {
+     "starter": true,
+     "jersey": "6",
+     "athlete": {
+      "id": "218649",
+      "displayName": "Emmanuel Martínez",
+      "shortName": "E. Martínez"
+     },
+     "position": {
+      "name": "Defensive Midfielder",
+      "displayName": "Defensive Midfielder",
+      "abbreviation": "DM"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "4"
+    },
+    {
+     "starter": true,
+     "jersey": "83",
+     "athlete": {
+      "id": "284450",
+      "displayName": "Jamerson",
+      "shortName": "Jamerson"
+     },
+     "position": {
+      "name": "Left Back",
+      "displayName": "Left Back",
+      "abbreviation": "LB"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "3"
+    },
+    {
+     "starter": true,
+     "jersey": "98",
+     "athlete": {
+      "id": "315766",
+      "displayName": "Matheusinho",
+      "shortName": "Matheusinho"
+     },
+     "position": {
+      "name": "Right Back",
+      "displayName": "Right Back",
+      "abbreviation": "RB"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "2"
+    },
+    {
+     "starter": true,
+     "jersey": "95",
+     "athlete": {
+      "id": "252315",
+      "displayName": "Caique",
+      "shortName": "Caique"
+     },
+     "position": {
+      "name": "Center Left Midfielder",
+      "displayName": "Center Left Midfielder",
+      "abbreviation": "CM-L"
+     },
+     "subbedIn": false,
+     "subbedOut": true,
+     "formationPlace": "10"
+    },
+    {
+     "starter": true,
+     "jersey": "10",
+     "athlete": {
+      "id": "218972",
+      "displayName": "Matheus",
+      "shortName": "Matheus"
+     },
+     "position": {
+      "name": "Center Right Midfielder",
+      "displayName": "Center Right Midfielder",
+      "abbreviation": "CM-R"
+     },
+     "subbedIn": false,
+     "subbedOut": true,
+     "formationPlace": "8"
+    },
+    {
+     "starter": true,
+     "jersey": "12",
+     "athlete": {
+      "id": "379661",
+      "displayName": "Diego Tarzia",
+      "shortName": "D. Tarzia"
+     },
+     "position": {
+      "name": "Left Midfielder",
+      "displayName": "Left Midfielder",
+      "abbreviation": "LM"
+     },
+     "subbedIn": false,
+     "subbedOut": true,
+     "formationPlace": "11"
+    },
+    {
+     "starter": true,
+     "jersey": "33",
+     "athlete": {
+      "id": "256044",
+      "displayName": "Erick",
+      "shortName": "Erick"
+     },
+     "position": {
+      "name": "Right Midfielder",
+      "displayName": "Right Midfielder",
+      "abbreviation": "RM"
+     },
+     "subbedIn": false,
+     "subbedOut": true,
+     "formationPlace": "7"
+    },
+    {
+     "starter": true,
+     "jersey": "91",
+     "athlete": {
+      "id": "379359",
+      "displayName": "Renê",
+      "shortName": "Renê"
+     },
+     "position": {
+      "name": "Forward",
+      "displayName": "Forward",
+      "abbreviation": "F"
+     },
+     "subbedIn": false,
+     "subbedOut": true,
+     "formationPlace": "9"
+    },
+    {
+     "starter": false,
+     "jersey": "88",
+     "athlete": {
+      "id": "383950",
+      "displayName": "Zé Vitor",
+      "shortName": "Zé Vitor"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": true,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "16",
+     "athlete": {
+      "id": "321370",
+      "displayName": "Ruben Ramos",
+      "shortName": "R. Ramos"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "77",
+     "athlete": {
+      "id": "285233",
+      "displayName": "Ignacio Laquintana",
+      "shortName": "I. Laquintana"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": true,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "20",
+     "athlete": {
+      "id": "253009",
+      "displayName": "Lucas",
+      "shortName": "Lucas"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": true,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "7",
+     "athlete": {
+      "id": "198392",
+      "displayName": "Marinho",
+      "shortName": "Marinho"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "23",
+     "athlete": {
+      "id": "285395",
+      "displayName": "Fabrício Santos",
+      "shortName": "F. Santos"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": true,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "26",
+     "athlete": {
+      "id": "402426",
+      "displayName": "Edenilson",
+      "shortName": "Edenilson"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "71",
+     "athlete": {
+      "id": "266662",
+      "displayName": "Yuri Sena",
+      "shortName": "Y. Sena"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "79",
+     "athlete": {
+      "id": "227314",
+      "displayName": "Renato Kayzer",
+      "shortName": "R. Kayzer"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "15",
+     "athlete": {
+      "id": "204113",
+      "displayName": "Walace",
+      "shortName": "Walace"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": true,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "9",
+     "athlete": {
+      "id": "3098485",
+      "displayName": "Alex Bruno Da Costa Lima",
+      "shortName": "A. Da Costa Lima"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "0"
+    },
+    {
+     "starter": false,
+     "jersey": "8",
+     "athlete": {
+      "id": "215771",
+      "displayName": "Tomás Pochettino",
+      "shortName": "T. Pochettino"
+     },
+     "position": {
+      "name": "Substitute",
+      "displayName": "Substitute",
+      "abbreviation": "SUB"
+     },
+     "subbedIn": false,
+     "subbedOut": false,
+     "formationPlace": "0"
+    }
+   ],
+   "uniform": {
+    "type": "home",
+    "color": "000000",
+    "alternateColor": "ff0000"
+   },
+   "formation": "4-1-4-1"
+  }
+ ]
+}

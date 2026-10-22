@@ -1,0 +1,218 @@
+@import "tailwindcss";
+
+/*
+ * Placar — tokens.
+ * Cor só onde carrega informação: o cobalto é EXCLUSIVO do "ao vivo" (e do foco do teclado).
+ * Os cartões e as zonas da tabela têm cores próprias, que não se confundem com ele.
+ */
+:root {
+  color-scheme: light dark;
+
+  --bg: #ffffff;
+  --surface: #f3f4f7; /* toque / hover / faixas */
+  --ink: #101114;
+  --muted: #5f636b; /* 6,1:1 sobre o fundo */
+  --faint: #8a8f98; /* só para o que não é texto essencial (linhas de apoio, ícones) */
+  --line: #e5e7eb;
+
+  --live: #2b50ff; /* ao vivo */
+  --on-live: #ffffff;
+
+  --zone-up: #1f9d61; /* vaga / acesso */
+  --zone-mid: #c98a00; /* repescagem / vaga menor */
+  --zone-down: #d6403a; /* rebaixamento */
+  --card-yellow: #f2c200;
+  --card-red: #e0372f;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #12151c;
+    --surface: #1b2029;
+    --ink: #f2f3f5;
+    --muted: #a0a6b1;
+    --faint: #6e7480;
+    --line: #262c37;
+
+    --live: #7f97ff;
+    --on-live: #0b1030;
+
+    --zone-up: #3dd68c;
+    --zone-mid: #f2b84b;
+    --zone-down: #ff6b63;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-line: var(--line);
+  --color-live: var(--live);
+  --color-on-live: var(--on-live);
+  --color-zone-up: var(--zone-up);
+  --color-zone-mid: var(--zone-mid);
+  --color-zone-down: var(--zone-down);
+  --color-card-yellow: var(--card-yellow);
+  --color-card-red: var(--card-red);
+  --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+html {
+  background: var(--bg);
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.45;
+  min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* Foco do teclado sempre visível, no mesmo cobalto. */
+:focus-visible {
+  outline: 2px solid var(--live);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+}
+
+@layer components {
+
+/* Números de placar e de tabela: colunas que não dançam quando o dígito muda. */
+.num {
+  font-variant-numeric: tabular-nums;
+}
+
+/*
+ * O placar é o gesto ousado do app: largura expandida e peso alto, como a sinalização de placar de
+ * estádio. (Largura via eixo `wdth` da Archivo; o resto da interface usa a largura normal.)
+ */
+.score {
+  font-variant-numeric: tabular-nums;
+  font-stretch: 125%;
+  font-variation-settings: "wdth" 125;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+.wordmark {
+  font-stretch: 125%;
+  font-variation-settings: "wdth" 125;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: -4rem;
+  z-index: 50;
+  padding: 0.6rem 0.9rem;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--bg);
+  font-weight: 600;
+}
+.skip-link:focus {
+  top: 0.75rem;
+}
+
+/* Ao vivo: um ponto que pulsa devagar. É a única animação contínua do app. */
+.live-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: var(--live);
+  box-shadow: 0 0 0 0 color-mix(in oklab, var(--live) 55%, transparent);
+  animation: live-pulse 1.8s ease-out infinite;
+}
+@keyframes live-pulse {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in oklab, var(--live) 50%, transparent);
+  }
+  70%,
+  100% {
+    box-shadow: 0 0 0 0.45rem color-mix(in oklab, var(--live) 0%, transparent);
+  }
+}
+
+/* Gol: o número que mudou acende e apaga. Responde a um acontecimento, não enfeita. */
+.score-flash {
+  animation: score-flash 1.6s ease-out;
+  border-radius: 6px;
+}
+@keyframes score-flash {
+  0% {
+    background: color-mix(in oklab, var(--live) 28%, transparent);
+  }
+  100% {
+    background: transparent;
+  }
+}
+
+/* Carregando: esqueleto com um brilho lento. */
+.skeleton {
+  background: linear-gradient(100deg, var(--surface) 30%, color-mix(in oklab, var(--surface) 55%, var(--bg)) 50%, var(--surface) 70%);
+  background-size: 220% 100%;
+  animation: skeleton 1.4s ease-in-out infinite;
+  border-radius: 6px;
+}
+@keyframes skeleton {
+  from {
+    background-position: 120% 0;
+  }
+  to {
+    background-position: -20% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .live-dot {
+    box-shadow: none;
+  }
+  .skeleton {
+    background: var(--surface);
+  }
+}
+
+/* Barras de rolagem horizontais discretas (faixa de dias). */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+}

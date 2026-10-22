@@ -1,0 +1,173 @@
+{
+ "season": {
+  "startDate": "2026-09-01"
+ },
+ "standings": [
+  {
+   "stage": "GROUP_STAGE",
+   "type": "TOTAL",
+   "group": "GROUP_A",
+   "table": [
+    {
+     "position": 1,
+     "team": {
+      "id": 5,
+      "name": "FC Bayern München",
+      "shortName": "Bayern",
+      "tla": "FCB",
+      "crest": "https://crests.football-data.org/5.png"
+     },
+     "playedGames": 4,
+     "form": "W,W,D,L,W",
+     "won": 3,
+     "draw": 1,
+     "lost": 0,
+     "points": 10,
+     "goalsFor": 10,
+     "goalsAgainst": 1,
+     "goalDifference": 9
+    },
+    {
+     "position": 2,
+     "team": {
+      "id": 65,
+      "name": "Manchester City FC",
+      "shortName": "Man City",
+      "tla": "MCI",
+      "crest": "https://crests.football-data.org/65.png"
+     },
+     "playedGames": 4,
+     "form": "W,W,D,L,W",
+     "won": 3,
+     "draw": 0,
+     "lost": 1,
+     "points": 9,
+     "goalsFor": 9,
+     "goalsAgainst": 2,
+     "goalDifference": 7
+    },
+    {
+     "position": 3,
+     "team": {
+      "id": 4,
+      "name": "Borussia Dortmund",
+      "shortName": "Dortmund",
+      "tla": "BVB",
+      "crest": "https://crests.football-data.org/4.png"
+     },
+     "playedGames": 4,
+     "form": "W,W,D,L,W",
+     "won": 3,
+     "draw": 0,
+     "lost": 1,
+     "points": 9,
+     "goalsFor": 9,
+     "goalsAgainst": 2,
+     "goalDifference": 7
+    },
+    {
+     "position": 4,
+     "team": {
+      "id": 57,
+      "name": "Arsenal FC",
+      "shortName": "Arsenal",
+      "tla": "ARS",
+      "crest": "https://crests.football-data.org/57.png"
+     },
+     "playedGames": 4,
+     "form": "W,W,D,L,W",
+     "won": 2,
+     "draw": 1,
+     "lost": 1,
+     "points": 7,
+     "goalsFor": 8,
+     "goalsAgainst": 3,
+     "goalDifference": 5
+    }
+   ]
+  },
+  {
+   "stage": "GROUP_STAGE",
+   "type": "TOTAL",
+   "group": "GROUP_B",
+   "table": [
+    {
+     "position": 1,
+     "team": {
+      "id": 57,
+      "name": "Arsenal FC",
+      "shortName": "Arsenal",
+      "tla": "ARS",
+      "crest": "https://crests.football-data.org/57.png"
+     },
+     "playedGames": 4,
+     "form": "W,W,D,L,W",
+     "won": 3,
+     "draw": 1,
+     "lost": 0,
+     "points": 10,
+     "goalsFor": 10,
+     "goalsAgainst": 1,
+     "goalDifference": 9
+    },
+    {
+     "position": 2,
+     "team": {
+      "id": 4,
+      "name": "Borussia Dortmund",
+      "shortName": "Dortmund",
+      "tla": "BVB",
+      "crest": "https://crests.football-data.org/4.png"
+     },
+     "playedGames": 4,
+     "form": "W,W,D,L,W",
+     "won": 3,
+     "draw": 0,
+     "lost": 1,
+     "points": 9,
+     "goalsFor": 9,
+     "goalsAgainst": 2,
+     "goalDifference": 7
+    },
+    {
+     "position": 3,
+     "team": {
+      "id": 65,
+      "name": "Manchester City FC",
+      "shortName": "Man City",
+      "tla": "MCI",
+      "crest": "https://crests.football-data.org/65.png"
+     },
+     "playedGames": 4,
+     "form": "W,W,D,L,W",
+     "won": 3,
+     "draw": 0,
+     "lost": 1,
+     "points": 9,
+     "goalsFor": 9,
+     "goalsAgainst": 2,
+     "goalDifference": 7
+    },
+    {
+     "position": 4,
+     "team": {
+      "id": 5,
+      "name": "FC Bayern München",
+      "shortName": "Bayern",
+      "tla": "FCB",
+      "crest": "https://crests.football-data.org/5.png"
+     },
+     "playedGames": 4,
+     "form": "W,W,D,L,W",
+     "won": 2,
+     "draw": 1,
+     "lost": 1,
+     "points": 7,
+     "goalsFor": 8,
+     "goalsAgainst": 3,
+     "goalDifference": 5
+    }
+   ]
+  }
+ ]
+}
