@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { isEsportsConfigured } from "@/lib/esports/service";
 import { StarIcon } from "./icons";
+import { ThemeToggle } from "./theme-toggle";
 
 /** Marca: o nome em largura expandida e o ponto cobalto, o mesmo ponto que pulsa nos jogos ao vivo. */
 export function Wordmark({ className = "" }: { className?: string }) {
@@ -33,6 +34,7 @@ export function AppHeader() {
           <StarIcon />
           <span className="hidden min-[400px]:inline">Favoritos</span>
         </Link>
+        <ThemeToggle />
       </nav>
     </header>
   );

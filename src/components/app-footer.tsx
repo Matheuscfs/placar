@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { isEsportsConfigured } from "@/lib/esports/service";
+import { ThemePicker } from "./theme-toggle";
 
 export function AppFooter() {
   return (
@@ -10,6 +11,9 @@ export function AppFooter() {
       <Link href="/sobre" className="mt-2 inline-block font-medium text-ink underline decoration-line underline-offset-4 hover:decoration-ink">
         Sobre o Placar
       </Link>
+      <div>
+        <ThemePicker />
+      </div>
     </footer>
   );
 }

@@ -5,6 +5,7 @@ import { AppHeader } from "@/components/app-header";
 import { FavoritesCookieSync } from "@/components/favorites-cookie-sync";
 import { OfflineBanner } from "@/components/offline-banner";
 import { RegisterServiceWorker } from "@/components/register-sw";
+import { THEME_INIT_SCRIPT } from "@/lib/ui/theme";
 import "./globals.css";
 
 // Uma família só. O eixo de largura (`wdth`) serve ao placar: dígitos expandidos, como numa placa de estádio.
@@ -30,7 +31,11 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="pt-BR" className={archivo.variable}>
+    // suppressHydrationWarning: o script do <head> põe `data-theme` no <html> antes do React hidratar.
+    <html lang="pt-BR" className={archivo.variable} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+      </head>
       <body>
         <a href="#conteudo" className="skip-link">
           Ir para o conteúdo

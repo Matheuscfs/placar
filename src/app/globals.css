@@ -25,8 +25,14 @@
   --card-red: #e0372f;
 }
 
+/*
+ * Escuro: vale quando o aparelho pede escuro E a pessoa não escolheu claro, ou quando ela escolheu
+ * escuro (`data-theme` no <html>, ver src/lib/ui/theme.ts). Os dois blocos têm de ficar iguais.
+ */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+
     --bg: #12151c;
     --surface: #1b2029;
     --ink: #f2f3f5;
@@ -41,6 +47,26 @@
     --zone-mid: #f2b84b;
     --zone-down: #ff6b63;
   }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg: #12151c;
+  --surface: #1b2029;
+  --ink: #f2f3f5;
+  --muted: #a0a6b1;
+  --faint: #6e7480;
+  --line: #262c37;
+
+  --live: #7f97ff;
+  --on-live: #0b1030;
+
+  --zone-up: #3dd68c;
+  --zone-mid: #f2b84b;
+  --zone-down: #ff6b63;
+}
+:root[data-theme="light"] {
+  color-scheme: light;
 }
 
 @theme inline {
@@ -205,6 +231,25 @@ button {
   }
   .skeleton {
     background: var(--surface);
+  }
+}
+
+/* Botão de tema: lua no claro (leva ao escuro), sol no escuro (leva ao claro). Mesmas regras do tema acima. */
+.theme-sun {
+  display: none;
+}
+:root[data-theme="dark"] .theme-sun {
+  display: block;
+}
+:root[data-theme="dark"] .theme-moon {
+  display: none;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-sun {
+    display: block;
+  }
+  :root:not([data-theme="light"]) .theme-moon {
+    display: none;
   }
 }
 
