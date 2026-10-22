@@ -108,7 +108,7 @@ describe("Countdown", () => {
   it("antes de o relógio do navegador entrar (servidor), não escreve nada, mas já reserva a altura", () => {
     at("2026-10-22T20:45:00Z");
     const { container } = render(<Countdown kickoff={kickoff} />);
-    expect(container.querySelector("p")).toHaveClass("h-5");
+    expect(container.querySelector("p")).toHaveClass("min-h-5");
   });
 });
 
