@@ -22,6 +22,10 @@ export default function AboutPage() {
           O Placar junta três fontes gratuitas. A <strong>ESPN</strong> é a principal: placares ao vivo, lances, escalações e estatísticas. O <strong>openfootball</strong> (domínio público) traz calendário e resultados
           em lote. O <strong>football-data.org</strong> é a reserva para Brasileirão Série A e as principais ligas europeias.
         </p>
+        <p>
+          Quando a seção de <strong>e-sports</strong> está ativa (CS2, League of Legends e Valorant), os dados vêm do <strong>PandaScore</strong>, no plano gratuito: calendário e resultados, sem garantia de placar ao
+          vivo.
+        </p>
         <p>Quando a fonte principal falha, o app usa a reserva e avisa na tela. Placar de fonte reserva pode demorar mais para atualizar.</p>
       </Section>
 

@@ -10,9 +10,10 @@ PWA de placares de futebol ao vivo: minimalista, rápido e pensado primeiro para
 - **Sem API paga.** Três fontes gratuitas, com fallback automático e cache próprio.
 
 > **Estado do projeto:** todas as etapas do plano estão implementadas, testadas e **publicadas na Vercel**
-> (https://placar-orpin-five.vercel.app). Duas coisas **nunca foram exercitadas de verdade** e precisam do seu
-> teste antes de confiar: (1) o conector football-data.org com um token real; (2) os avisos push entregues a
-> um aparelho. Veja ["O que não foi verificado"](#o-que-não-foi-verificado).
+> (https://placar-orpin-five.vercel.app). Três coisas **nunca foram exercitadas de verdade** e precisam do seu
+> teste antes de confiar: (1) o conector football-data.org com um token real; (2) o conector de e-sports
+> (PandaScore) com um token real; (3) os avisos push entregues a um aparelho.
+> Veja ["O que não foi verificado"](#o-que-não-foi-verificado).
 
 ## Sumário
 
@@ -51,6 +52,8 @@ Copie `.env.example` para `.env.local`. **Nenhuma é obrigatória** para o app a
 | Variável | Para quê | Sem ela |
 |---|---|---|
 | `FOOTBALL_DATA_TOKEN` | fonte reserva football-data.org (cadastro grátis em football-data.org; **só você pode criar**) | a fonte é pulada |
+| `PANDASCORE_TOKEN` | e-sports (CS2, LoL, Valorant: calendário e resultados). Cadastro grátis em pandascore.co; **só você pode criar** | a seção E-sports fica desligada e o link some do menu |
+| `PANDASCORE_BASE_URL` | só desenvolvimento/testes: aponta para um servidor falso do PandaScore | usa a API real |
 | `NEXT_PUBLIC_VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY`, `VAPID_SUBJECT` | avisos push (gere com `npm run push:keys`) | os avisos ficam desligados e o botão nem aparece |
 | `CRON_SECRET` | protege `GET /api/cron/push` (o job de avisos) | em produção a rota responde 404 |
 | `STATUS_TOKEN` | protege `GET /api/status` (saúde das fontes, cota, erros) | em produção a rota responde 404 |
@@ -75,6 +78,7 @@ src/
     domain/     modelo normalizado, catálogo de ligas, ids, datas, chave de time, aliases de nomes
     data/       interface DataSource, orquestrador, cache TTL, cota, disjuntor, conectores (sources/)
     api/        validação de parâmetros e respostas das rotas /api
+    esports/    CS2, LoL e Valorant (PandaScore): modelo próprio, conversor, cliente, cache e lógica de tela
     push/       avisos: detecção de eventos, job, envio Web Push, repositório
     ui/         lógica de tela sem JSX: formatação, atualização periódica, favoritos, cliente de push
     config.ts   TTLs, cotas de requisição, ordem de prioridade das fontes
@@ -132,6 +136,7 @@ O front-end só fala com estas rotas. Todas devolvem JSON; as de dados vêm como
 | `GET /api/standings/{liga}` | classificação, com as zonas (G4, rebaixamento…) |
 | `GET /api/teams/{id}?league={liga}` | próximos jogos, últimos resultados e posição |
 | `GET /api/status` | saúde das fontes, cota restante, erros recentes (exige `STATUS_TOKEN` em produção) |
+| `GET /api/esports/matches?date=AAAA-MM-DD&games=cs2,lol,valorant` | partidas de e-sports do dia (calendário e resultados, sem ao vivo); 503 `esports_not_configured` sem `PANDASCORE_TOKEN` |
 | `GET /api/push/config` | se os avisos estão ligados e a chave VAPID **pública** |
 | `POST /api/push/subscribe` · `POST /api/push/unsubscribe` | registra/cancela o aparelho para os avisos |
 | `GET /api/cron/push` | o job de avisos, chamado por um agendador (exige `CRON_SECRET` em produção) |
@@ -155,6 +160,7 @@ passados), para o CDN da Vercel absorver o tráfego. **Erros**: `400` parâmetro
 | `/jogo/{id}` | placar, resumo (linha do tempo), escalações e estatísticas — o que a fonte tiver |
 | `/liga/{id}` | classificação com zonas; ligas com grupos (Libertadores) ganham abas |
 | `/time/{id}` | próximos jogos, últimos resultados e posição |
+| `/esports` | partidas de CS2, LoL e Valorant do dia (só aparece no menu com `PANDASCORE_TOKEN`), com filtro de torneios principais |
 | `/favoritos` | times e ligas favoritos, e o interruptor dos avisos |
 | `/sobre`, `/offline` | de onde vêm os dados, limites, privacidade; tela mostrada sem conexão |
 
@@ -199,6 +205,29 @@ foi visto de verdade em um navegador: registrado, ativo, controlando a página, 
 `placar-api`, `placar-static`) se preenchem como esperado. O que **ainda não foi visto** é o fallback offline em si
 (página guardada ou `/offline` com a rede cortada): marque *Offline* no DevTools e confira. Em `http://localhost` o
 registro falhou no navegador embutido do ambiente de desenvolvimento; use HTTPS (ou o Chrome em localhost).
+
+## E-sports
+
+CS2, League of Legends e Valorant, **só calendário e resultados**, em `/esports`. Vivem num módulo próprio
+(`src/lib/esports/`), separado do futebol: não há mandante, tabela de pontos nem minuto de jogo, e sim partidas
+entre dois times, em série (melhor de N mapas), dentro de torneios que mudam o ano todo.
+
+- **Fonte:** PandaScore, plano gratuito: calendário, resultados e contexto, **1000 requisições por hora e sem
+  ao vivo** (o ao vivo é pago). Uma chamada traz os três jogos do dia (até 3 páginas de 100); filtrar por jogo é
+  feito no próprio app. O cache é por dia (hoje 60 s, passado 6 h, futuro 30 min) e há um orçamento de 600
+  requisições por hora por instância, abaixo do limite da conta.
+- **Como ligar:** crie uma conta grátis em pandascore.co, pegue o token e cadastre `PANDASCORE_TOKEN` (no `.env.local`
+  e, na Vercel, nas variáveis do projeto, ou `npx vercel env add PANDASCORE_TOKEN production`). Sem o token a seção fica
+  desligada e o link "E-sports" some do menu. **O token só você pode criar e nunca deve ir ao repositório.**
+- **Tela:** abas por jogo (troca instantânea, sem nova busca), filtro "só torneios principais" (tiers S, A e B do
+  PandaScore; ligado sozinho quando há alguma principal no dia), partidas agrupadas por campeonato e etapa,
+  placar = mapas vencidos, e links "Assistir" (Twitch, YouTube…) **antes e durante** a partida. Os links vêm do
+  PandaScore, só `https` passa.
+- **Como a tela é honesta:** diz que o plano gratuito não garante placar ao vivo; partida adiada ou cancelada não
+  mostra o 0 x 0 que a fonte manda; adversário indefinido aparece como "A definir".
+- **Verificar com o seu token:** `PANDASCORE_TOKEN=... npx vitest run src/lib/esports/pandascore.live.test.ts`
+  (1 a 3 requisições). **Isso nunca foi feito**: as respostas de exemplo em `src/lib/esports/__fixtures__/` foram
+  escritas pela documentação (veja o `LEIA-ME.md` ali). Se o formato real diferir, o teste aponta e o conversor se ajusta.
 
 ## Notificações push
 
@@ -296,6 +325,12 @@ Este projeto é técnico, **não é aconselhamento jurídico**. Antes de publica
   navegador do usuário: só o servidor, com cache e cota.
 - **football-data.org.** Exige cadastro e token **seu**; o plano gratuito tem limite de 10 req/min e restrições
   de uso e de atribuição. Leia os termos vigentes e cumpra o que pedem (a atribuição já aparece no rodapé).
+- **PandaScore (e-sports).** Exige conta e token **seus**. Pelo que encontrei, os planos de estatísticas do
+  PandaScore não podem ser usados em produtos de apostas ou fantasy; o Placar não tem nenhum dos dois, mas não
+  confirmei se a restrição vale também para o plano gratuito. Leia os termos vigentes e cumpra o que pedem
+  (a atribuição "e-sports por PandaScore" já aparece no rodapé quando a seção está ativa). Não consegui ler a página
+  de termos durante o desenvolvimento: confirme você mesmo se o seu uso (público, com ou sem receita) é permitido.
+  Logos de times e campeonatos são marcas de seus titulares, como no futebol.
 - **openfootball.** Dados abertos em domínio público (confira a licença no repositório de cada arquivo usado).
 - **Nome "Placar".** O nome é provisório. "Placar" é um nome conhecido no jornalismo esportivo brasileiro
   (existe uma revista com esse nome); **pesquise a marca no INPI** antes de usar publicamente ou troque o
@@ -329,6 +364,7 @@ Dito com franqueza, para você não descobrir em produção:
 | Item | Situação |
 |---|---|
 | football-data.org com token real | Fixtures escritas pela **documentação**, nunca validadas contra a API. É a fonte reserva: se o formato real diferir, o fallback falha (e cai para o openfootball). Rode o teste real com o seu token. |
+| E-sports (PandaScore) com token real | Conector, conversor e tela testados com respostas **escritas pela documentação** e com um servidor falso local; **nunca falou com a API real**. Também não sabemos o que o plano gratuito devolve de verdade em `running` (ao vivo) nem se `streams_list` vem preenchido nele. Rode o teste real com o seu token. |
 | Service worker num navegador real | Registro, ativação, controle da página e preenchimento dos caches foram vistos no site publicado (HTTPS). O **fallback offline** (rede cortada) só foi testado por simulação (`tests/service-worker.test.ts`). |
 | Avisos push de ponta a ponta | Nenhum aviso foi entregue a um aparelho. O job rodou contra a ESPN real, mas só com um inscrito fictício, sem envio. |
 | Android, iPhone e Safari | Nenhum teste em aparelho. No iPhone, push só funciona com o app instalado na tela de início. |

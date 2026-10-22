@@ -30,6 +30,11 @@ export function Crest({ team, size = 28, priority = false }: { team: CrestTeam; 
     // Escudos vêm de CDNs de terceiros já redimensionados (ver crestUrl): o otimizador do Next não ajudaria.
     // eslint-disable-next-line @next/next/no-img-element
     <img
+      // A página chega com o <img> já no HTML: se a imagem falhou ANTES da hidratação, o `onError` nunca dispara.
+      // Aqui conferimos na montagem se ela já terminou de carregar sem conteúdo.
+      ref={(el) => {
+        if (el && el.complete && el.naturalWidth === 0) setFailed(true);
+      }}
       src={src}
       alt=""
       width={size}

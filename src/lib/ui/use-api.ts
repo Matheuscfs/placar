@@ -1,18 +1,25 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import type { Sourced } from "@/lib/domain/types";
+import type { ResponseMeta } from "@/lib/domain/types";
 
-export interface ApiOptions<T> {
-  /** Dados já buscados no servidor para `initialUrl`: a tela nasce pronta, sem esperar a rede. */
-  initial?: Sourced<T> | null;
-  initialUrl?: string;
-  /** Em quantos ms buscar de novo (`null` = não buscar). Recebe os dados atuais e o nº de falhas seguidas. */
-  nextRefreshMs: (data: Sourced<T> | null, failures: number) => number | null;
+/** O que a API devolve: `{ data, meta }`. O hook só exige de `meta` o instante da busca (`fetchedAt`), então serve ao futebol e aos e-sports. */
+export type Meta = { fetchedAt: string };
+export interface Env<T, M extends Meta = ResponseMeta> {
+  data: T;
+  meta: M;
 }
 
-export interface ApiResult<T> {
-  data: Sourced<T> | null;
+export interface ApiOptions<T, M extends Meta = ResponseMeta> {
+  /** Dados já buscados no servidor para `initialUrl`: a tela nasce pronta, sem esperar a rede. */
+  initial?: Env<T, M> | null;
+  initialUrl?: string;
+  /** Em quantos ms buscar de novo (`null` = não buscar). Recebe os dados atuais e o nº de falhas seguidas. */
+  nextRefreshMs: (data: Env<T, M> | null, failures: number) => number | null;
+}
+
+export interface ApiResult<T, M extends Meta = ResponseMeta> {
+  data: Env<T, M> | null;
   error: string | null;
   /** Primeira carga desta URL, ainda sem nada para mostrar. */
   loading: boolean;
@@ -23,19 +30,19 @@ export interface ApiResult<T> {
   refresh: () => void;
 }
 
-interface Slot<T> {
+interface Slot<T, M extends Meta> {
   url: string | null;
-  data: Sourced<T> | null;
+  data: Env<T, M> | null;
   error: string | null;
   failures: number;
   refreshing: boolean;
 }
 
-const emptySlot = <T,>(url: string | null): Slot<T> => ({ url, data: null, error: null, failures: 0, refreshing: false });
+const emptySlot = <T, M extends Meta>(url: string | null): Slot<T, M> => ({ url, data: null, error: null, failures: 0, refreshing: false });
 
-async function fetchSourced<T>(url: string, signal: AbortSignal): Promise<Sourced<T>> {
+async function fetchEnv<T, M extends Meta>(url: string, signal: AbortSignal): Promise<Env<T, M>> {
   const res = await fetch(url, { signal, headers: { accept: "application/json" } });
-  const body = (await res.json().catch(() => null)) as (Sourced<T> & { error?: { message?: string } }) | null;
+  const body = (await res.json().catch(() => null)) as (Env<T, M> & { error?: { message?: string } }) | null;
   if (!res.ok || !body || body.error || !body.meta) throw new Error(body?.error?.message ?? "Não foi possível carregar os dados.");
   return body;
 }
@@ -46,11 +53,11 @@ async function fetchSourced<T>(url: string, signal: AbortSignal): Promise<Source
  * - erro numa atualização → mantém o que já estava na tela e tenta de novo com recuo;
  * - aba escondida ou sem internet → não busca; ao voltar, busca na hora se estiver atrasado.
  */
-export function useApi<T>(url: string | null, opts: ApiOptions<T>): ApiResult<T> {
-  const [slot, setSlot] = useState<Slot<T>>(() =>
-    opts.initial && url !== null && (opts.initialUrl ?? url) === url ? { ...emptySlot<T>(url), data: opts.initial } : emptySlot<T>(url),
+export function useApi<T, M extends Meta = ResponseMeta>(url: string | null, opts: ApiOptions<T, M>): ApiResult<T, M> {
+  const [slot, setSlot] = useState<Slot<T, M>>(() =>
+    opts.initial && url !== null && (opts.initialUrl ?? url) === url ? { ...emptySlot<T, M>(url), data: opts.initial } : emptySlot<T, M>(url),
   );
-  const current = slot.url === url ? slot : emptySlot<T>(url);
+  const current = slot.url === url ? slot : emptySlot<T, M>(url);
 
   const nextRefreshRef = useRef(opts.nextRefreshMs);
   useEffect(() => {
@@ -66,12 +73,12 @@ export function useApi<T>(url: string | null, opts: ApiOptions<T>): ApiResult<T>
       const ctl = new AbortController();
       abortRef.current = ctl;
       try {
-        const data = await fetchSourced<T>(target, ctl.signal);
+        const data = await fetchEnv<T, M>(target, ctl.signal);
         setSlot({ url: target, data, error: null, failures: 0, refreshing: false });
       } catch (e) {
         if (ctl.signal.aborted) return;
         const message = e instanceof Error ? e.message : "Não foi possível carregar os dados.";
-        setSlot((s) => (s.url === target ? { ...s, error: message, failures: s.failures + 1, refreshing: false } : { ...emptySlot<T>(target), error: message, failures: 1 }));
+        setSlot((s) => (s.url === target ? { ...s, error: message, failures: s.failures + 1, refreshing: false } : { ...emptySlot<T, M>(target), error: message, failures: 1 }));
       }
     },
     [],

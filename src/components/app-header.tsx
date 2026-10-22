@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { isEsportsConfigured } from "@/lib/esports/service";
 import { StarIcon } from "./icons";
 
 /** Marca: o nome em largura expandida e o ponto cobalto, o mesmo ponto que pulsa nos jogos ao vivo. */
@@ -17,10 +18,18 @@ export function AppHeader() {
       <Link href="/" aria-label="Placar, página inicial" className="-m-2 p-2">
         <Wordmark />
       </Link>
-      <Link href="/favoritos" className="-m-2 flex items-center gap-1.5 p-2 text-[0.95rem] font-medium text-muted hover:text-ink">
-        <StarIcon />
-        Favoritos
-      </Link>
+      <nav aria-label="Seções" className="flex items-center gap-5">
+        {/* Só aparece se este servidor tem a fonte de e-sports configurada: nada de link para uma tela vazia. */}
+        {isEsportsConfigured() ? (
+          <Link href="/esports" className="-m-2 p-2 text-[0.95rem] font-medium text-muted hover:text-ink">
+            E-sports
+          </Link>
+        ) : null}
+        <Link href="/favoritos" className="-m-2 flex items-center gap-1.5 p-2 text-[0.95rem] font-medium text-muted hover:text-ink">
+          <StarIcon />
+          Favoritos
+        </Link>
+      </nav>
     </header>
   );
 }

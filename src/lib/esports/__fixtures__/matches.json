@@ -1,0 +1,198 @@
+[
+  {
+    "id": 1001,
+    "name": "Grand final: Alpha vs Bravo",
+    "slug": "alpha-vs-bravo",
+    "status": "finished",
+    "scheduled_at": "2026-10-22T18:00:00Z",
+    "begin_at": "2026-10-22T18:07:12Z",
+    "end_at": "2026-10-22T20:31:40Z",
+    "number_of_games": 3,
+    "match_type": "best_of",
+    "forfeit": false,
+    "draw": false,
+    "opponents": [
+      { "type": "Team", "opponent": { "id": 501, "name": "Alpha Esports", "acronym": "ALP", "image_url": "https://cdn.example.com/teams/alpha.png", "slug": "alpha" } },
+      { "type": "Team", "opponent": { "id": 502, "name": "Bravo Gaming", "acronym": "BRV", "image_url": "https://cdn.example.com/teams/bravo.png", "slug": "bravo" } }
+    ],
+    "results": [
+      { "team_id": 501, "score": 2 },
+      { "team_id": 502, "score": 1 }
+    ],
+    "winner_id": 501,
+    "winner_type": "Team",
+    "streams_list": [
+      { "embed_url": "https://player.twitch.tv/?channel=alt", "language": "pt", "main": false, "official": false, "raw_url": "https://www.twitch.tv/alt" },
+      { "embed_url": "https://player.twitch.tv/?channel=main", "language": "en", "main": true, "official": true, "raw_url": "https://www.twitch.tv/mainchannel" }
+    ],
+    "league": { "id": 11, "name": "Liga Aurora", "slug": "liga-aurora" },
+    "serie": { "id": 21, "name": "Fall", "full_name": "Fall 2026", "year": 2026 },
+    "tournament": { "id": 31, "name": "Playoffs", "tier": "s", "region": "SA" },
+    "videogame": { "id": 3, "name": "Counter-Strike", "slug": "cs-go" }
+  },
+  {
+    "id": 1002,
+    "name": "Semifinal: Charlie vs Delta",
+    "status": "running",
+    "scheduled_at": "2026-10-22T21:30:00Z",
+    "begin_at": "2026-10-22T21:41:00Z",
+    "end_at": null,
+    "number_of_games": 5,
+    "match_type": "best_of",
+    "forfeit": false,
+    "opponents": [
+      { "type": "Team", "opponent": { "id": 503, "name": "Charlie", "acronym": "CHA", "image_url": null } },
+      { "type": "Team", "opponent": { "id": 504, "name": "Delta Team", "acronym": null, "image_url": "https://cdn.example.com/teams/delta.png" } }
+    ],
+    "results": [
+      { "team_id": 503, "score": 1 },
+      { "team_id": 504, "score": 2 }
+    ],
+    "winner_id": null,
+    "streams_list": [{ "language": "en", "main": true, "official": true, "raw_url": "https://www.youtube.com/watch?v=abc123" }],
+    "league": { "id": 12, "name": "Liga Boreal" },
+    "serie": { "id": 22, "name": "Split 3", "full_name": null },
+    "tournament": { "id": 32, "name": "Fase de grupos", "tier": "a" },
+    "videogame": { "id": 1, "name": "League of Legends", "slug": "league-of-legends" }
+  },
+  {
+    "id": 1003,
+    "name": "Upper final: Echo vs TBD",
+    "status": "not_started",
+    "scheduled_at": "2026-10-23T02:00:00Z",
+    "begin_at": null,
+    "end_at": null,
+    "number_of_games": 3,
+    "match_type": "best_of",
+    "forfeit": false,
+    "opponents": [{ "type": "Team", "opponent": { "id": 505, "name": "Echo Club", "acronym": "ECH", "image_url": "https://cdn.example.com/teams/echo.png" } }],
+    "results": [],
+    "winner_id": null,
+    "streams_list": [],
+    "league": { "id": 13, "name": "Copa Cobalto" },
+    "serie": { "id": 23, "name": "2026", "full_name": "Season 2026" },
+    "tournament": { "id": 33, "name": "Chave superior", "tier": "b" },
+    "videogame": { "id": 26, "name": "Valorant", "slug": "valorant" }
+  },
+  {
+    "id": 1004,
+    "name": "Foxtrot vs Golf",
+    "status": "postponed",
+    "scheduled_at": "2026-10-22T15:00:00Z",
+    "begin_at": null,
+    "end_at": null,
+    "number_of_games": 1,
+    "match_type": "best_of",
+    "opponents": [
+      { "type": "Team", "opponent": { "id": 506, "name": "Foxtrot", "acronym": "FOX", "image_url": null } },
+      { "type": "Team", "opponent": { "id": 507, "name": "Golf", "acronym": "GLF", "image_url": null } }
+    ],
+    "results": [
+      { "team_id": 506, "score": 0 },
+      { "team_id": 507, "score": 0 }
+    ],
+    "winner_id": null,
+    "streams_list": [],
+    "league": { "id": 14, "name": "Open Menor" },
+    "tournament": { "id": 34, "name": "Rodada 4", "tier": "d" },
+    "videogame": { "id": 3, "name": "Counter-Strike", "slug": "cs-go" }
+  },
+  {
+    "id": 1005,
+    "name": "Hotel vs India",
+    "status": "canceled",
+    "scheduled_at": "2026-10-22T19:00:00Z",
+    "number_of_games": 3,
+    "match_type": "best_of",
+    "opponents": [
+      { "type": "Team", "opponent": { "id": 508, "name": "Hotel", "acronym": "HOT", "image_url": null } },
+      { "type": "Team", "opponent": { "id": 509, "name": "India", "acronym": "IND", "image_url": null } }
+    ],
+    "results": [],
+    "winner_id": null,
+    "league": { "id": 14, "name": "Open Menor" },
+    "tournament": { "id": 34, "name": "Rodada 4", "tier": "unranked" },
+    "videogame": { "id": 1, "name": "League of Legends", "slug": "league-of-legends" }
+  },
+  {
+    "id": 1006,
+    "name": "Juliet vs Kilo (W.O.)",
+    "status": "finished",
+    "scheduled_at": "2026-10-22T12:00:00Z",
+    "begin_at": "2026-10-22T12:00:00Z",
+    "end_at": "2026-10-22T12:05:00Z",
+    "number_of_games": 3,
+    "match_type": "best_of",
+    "forfeit": true,
+    "opponents": [
+      { "type": "Team", "opponent": { "id": 510, "name": "Juliet", "acronym": "JUL", "image_url": null } },
+      { "type": "Team", "opponent": { "id": 511, "name": "Kilo", "acronym": "KIL", "image_url": null } }
+    ],
+    "results": [
+      { "team_id": 510, "score": 2 },
+      { "team_id": 511, "score": 0 }
+    ],
+    "winner_id": 510,
+    "streams_list": [],
+    "league": { "id": 13, "name": "Copa Cobalto" },
+    "tournament": { "id": 33, "name": "Chave inferior", "tier": "c" },
+    "videogame": { "id": 26, "name": "Valorant", "slug": "valorant" }
+  },
+  {
+    "id": 1007,
+    "name": "Dota 2: Lima vs Mike",
+    "status": "finished",
+    "scheduled_at": "2026-10-22T10:00:00Z",
+    "number_of_games": 3,
+    "match_type": "best_of",
+    "opponents": [
+      { "type": "Team", "opponent": { "id": 512, "name": "Lima", "image_url": null } },
+      { "type": "Team", "opponent": { "id": 513, "name": "Mike", "image_url": null } }
+    ],
+    "results": [
+      { "team_id": 512, "score": 2 },
+      { "team_id": 513, "score": 0 }
+    ],
+    "winner_id": 512,
+    "league": { "id": 15, "name": "Outro jogo" },
+    "tournament": { "id": 35, "name": "X", "tier": "a" },
+    "videogame": { "id": 4, "name": "Dota 2", "slug": "dota-2" }
+  },
+  {
+    "id": 1008,
+    "name": "Sem horário",
+    "status": "not_started",
+    "scheduled_at": null,
+    "begin_at": null,
+    "number_of_games": 3,
+    "match_type": "best_of",
+    "opponents": [],
+    "results": [],
+    "league": { "id": 16, "name": "A definir" },
+    "videogame": { "id": 1, "name": "League of Legends", "slug": "league-of-legends" }
+  },
+  {
+    "id": 1009,
+    "name": "Links perigosos",
+    "status": "not_started",
+    "scheduled_at": "2026-10-22T23:00:00Z",
+    "number_of_games": 3,
+    "match_type": "first_to",
+    "opponents": [
+      { "type": "Team", "opponent": { "id": 514, "name": "November", "acronym": "NOV", "image_url": "javascript:alert(1)" } },
+      { "type": "Team", "opponent": { "id": 515, "name": "Oscar", "acronym": "OSC", "image_url": "http://insecure.example.com/o.png" } }
+    ],
+    "results": [],
+    "streams_list": [
+      { "language": "pt", "main": true, "official": true, "raw_url": "javascript:alert(1)" },
+      { "language": "pt", "main": false, "official": true, "raw_url": "http://www.twitch.tv/inseguro" },
+      { "language": "pt", "main": false, "official": false, "raw_url": "data:text/html,<script>1</script>" },
+      { "language": "pt", "main": false, "official": false, "raw_url": "https://user:senha@www.twitch.tv/credenciais" },
+      { "language": "pt", "main": false, "official": false, "raw_url": "https://www.twitch.tv/valido" },
+      { "language": "pt", "main": false, "official": false, "raw_url": "https://www.twitch.tv/valido" }
+    ],
+    "league": { "id": 17, "name": "Liga Teste" },
+    "tournament": { "id": 37, "name": "Sem tier", "tier": "z" },
+    "videogame": { "id": 3, "name": "Counter-Strike", "slug": "cs-go" }
+  }
+]
