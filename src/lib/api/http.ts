@@ -1,5 +1,5 @@
 import { DATE_WINDOW_DAYS } from "@/lib/config";
-import { AllSourcesFailedError, DataSourceError, LocalQuotaError } from "@/lib/data/errors";
+import { isAllSourcesFailedError, isDataSourceError, isLocalQuotaError } from "@/lib/data/errors";
 import { addDays, isIsoDate, todayIso } from "@/lib/domain/dates";
 import { isLeagueId } from "@/lib/domain/leagues";
 import type { IsoDate, LeagueId, Sourced } from "@/lib/domain/types";
@@ -97,15 +97,15 @@ const NO_STORE = { "cache-control": "no-store" } as const;
 export function errorResponse(e: unknown): Response {
   if (e instanceof ApiError) return Response.json({ error: { code: e.code, message: e.message } }, { status: e.status, headers: NO_STORE });
 
-  if (e instanceof AllSourcesFailedError) {
+  if (isAllSourcesFailedError(e)) {
     return Response.json(
       { error: { code: "all_sources_failed", message: "Nenhuma fonte de dados respondeu agora. Tente de novo em instantes." }, failures: e.failures },
       { status: 503, headers: { ...NO_STORE, "retry-after": "15" } },
     );
   }
 
-  if (e instanceof DataSourceError) {
-    const retry = e instanceof LocalQuotaError ? String(e.retryAfterSeconds) : "15";
+  if (isDataSourceError(e)) {
+    const retry = isLocalQuotaError(e) ? String(e.retryAfterSeconds) : "15";
     switch (e.kind) {
       case "invalid_id":
         return Response.json({ error: { code: "invalid_id", message: e.message } }, { status: 400, headers: NO_STORE });

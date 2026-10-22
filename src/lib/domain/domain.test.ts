@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { DataSourceError } from "@/lib/data/errors";
 import { addDays, isIsoDate, isOnDate, toZonedIsoDate, zonedTimeToUtc } from "./dates";
 import { makeId, parseId } from "./ids";
-import { LEAGUES, findLeagueBySourceCode, getLeagueDef, leaguesForSource, zoneFor } from "./leagues";
+import { LEAGUES, findLeagueBySourceCode, getLeagueDef, leaguesForSource, toPublicLeague, zoneFor } from "./leagues";
 import { TEAM_ALIASES } from "./team-aliases";
 import { normalizeTeamKey, teamDisplayName } from "./team-key";
 import { LEAGUE_IDS } from "./types";
@@ -192,5 +192,30 @@ describe("aliases de times", () => {
       expect(from, from).not.toBe(to.key);
       expect(TEAM_ALIASES[to.key], `${from} → ${to.key}`).toBeUndefined();
     }
+  });
+});
+
+describe("catálogo ampliado (competições só da ESPN)", () => {
+  const onlyEspn = ["recopa", "copa-do-nordeste", "amistosos", "liga-das-nacoes", "europa-league", "conference-league", "ligue-1", "liga-portugal", "eredivisie", "liga-argentina", "mls", "liga-mx", "fa-cup", "copa-da-liga-inglesa", "copa-del-rey", "coppa-italia", "copa-da-alemanha"] as const;
+
+  it("cada código da ESPN é único (dois ids de liga com o mesmo código se confundiriam no feed)", () => {
+    const slugs = LEAGUES.map((l) => l.sources.espn);
+    expect(slugs.every((s) => typeof s === "string" && s.length > 0)).toBe(true);
+    expect(new Set(slugs).size).toBe(LEAGUES.length);
+  });
+
+  it("as competições novas só têm a ESPN como fonte (o reserva não as cobre) e entram no catálogo público", () => {
+    for (const id of onlyEspn) {
+      const def = getLeagueDef(id);
+      expect(Object.keys(def.sources).sort(), id).toEqual(["espn", "espnLeagueId"]);
+      expect(toPublicLeague(def).id).toBe(id);
+      expect(def.zones, `${id}: zonas só quando conferidas`).toEqual([]);
+    }
+  });
+
+  it("ESPN vem como única fonte; football-data e openfootball seguem só nas ligas que já cobriam", () => {
+    expect(leaguesForSource("openfootball").map((l) => l.id)).not.toContain("mls");
+    expect(leaguesForSource("football-data").map((l) => l.id)).not.toContain("ligue-1");
+    expect(leaguesForSource("espn")).toHaveLength(LEAGUES.length);
   });
 });

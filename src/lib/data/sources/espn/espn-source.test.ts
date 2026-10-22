@@ -54,13 +54,16 @@ describe("EspnSource — lista de jogos (feed global)", () => {
     expect(ms.every((m) => m.leagueId === "brasileirao-a")).toBe(true);
   });
 
-  it("traz as ligas do catálogo e descarta as outras centenas do feed", async () => {
-    // sanidade da fixture: o feed real mistura ligas nossas e de fora
-    expect(feedEvents.some((e) => !OUR_ESPN_IDS.has(leagueIdOf(e)))).toBe(true);
-    const { source } = setup(feedOf(feedDay));
+  it("traz as ligas do catálogo e descarta as de fora", async () => {
+    // O feed real mistura o mundo todo. O catálogo cresce com o tempo, então não dependemos de quais ligas a
+    // ESPN tinha naquele dia: juntamos à fixture um jogo de uma liga que NÃO está no catálogo (id 99999).
+    const stranger = { ...feedEvents[0], id: "999999", uid: "s:600~l:99999~e:999999" };
+    expect(OUR_ESPN_IDS.has("99999")).toBe(false);
+    const { source } = setup(feedOf({ ...(feedDay as object), events: [...feedEvents, stranger] }));
     const ms = await source.getMatchesByDate("2026-10-24");
     const esperados = feedEvents.filter((e) => OUR_ESPN_IDS.has(leagueIdOf(e)) && toZonedIsoDate(e.date!) === "2026-10-24");
     expect(ms).toHaveLength(esperados.length);
+    expect(ms.some((m) => m.id.endsWith(":999999"))).toBe(false);
     expect(ms.length).toBeGreaterThan(10);
     expect(new Set(ms.map((m) => m.leagueId)).size).toBeGreaterThan(1);
   });
@@ -142,7 +145,10 @@ describe("EspnSource — ao vivo", () => {
   });
 
   it("jogos de ligas fora do catálogo não aparecem (o feed é do mundo todo)", async () => {
-    const { source } = setup(feedOf(feedLive));
+    // Troca o id da liga de todos os eventos por um que não está no catálogo.
+    const board = structuredClone(feedLive) as unknown as EspnScoreboard;
+    for (const e of board.events ?? []) e.uid = e.uid?.replace(/~l:\d+~/, "~l:99999~");
+    const { source } = setup(feedOf(board));
     expect(await source.getLiveMatches()).toEqual([]);
   });
 

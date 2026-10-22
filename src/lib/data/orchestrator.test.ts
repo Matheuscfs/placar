@@ -726,6 +726,29 @@ describe("classificação", () => {
     await expect(orch.getStandings("brasileirao-a")).rejects.toBeInstanceOf(AllSourcesFailedError);
   });
 
+  it("competição sem tabela (a fonte diz 'não existe'): é 'unsupported', não 'todas as fontes falharam'", async () => {
+    const espn = fake("espn");
+    espn.h.standings = () => {
+      throw new DataSourceError("not_found", "A ESPN não tem classificação para copa-do-brasil", { source: "espn" });
+    };
+    const { orch } = build([espn]);
+    await expect(orch.getStandings("copa-do-brasil")).rejects.toMatchObject({ kind: "unsupported", message: expect.stringContaining("Copa do Brasil") });
+    await expect(orch.getStandings("copa-do-brasil")).rejects.not.toBeInstanceOf(AllSourcesFailedError);
+  });
+
+  it("'não existe' numa fonte e fonte fora do ar na outra: continua sendo falha (pode ser passageira)", async () => {
+    const espn = fake("espn");
+    const of = fake("openfootball");
+    espn.h.standings = () => {
+      throw new DataSourceError("not_found", "sem tabela", { source: "espn" });
+    };
+    of.h.standings = () => {
+      throw down("openfootball");
+    };
+    const { orch } = build([espn, of]);
+    await expect(orch.getStandings("brasileirao-a")).rejects.toBeInstanceOf(AllSourcesFailedError);
+  });
+
   it("nenhuma fonte tem classificação → unsupported", async () => {
     const { orch } = build([fake("espn", { caps: { standings: false } })]);
     await expect(orch.getStandings("brasileirao-a")).rejects.toMatchObject({ kind: "unsupported" });

@@ -1,5 +1,5 @@
 import { cookies } from "next/headers";
-import { DataSourceError } from "@/lib/data/errors";
+import { isDataSourceError } from "@/lib/data/errors";
 import type { Favorites } from "./favorites";
 import { FAVORITES_COOKIE, decodeFavoritesCookie } from "./favorites-cookie";
 import type { Sourced } from "@/lib/domain/types";
@@ -17,7 +17,7 @@ export async function loadInitial<T>(fn: () => Promise<Sourced<T>>): Promise<Ini
   try {
     return { ok: true, data: await fn() };
   } catch (e) {
-    if (e instanceof DataSourceError && (e.kind === "not_found" || e.kind === "invalid_id" || e.kind === "unsupported")) return { ok: false, reason: "not_found" };
+    if (isDataSourceError(e) && (e.kind === "not_found" || e.kind === "invalid_id" || e.kind === "unsupported")) return { ok: false, reason: "not_found" };
     return { ok: false, reason: "failed" };
   }
 }

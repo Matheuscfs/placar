@@ -26,6 +26,23 @@ export const LEAGUE_IDS = [
   "carioca",
   "mineiro",
   "gaucho",
+  "recopa",
+  "copa-do-nordeste",
+  "amistosos",
+  "liga-das-nacoes",
+  "europa-league",
+  "conference-league",
+  "ligue-1",
+  "liga-portugal",
+  "eredivisie",
+  "liga-argentina",
+  "mls",
+  "liga-mx",
+  "fa-cup",
+  "copa-da-liga-inglesa",
+  "copa-del-rey",
+  "coppa-italia",
+  "copa-da-alemanha",
 ] as const;
 export type LeagueId = (typeof LEAGUE_IDS)[number];
 

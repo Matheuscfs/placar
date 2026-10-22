@@ -59,6 +59,23 @@ export class AllSourcesFailedError extends DataSourceError {
   }
 }
 
+const KINDS: ReadonlySet<string> = new Set<DataSourceErrorKind>(["unavailable", "rate_limited", "not_found", "unsupported", "bad_response", "timeout", "invalid_id"]);
+
+/**
+ * É um erro de fonte? Além do `instanceof`, confere o FORMATO: o mesmo módulo pode ser empacotado duas vezes
+ * (rotas e páginas no servidor), e aí o erro criado por uma cópia da classe não é `instanceof` da outra. Sem isto,
+ * "não existe" virava "falhou" na página (e 404 virava 500 na API) quando o orquestrador era criado por outra rota.
+ */
 export function isDataSourceError(e: unknown): e is DataSourceError {
-  return e instanceof DataSourceError;
+  if (e instanceof DataSourceError) return true;
+  const x = e as { kind?: unknown } | null;
+  return e instanceof Error && typeof x?.kind === "string" && KINDS.has(x.kind) && "source" in e && "status" in e;
+}
+
+export function isAllSourcesFailedError(e: unknown): e is AllSourcesFailedError {
+  return e instanceof AllSourcesFailedError || (isDataSourceError(e) && e.name === "AllSourcesFailedError" && Array.isArray((e as { failures?: unknown }).failures));
+}
+
+export function isLocalQuotaError(e: unknown): e is LocalQuotaError {
+  return e instanceof LocalQuotaError || (isDataSourceError(e) && e.name === "LocalQuotaError" && typeof (e as { retryAfterSeconds?: unknown }).retryAfterSeconds === "number");
 }

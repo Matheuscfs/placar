@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import type { Match, MatchStatus, Team } from "@/lib/domain/types";
+import { LEAGUE_IDS, type Match, type MatchStatus, type Team } from "@/lib/domain/types";
 import { crestUrl, monogram } from "./crest";
 import { EMPTY_FAVORITES, isFavoriteLeague, isFavoriteTeam, parseFavorites, serializeFavorites, toFavoriteTeam, toggleLeague, toggleTeam, type Favorites } from "./favorites";
 import { dayOfMonth, formatAge, formatLongDay, formatShortDate, formatTime, formatWeekday, hasScore, matchSummary, statusView, winnerOf } from "./format";
@@ -249,7 +249,7 @@ describe("agrupamento da tela inicial", () => {
   });
 
   it("o catálogo no cliente tem todas as ligas, em ordem", () => {
-    expect(PUBLIC_LEAGUES).toHaveLength(14);
+    expect(PUBLIC_LEAGUES).toHaveLength(LEAGUE_IDS.length);
     expect(leagueById("libertadores")?.shortName).toBe("Libertadores");
     expect(PUBLIC_LEAGUES[0].id).toBe("brasileirao-a");
   });

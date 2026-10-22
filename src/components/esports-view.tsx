@@ -1,13 +1,16 @@
 "use client";
 
 import { useId, useMemo, useState } from "react";
+import { addDays } from "@/lib/domain/dates";
 import type { IsoDate } from "@/lib/domain/types";
 import type { EsportsMatch, EsportsMeta, EsportsResult } from "@/lib/esports/types";
 import { GAME_FULL_NAME, GAME_LABEL, groupEsports, hasLiveEsports, isMainTier, type GameTab } from "@/lib/esports/ui";
+import { dateBounds } from "@/lib/ui/days";
 import { formatDayMonth, formatAge, formatWeekdayLong } from "@/lib/ui/format";
 import { nextRefreshMs } from "@/lib/ui/refresh";
 import { useApi } from "@/lib/ui/use-api";
 import { useNow } from "@/lib/ui/use-now";
+import { useSwipe } from "@/lib/ui/use-swipe";
 import { UpdatedAt } from "./data-notices";
 import { DayStrip } from "./day-strip";
 import { EsportsRow } from "./esports-row";
@@ -69,13 +72,20 @@ export function EsportsView({ today, initialDate, initialGame, initial }: { toda
     setDate(next);
     sync(next, tab);
   };
+  // Arrastar para a esquerda avança um dia; para a direita, volta. Nunca sai da janela que a API aceita.
+  const step = (days: number) => {
+    const next = addDays(date, days);
+    const { min, max } = dateBounds(today);
+    if (next >= min && next <= max) selectDate(next);
+  };
+  const swipe = useSwipe({ onLeft: () => step(1), onRight: () => step(-1) });
   const selectTab = (next: GameTab) => {
     setTab(next);
     sync(date, next);
   };
 
   return (
-    <div className="pt-3">
+    <div className="pt-3" {...swipe}>
       <h1>
         <span className="block text-base font-medium text-muted first-letter:uppercase">E-sports · {formatWeekdayLong(date)}</span>
         <span className="block text-[2.1rem] font-bold leading-[1.1]">{formatDayMonth(date)}</span>

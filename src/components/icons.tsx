@@ -55,3 +55,23 @@ export const WifiOffIcon = (p: SVGProps<SVGSVGElement>) => (
     <path d="M3 3l18 18M8.5 16.2a5 5 0 017 0M5.2 12.9a9.5 9.5 0 013.6-2.1M12 20h.01M10 6.2A14 14 0 0121 10M2.5 9.7a14 14 0 013-2.2" />
   </svg>
 );
+
+export const SearchIcon = (p: SVGProps<SVGSVGElement>) => (
+  <svg {...base(p)}>
+    <circle cx="11" cy="11" r="6.5" />
+    <path d="M16 16l4.5 4.5" />
+  </svg>
+);
+
+export const CloseIcon = (p: SVGProps<SVGSVGElement>) => (
+  <svg {...base(p)}>
+    <path d="M6.5 6.5l11 11M17.5 6.5l-11 11" />
+  </svg>
+);
+
+export const ShareIcon = (p: SVGProps<SVGSVGElement>) => (
+  <svg {...base(p)}>
+    <path d="M12 15V4.5M8 8l4-4 4 4" />
+    <path d="M6 11.5v6A2.5 2.5 0 008.5 20h7a2.5 2.5 0 002.5-2.5v-6" />
+  </svg>
+);

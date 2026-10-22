@@ -26,11 +26,17 @@ describe("id da liga no feed global", () => {
 
 describe("matchesFromAllFeed (feed real de 24/10/2026)", () => {
   it("reconhece cada liga do catálogo pelo id e ignora as outras", () => {
-    const ms = matchesFromAllFeed(feedDay as unknown as EspnScoreboard, [...LEAGUES]);
+    // O catálogo cresce, então não dependemos de quais ligas a ESPN tinha naquele dia: juntamos um jogo de uma liga
+    // que NÃO está no catálogo (id 99999) e conferimos que só ele fica de fora.
+    const stranger = { ...events(feedDay)[0], id: "999999", uid: "s:600~l:99999~e:999999" };
+    const board = { ...(feedDay as object), events: [...events(feedDay), stranger] } as unknown as EspnScoreboard;
+    const ms = matchesFromAllFeed(board, [...LEAGUES]);
     const doCatalogo = events(feedDay).filter((e) => LEAGUES.some((l) => l.sources.espnLeagueId === espnLeagueIdOf(e)));
     expect(ms).toHaveLength(doCatalogo.length);
-    expect(events(feedDay).length).toBeGreaterThan(ms.length); // o feed tem jogos de ligas que não são nossas
-    expect(new Set(ms.map((m) => m.leagueId))).toEqual(new Set(["premier-league", "la-liga", "serie-a-italia", "bundesliga", "brasileirao-a", "brasileirao-b", "libertadores"].filter((id) => ms.some((m) => m.leagueId === id))));
+    expect(events(board).length).toBeGreaterThan(ms.length); // o feed tem jogos de ligas que não são nossas
+    const ids = new Set(ms.map((m) => m.leagueId));
+    expect(ids.has("brasileirao-a")).toBe(true);
+    expect([...ids].every((id) => LEAGUES.some((l) => l.id === id))).toBe(true);
   });
 
   it("só devolve as ligas pedidas", () => {

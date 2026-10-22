@@ -371,7 +371,7 @@ export class Orchestrator {
   }
 
   async getStandings(leagueId: LeagueId): Promise<Sourced<Standings>> {
-    getLeagueDef(leagueId);
+    const league = getLeagueDef(leagueId);
     const failures: SourceFailure[] = [];
     const candidates = this.candidates(leagueId, (s) => s.capabilities.standings);
     if (candidates.length === 0) throw new DataSourceError("unsupported", `Nenhuma fonte tem classificação para ${leagueId}`);
@@ -381,7 +381,14 @@ export class Orchestrator {
       (src) => this.via(src, "standings", `standings|${src.id}|${leagueId}`, () => src.getStandings(leagueId), () => ({ ttlSeconds: TTL.standings, staleSeconds: STALE.standings }), leagueId),
       leagueId,
     );
-    if (!piece) throw new AllSourcesFailedError(`Nenhuma fonte respondeu (classificação de ${leagueId})`, failures);
+    if (!piece) {
+      // Copas, amistosos e mata-matas não têm tabela: se TODAS as fontes disseram "não existe/não cobre", isso não é
+      // uma falha passageira, é a resposta. (Um erro de verdade, como fonte fora do ar, continua sendo 503.)
+      if (failures.length > 0 && failures.every((f) => f.kind === "not_found" || f.kind === "unsupported")) {
+        throw new DataSourceError("unsupported", `Não há tabela de classificação para ${league.name}.`);
+      }
+      throw new AllSourcesFailedError(`Nenhuma fonte respondeu (classificação de ${leagueId})`, failures);
+    }
     return { data: piece.value, meta: this.meta([piece], failures, []) };
   }
 

@@ -3,7 +3,9 @@
 PWA de placares de futebol ao vivo: minimalista, rápido e pensado primeiro para o celular.
 *(Nome provisório: veja "Avisos legais" antes de publicar.)*
 
-- **Jogos do dia** agrupados por liga, com seletor de dia e atualização só enquanto há jogo na tela.
+- **Jogos do dia** agrupados por liga, com seletor de dia (ou arrastar para os lados), **filtros** (ao vivo, favoritos),
+  **busca** por time ou campeonato e atualização só enquanto há jogo na tela.
+- **31 competições**: Brasil, América do Sul, Europa, Américas e seleções (lista abaixo).
 - **Página do jogo** (resumo, escalações, estatísticas), **classificação**, **página do time**.
 - **Favoritos** no aparelho (times e ligas vão primeiro) e **avisos** de início, gols e fim de jogo.
 - **PWA** instalável, com modo offline para o que já foi visto. Tema claro/escuro automático.
@@ -150,7 +152,8 @@ em nenhuma fonte) e `failures` (o que falhou no caminho). Cada `Match` também t
 
 **Cache-Control** sai do TTL do conteúdo (`s-maxage` de 20 s com jogo ao vivo, 30 s hoje, 6 h para dias
 passados), para o CDN da Vercel absorver o tráfego. **Erros**: `400` parâmetro inválido, `404` não existe,
-`503` + `Retry-After` quando nenhuma fonte responde (com `failures` no corpo).
+`503` + `Retry-After` quando nenhuma fonte responde (com `failures` no corpo). Competição **sem tabela** (copas,
+amistosos) responde `404 unsupported` em `/api/standings/{liga}`: não é falha, é a resposta.
 
 ## Interface
 
@@ -172,6 +175,19 @@ jogo, e a tela diz para confirmar. Competição sem informação confiável (hoj
 fica sem a linha, de propósito. **Revise o catálogo quando os direitos mudarem** (temporada nova, renovação).
 
 Ids de liga são os do catálogo (`src/lib/domain/leagues.ts`): `brasileirao-a`, `libertadores`, `premier-league`…
+
+Interações da tela inicial (e da de e-sports):
+
+- **Filtros** "Todos", "Ao vivo" e "Favoritos", com contagem. Só aparecem quando há o que filtrar (e ficam, se já
+  escolhidos, para dar para desligar). "Favoritos" = jogo em que um dos dois **times** é favorito (liga favorita só
+  muda a ordem).
+- **Busca** pela lupa: acha por nome, nome curto ou sigla de qualquer time, nome/país do campeonato e fase, sem ligar
+  para acento ou caixa; várias palavras valem em qualquer ordem ("fla liberta"). Esc fecha e limpa. Olha os jogos do
+  dia escolhido.
+- **Arrastar para os lados** (celular) troca de dia, sem sair da janela de datas que a API aceita. Ignora gestos que
+  começam no campo de busca ou na faixa de dias, e rolagem vertical não conta.
+- **Compartilhar** na página do jogo: folha do sistema no celular; no computador copia o link (com plano B para
+  navegadores que recusam a área de transferência) e avisa.
 
 Como ela se mantém rápida e honesta:
 
@@ -205,6 +221,33 @@ foi visto de verdade em um navegador: registrado, ativo, controlando a página, 
 `placar-api`, `placar-static`) se preenchem como esperado. O que **ainda não foi visto** é o fallback offline em si
 (página guardada ou `/offline` com a rede cortada): marque *Offline* no DevTools e confira. Em `http://localhost` o
 registro falhou no navegador embutido do ambiente de desenvolvimento; use HTTPS (ou o Chrome em localhost).
+
+## Competições
+
+31 competições no catálogo (`src/lib/domain/leagues.ts`):
+
+| Região | Competições |
+|---|---|
+| Brasil | Brasileirão A e B, Copa do Brasil, Copa do Nordeste, Paulista, Carioca, Mineiro, Gaúcho |
+| América do Sul | Libertadores, Sul-Americana, Recopa, Liga Profesional Argentina |
+| Europa | Premier League, La Liga, Serie A, Bundesliga, Ligue 1, Liga Portugal, Eredivisie, Champions, Europa League, Conference League, Liga das Nações |
+| Copas nacionais | FA Cup, Copa da Liga Inglesa, Copa del Rey, Coppa Italia, Copa da Alemanha |
+| Outras | MLS, Liga MX, Amistosos de seleções |
+
+As 17 mais novas (Recopa em diante) vêm **só da ESPN**: sem o openfootball nem o football-data como reserva, então se a
+ESPN cair não há fallback para elas. Os códigos e os ids foram conferidos contra a API real em 22/10/2026, e jogos e
+tabelas delas foram vistos funcionando no app. As **zonas** da tabela ficam vazias nessas competições, de propósito:
+as vagas mudam por temporada e a ESPN informa as que souber (Champions, mata-mata, acesso…). Competição sem tabela
+mostra uma explicação em vez de erro.
+
+Ficaram de fora, por não terem jogo agora: Copa do Mundo, Eurocopa, Copa América, Mundial de Clubes e as Eliminatórias
+(a ESPN tem todas). O Brasileirão Feminino não existe na ESPN com o código que tentei (HTTP 400).
+
+**Como adicionar uma competição da ESPN:** descubra o código (`https://site.api.espn.com/apis/site/v2/sports/soccer/<codigo>/scoreboard`
+responde 200) e o id numérico da liga (o `l:NNN` do `uid` do evento, em `leagues[0].uid`); acrescente o id em `LEAGUE_IDS`
+(`src/lib/domain/types.ts`) e a entrada em `LEAGUES` (`leagues.ts`, com `order` único). Os testes do catálogo conferem
+unicidade de códigos, ids e ordem. Teste com jogos e tabela reais antes de publicar. Se tiver tabela, confira também como
+as zonas aparecem.
 
 ## E-sports
 
@@ -373,6 +416,8 @@ Dito com franqueza, para você não descobrir em produção:
 | Desempenho e acessibilidade | Sem Lighthouse nem leitor de tela. Foco, rótulos, contraste e movimento reduzido foram conferidos à mão e por testes de componente. |
 | Zonas da classificação | Vêm do catálogo (`leagues.ts`) quando a fonte não informa, e **mudam de ano para ano**: confira o regulamento da temporada. |
 | openfootball | Atualizado em lote (a Série A 2026 parou em 20/09; Libertadores só em TXT e defasada). A tabela dele é calculada e ignora confronto direto e punições. |
+| Competições novas (17) | Verificadas uma vez contra a ESPN real (22/10/2026): jogos de várias datas e tabelas de 10 delas via API; visualmente só MLS e FA Cup. **Sem reserva** (só ESPN). Zonas da tabela vazias, salvo as que a ESPN informa. |
+| Gestos no celular real | O arrastar para trocar de dia foi testado com eventos de toque no navegador embutido e em testes, **não com um dedo num aparelho de verdade**. O botão Compartilhar não pôde ser testado na folha do sistema (só a cópia do link). |
 | Detalhes de jogos ao vivo | Observados em jogos reais em 22/10/2026 (placar, minuto, intervalo); pênaltis, prorrogação e adiados foram verificados com dados simulados e fixtures. |
 
 ## Sobre as mensagens do Next.js

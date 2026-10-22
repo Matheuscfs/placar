@@ -102,8 +102,10 @@ describe("OpenFootballSource — o que a fonte não tem", () => {
     await expect(source.getLiveMatches()).rejects.toMatchObject({ kind: "unsupported" });
   });
 
-  it("cobre 9 das 14 ligas (não tem Champions nem estaduais)", () => {
+  it("cobre só as ligas com arquivo no openfootball (não tem Champions, estaduais nem as competições só da ESPN)", () => {
     const { source } = setup({});
+    expect(source.supportsLeague("mls")).toBe(false);
+    expect(source.supportsLeague("amistosos")).toBe(false);
     expect(source.supportsLeague("brasileirao-a")).toBe(true);
     expect(source.supportsLeague("libertadores")).toBe(true);
     expect(source.supportsLeague("bundesliga")).toBe(true);

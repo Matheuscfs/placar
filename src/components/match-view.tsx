@@ -22,6 +22,8 @@ import { StateMessage } from "./state-message";
 import { StatusCell } from "./status-cell";
 import { Tabs, panelProps, type TabItem } from "./tabs";
 import { broadcastFor } from "@/lib/domain/broadcasts";
+import { matchShareText } from "@/lib/ui/share";
+import { ShareButton } from "./share-button";
 
 type TabId = "resumo" | "escalacoes" | "estatisticas";
 const TABS: TabItem<TabId>[] = [
@@ -144,10 +146,13 @@ export function MatchView({ id, initial }: { id: string; initial: Sourced<MatchD
 
   return (
     <article className="pt-1">
-      <Link href={backHref} className="-ml-2 inline-flex h-11 items-center gap-1 rounded-full pr-3 text-[0.95rem] font-medium text-muted hover:text-ink">
-        <ChevronLeftIcon />
-        Jogos
-      </Link>
+      <div className="flex items-center justify-between">
+        <Link href={backHref} className="-ml-2 inline-flex h-11 items-center gap-1 rounded-full pr-3 text-[0.95rem] font-medium text-muted hover:text-ink">
+          <ChevronLeftIcon />
+          Jogos
+        </Link>
+        <ShareButton title={`${m.home.team.name} x ${m.away.team.name} — Placar`} text={matchShareText(m)} />
+      </div>
 
       <header className="mt-1">
         <h1 className="sr-only">

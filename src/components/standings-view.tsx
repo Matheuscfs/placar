@@ -16,11 +16,12 @@ import { Tabs, panelProps } from "./tabs";
 /** A classificação muda de jogo em jogo, não de segundo em segundo: confere a cada 5 min. */
 const REFRESH_MS = 300_000;
 
-export function StandingsView({ league, initial }: { league: League; initial: Sourced<Standings> | null }) {
+export function StandingsView({ league, initial, noTable = false }: { league: League; initial: Sourced<Standings> | null; noTable?: boolean }) {
   const { isLeague, toggleLeague, isTeam } = useFavorites();
   const [group, setGroup] = useState(0);
   const url = `/api/standings/${league.id}`;
-  const api = useApi<Standings>(url, { initial, initialUrl: url, nextRefreshMs: (_d, failures) => (failures > 0 ? Math.min(120_000, 15_000 * 2 ** (failures - 1)) : REFRESH_MS) });
+  // Competição sem tabela: nada a buscar (url nula desliga a busca e a atualização periódica).
+  const api = useApi<Standings>(noTable ? null : url, { initial, initialUrl: url, nextRefreshMs: (_d, failures) => (failures > 0 ? Math.min(120_000, 15_000 * 2 ** (failures - 1)) : REFRESH_MS) });
 
   const data = api.data?.data;
   const groups = data?.groups ?? [];
@@ -50,7 +51,11 @@ export function StandingsView({ league, initial }: { league: League; initial: So
         extra={computed ? "Tabela calculada a partir dos resultados: pode estar defasada e não considera confronto direto nem punições." : undefined}
       />
 
-      {api.loading ? (
+      {noTable ? (
+        <StateMessage title="Esta competição não tem tabela de classificação" action={{ label: "Ver os jogos de hoje", href: "/" }}>
+          Ela é decidida em mata-mata ou em jogos avulsos. Os jogos aparecem na tela inicial, no dia em que acontecem.
+        </StateMessage>
+      ) : api.loading ? (
         <BlockSkeleton lines={10} />
       ) : !current ? (
         <StateMessage tone="error" title="Não foi possível carregar a classificação" action={{ label: "Tentar de novo", onClick: api.refresh }}>

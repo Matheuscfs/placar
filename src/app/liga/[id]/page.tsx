@@ -20,7 +20,8 @@ export default async function LeaguePage({ params }: Props) {
   const { id } = await params;
   const league = isLeagueId(id) ? leagueById(id) : undefined;
   if (!league) notFound();
-  // Copas sem tabela única (mata-mata) respondem "não suportado": a página abre mesmo assim e explica.
+  // Copas, amistosos e mata-matas não têm tabela: as fontes respondem "não existe" e a página explica, sem ficar
+  // tentando de novo. Falha de verdade (fonte fora do ar) é outra coisa: a tela mostra o erro e tenta de novo.
   const initial = await loadInitial(() => getOrchestrator().getStandings(league.id));
-  return <StandingsView league={league} initial={initial.ok ? initial.data : null} />;
+  return <StandingsView league={league} initial={initial.ok ? initial.data : null} noTable={!initial.ok && initial.reason === "not_found"} />;
 }
