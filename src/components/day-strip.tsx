@@ -26,7 +26,7 @@ export function DayStrip({ selected, today, onSelect }: { selected: IsoDate; tod
     <nav aria-label="Escolher o dia" className="mt-5 flex items-center gap-1">
       <ul className="no-scrollbar -mx-1 flex min-w-0 flex-1 items-center justify-between gap-0.5 overflow-x-auto px-1">
         {days.map((d) => (
-          <li key={d.date} className={d.isEdge ? "hidden min-[420px]:block" : undefined}>
+          <li key={d.date} className={d.isEdge ? "hidden min-[420px]:block min-[768px]:hidden min-[1200px]:block" : undefined}>
             <button
               type="button"
               onClick={() => onSelect(d.date)}

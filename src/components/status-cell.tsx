@@ -4,8 +4,8 @@ import type { StatusView } from "@/lib/ui/format";
  * Coluna de situação do jogo. O cobalto aparece SÓ aqui e só para jogo em andamento: é a cor que
  * diz "está acontecendo agora". Encerrado fica apagado; agendado mostra o horário em tinta normal.
  */
-export function StatusCell({ status, align = "right" }: { status: StatusView; align?: "right" | "center" }) {
-  const items = align === "center" ? "items-center text-center" : "items-end text-right";
+export function StatusCell({ status, align = "right" }: { status: StatusView; align?: "left" | "right" | "center" }) {
+  const items = align === "center" ? "items-center text-center" : align === "left" ? "items-start text-left" : "items-end text-right";
   const live = status.kind === "live";
   const halftime = status.kind === "halftime";
 

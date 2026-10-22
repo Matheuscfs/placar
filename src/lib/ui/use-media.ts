@@ -3,7 +3,7 @@
 import { useCallback, useSyncExternalStore } from "react";
 
 /**
- * Acompanha uma media query (ex.: `(min-width: 900px)`). No servidor e em ambientes sem `matchMedia`
+ * Acompanha uma media query (ex.: `(min-width: 768px)`). No servidor e em ambientes sem `matchMedia`
  * (testes) responde `false`; no cliente passa ao valor real logo após a hidratação, sem erro.
  * Serve para NÃO montar o que o CSS só esconderia (o detalhe lado a lado não deve existir no celular).
  */

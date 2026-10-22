@@ -1,15 +1,17 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { addDays } from "@/lib/domain/dates";
-import type { IsoDate, Match, Sourced } from "@/lib/domain/types";
+import type { IsoDate, LeagueId, Match, Sourced } from "@/lib/domain/types";
 import { dateBounds } from "@/lib/ui/days";
 import { filterMatches, isLiveMatch, type StatusFilter } from "@/lib/ui/filters";
 import { formatDayMonth, formatWeekdayLong } from "@/lib/ui/format";
+import { publishDayLeagues, showAllLeagues, type DayLeague } from "@/lib/ui/league-filter";
 import { groupMatches, hasLive, involvesFavorite } from "@/lib/ui/leagues";
 import { nextRefreshMs } from "@/lib/ui/refresh";
 import { useApi } from "@/lib/ui/use-api";
 import { useFavorites } from "@/lib/ui/use-favorites";
+import { useLeagueFilter } from "@/lib/ui/use-league-filter";
 import { useMedia } from "@/lib/ui/use-media";
 import { useSwipe } from "@/lib/ui/use-swipe";
 import { SPLIT_QUERY, XL_QUERY } from "@/lib/ui/viewport";
@@ -23,6 +25,9 @@ import { PanelView } from "./panel-view";
 import { MatchListSkeleton } from "./skeletons";
 import { StateMessage } from "./state-message";
 
+/** Sem nenhum campeonato desmarcado. */
+const NONE: readonly LeagueId[] = [];
+
 export function HomeView({ today, initialDate, initial }: { today: IsoDate; initialDate: IsoDate; initial: Sourced<Match[]> | null }) {
   const [date, setDate] = useState(initialDate);
   const [status, setStatus] = useState<StatusFilter>("todos");
@@ -31,6 +36,9 @@ export function HomeView({ today, initialDate, initial }: { today: IsoDate; init
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [view, setView] = useState<"lista" | "painel">("lista");
   const { favorites } = useFavorites();
+  // O detalhe ao lado, o painel e o filtro de campeonatos só existem em telas largas: no celular nem são montados.
+  const split = useMedia(SPLIT_QUERY);
+  const xl = useMedia(XL_QUERY);
 
   const api = useApi<Match[]>(`/api/matches?date=${date}`, {
     initial,
@@ -39,10 +47,21 @@ export function HomeView({ today, initialDate, initial }: { today: IsoDate; init
   });
 
   const matches = useMemo(() => api.data?.data ?? [], [api.data]);
-  const liveMatches = useMemo(() => matches.filter(isLiveMatch), [matches]);
+
+  // Campeonatos do dia: o trilho lateral mostra as caixas (só em tela larga) e a pessoa desmarca os que não quer ver.
+  const dayLeagues = useMemo<DayLeague[]>(() => groupMatches(matches, favorites).map((g) => ({ id: g.league.id, name: g.league.shortName, total: g.matches.length })), [matches, favorites]);
+  useEffect(() => {
+    publishDayLeagues(dayLeagues);
+  }, [dayLeagues]);
+  useEffect(() => () => publishDayLeagues([]), []);
+  const off = useLeagueFilter().off;
+  const hidden = xl ? off : NONE;
+  const scoped = useMemo(() => (hidden.length ? matches.filter((m) => !hidden.includes(m.leagueId)) : matches), [matches, hidden]);
+
+  const liveMatches = useMemo(() => scoped.filter(isLiveMatch), [scoped]);
   const liveTotal = liveMatches.length;
-  const favoriteTotal = useMemo(() => matches.filter((m) => involvesFavorite(m, favorites)).length, [matches, favorites]);
-  const filtered = useMemo(() => filterMatches(matches, { status, query, favorites }), [matches, status, query, favorites]);
+  const favoriteTotal = useMemo(() => scoped.filter((m) => involvesFavorite(m, favorites)).length, [scoped, favorites]);
+  const filtered = useMemo(() => filterMatches(scoped, { status, query, favorites }), [scoped, status, query, favorites]);
   const groups = useMemo(() => groupMatches(filtered, favorites), [filtered, favorites]);
   const liveCount = filtered.filter(isLiveMatch).length;
   const filtering = filtered.length !== matches.length;
@@ -60,9 +79,6 @@ export function HomeView({ today, initialDate, initial }: { today: IsoDate; init
   };
   const swipe = useSwipe({ onLeft: () => step(1), onRight: () => step(-1) });
 
-  // O detalhe ao lado e o painel só existem em telas largas: no celular nem são montados.
-  const split = useMedia(SPLIT_QUERY);
-  const xl = useMedia(XL_QUERY);
   const panel = view === "painel" && xl;
   // Trocar de dia fecha o detalhe: o jogo aberto pode nem existir no dia novo.
   const pick = (next: IsoDate) => {
@@ -71,10 +87,10 @@ export function HomeView({ today, initialDate, initial }: { today: IsoDate; init
   };
 
   return (
-    // data-wide: libera a largura da página (ver globals.css). No celular a coluna continua estreita; a partir de 900 px
+    // data-wide: libera a largura da página (ver globals.css). No celular a coluna continua estreita; a partir de 768 px
     // a lista fica à esquerda e o detalhe do jogo escolhido à direita.
-    <div data-wide className="min-[900px]:flex">
-      <div className="mx-auto w-full min-w-0 max-w-[40rem] px-5 pt-3 min-[900px]:mx-0 min-[900px]:max-w-none min-[900px]:flex-1 min-[900px]:px-8" {...swipe}>
+    <div data-wide className="min-[768px]:flex">
+      <div className="mx-auto w-full min-w-0 max-w-[40rem] px-5 pt-3 min-[768px]:mx-0 min-[768px]:max-w-none min-[768px]:flex-1 min-[768px]:px-5 min-[1200px]:px-8" {...swipe}>
         <div className="flex items-end justify-between gap-4">
           {/* O dia da semana fica discreto e a data ganha o destaque: dois níveis claros em vez de uma frase que quebra no meio. */}
           <h1>
@@ -98,18 +114,18 @@ export function HomeView({ today, initialDate, initial }: { today: IsoDate; init
           ) : null}
         </div>
 
-        <div className="min-[900px]:max-w-[46rem]">
+        <div className="min-[768px]:max-w-[46rem]">
           <DayStrip selected={date} today={today} onSelect={pick} />
         </div>
 
         {panel && api.data ? (
           <div className="mt-6">
-            <PanelView matches={matches} />
+            <PanelView matches={scoped} />
           </div>
         ) : null}
 
         <div hidden={panel}>
-          <div className="min-[900px]:max-w-[46rem]">
+          <div className="min-[768px]:max-w-[46rem]">
             {api.data ? <LiveStrip matches={liveMatches} selectedId={selectedId} onSelect={setSelectedId} /> : null}
 
             {api.data ? (
@@ -155,6 +171,10 @@ export function HomeView({ today, initialDate, initial }: { today: IsoDate; init
               <StateMessage title="Nenhum jogo neste dia" action={{ label: "Ver a classificação do Brasileirão", href: "/liga/brasileirao-a" }}>
                 Escolha outro dia na faixa acima ou use o calendário.
               </StateMessage>
+            ) : scoped.length === 0 ? (
+              <StateMessage title="Nenhum campeonato selecionado" action={{ label: "Mostrar todos os campeonatos", onClick: showAllLeagues }}>
+                Marque ao menos um campeonato na lista ao lado para ver os jogos.
+              </StateMessage>
             ) : groups.length === 0 ? (
               <EmptyFilter
                 query={query.trim()}
@@ -168,7 +188,7 @@ export function HomeView({ today, initialDate, initial }: { today: IsoDate; init
             ) : (
               <div>
                 {groups.map((g, i) => (
-                  <LeagueSection key={g.league.id} group={g} priority={i === 0} onSelect={setSelectedId} selectedId={selectedId} />
+                  <LeagueSection key={g.league.id} group={g} priority={i === 0} onSelect={setSelectedId} selectedId={selectedId} wide={xl} />
                 ))}
               </div>
             )}
@@ -176,9 +196,9 @@ export function HomeView({ today, initialDate, initial }: { today: IsoDate; init
         </div>
       </div>
 
-      {/* Detalhe do jogo ao lado da lista (a partir de 900 px). Escolher outro jogo troca o painel; `key` zera a aba aberta. */}
+      {/* Detalhe do jogo ao lado da lista (a partir de 768 px). Escolher outro jogo troca o painel; `key` zera a aba aberta. */}
       {split && !panel ? (
-        <aside aria-label="Detalhe do jogo" className="sticky top-0 h-dvh w-[24rem] shrink-0 overflow-y-auto border-l border-line px-6 pb-10 pt-4 min-[1200px]:w-[28rem]">
+        <aside aria-label="Detalhe do jogo" className="sticky top-0 h-dvh w-[22rem] shrink-0 overflow-y-auto border-l border-line px-5 pb-10 pt-4 min-[1000px]:w-[24rem] min-[1000px]:px-6 min-[1200px]:w-[28rem]">
           {selectedId ? (
             <MatchView key={selectedId} id={selectedId} initial={null} embedded />
           ) : (

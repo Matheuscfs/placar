@@ -13,7 +13,7 @@ export function Countdown({ kickoff }: { kickoff: IsoDateTime }) {
   const now = useNow(30_000);
   const text = now === null ? null : formatCountdown(Date.parse(kickoff) - now);
   return (
-    <p className="num h-5 text-sm font-medium" aria-live="off">
+    <p className="num min-h-5 max-w-[7.5rem] text-center text-sm font-medium leading-tight" aria-live="off">
       {text}
     </p>
   );

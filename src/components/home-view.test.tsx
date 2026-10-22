@@ -5,6 +5,7 @@ import { addDays } from "@/lib/domain/dates";
 import type { LeagueId, Match, MatchStatus, ResponseMeta, Sourced } from "@/lib/domain/types";
 import { dateBounds } from "@/lib/ui/days";
 import { resetFavoritesStore, setFavorites } from "@/lib/ui/favorites-store";
+import { getLeagueFilterSnapshot, resetLeagueFilter, showAllLeagues, toggleLeagueOff } from "@/lib/ui/league-filter";
 import { resetNowStores } from "@/lib/ui/use-now";
 import { HomeView } from "./home-view";
 
@@ -41,6 +42,7 @@ const initial = (matches: Match[]): Sourced<Match[]> => ({ data: matches, meta }
 let fetchMock: ReturnType<typeof vi.fn<(url: string) => Promise<Response>>>;
 
 beforeEach(() => {
+  resetLeagueFilter();
   resetFavoritesStore();
   localStorage.clear();
   fetchMock = vi.fn(async () => new Response(JSON.stringify(initial([])), { status: 200 }));
@@ -54,6 +56,8 @@ afterEach(() => {
 
 const view = (matches: Match[] = MATCHES, over: Partial<{ initialDate: string }> = {}) => render(<HomeView today={TODAY} initialDate={over.initialDate ?? TODAY} initial={initial(matches)} />);
 const rows = () => screen.queryAllByRole("link").filter((l) => l.getAttribute("href")?.startsWith("/jogo/"));
+/** As linhas da lista (sem os cartões da faixa "Ao vivo agora", que também são links para o jogo). */
+const listRows = () => rows().filter((r) => !r.closest('[aria-labelledby="ao-vivo-agora"]'));
 const leaguesShown = () => screen.queryAllByRole("heading", { level: 2 }).map((h) => h.textContent);
 
 function touch(el: Element, type: "touchstart" | "touchend", x: number, y: number) {
@@ -334,9 +338,71 @@ describe("HomeView — telas largas (lista + detalhe ao lado)", () => {
     expect(screen.getByRole("complementary", { name: "Detalhe do jogo" })).toBeInTheDocument();
   });
 
-  it("entre 900 e 1199 px não há botão de painel", () => {
+  it("entre 768 e 1199 px não há botão de painel", () => {
     stubWidth(1000);
     view();
     expect(screen.queryByRole("button", { name: "Painel" })).not.toBeInTheDocument();
   });
 });
+
+describe("HomeView — filtro de campeonatos (trilho lateral) e linha larga", () => {
+  const stubWidth = (px: number) =>
+    vi.stubGlobal("matchMedia", (q: string) => {
+      const min = Number(/min-width:\s*(\d+)px/.exec(q)?.[1] ?? 0);
+      return { matches: px >= min, media: q, addEventListener: () => {}, removeEventListener: () => {} };
+    });
+
+  it("informa ao trilho quais campeonatos têm jogo no dia e limpa ao sair da tela", () => {
+    stubWidth(1440);
+    const { unmount } = view();
+    expect(getLeagueFilterSnapshot().leagues.map((l) => l.id)).toEqual(["brasileirao-a", "libertadores", "premier-league", "mls"]);
+    unmount();
+    expect(getLeagueFilterSnapshot().leagues).toEqual([]);
+  });
+
+  it("desmarcar um campeonato tira os jogos dele da lista e das contagens; 'mostrar todos' devolve", () => {
+    stubWidth(1440);
+    view();
+    expect(listRows()).toHaveLength(4);
+    act(() => toggleLeagueOff("libertadores"));
+    expect(listRows()).toHaveLength(3);
+    expect(leaguesShown()).not.toContain("CONMEBOL Libertadores");
+    expect(screen.queryByRole("button", { name: /Ao vivo/ })).not.toBeInTheDocument(); // o único jogo ao vivo era da Libertadores
+    act(() => showAllLeagues());
+    expect(listRows()).toHaveLength(4);
+  });
+
+  it("com todos desmarcados, explica e oferece mostrar todos", () => {
+    stubWidth(1440);
+    view();
+    act(() => {
+      for (const l of getLeagueFilterSnapshot().leagues) toggleLeagueOff(l.id);
+    });
+    expect(screen.getByText("Nenhum campeonato selecionado")).toBeInTheDocument();
+    fireEvent.click(screen.getByRole("button", { name: "Mostrar todos os campeonatos" }));
+    expect(listRows()).toHaveLength(4);
+  });
+
+  it("abaixo de 1200 px o filtro não vale (a pessoa não vê as caixas para desfazê-lo)", () => {
+    stubWidth(1000);
+    view();
+    act(() => toggleLeagueOff("libertadores"));
+    expect(listRows()).toHaveLength(4);
+  });
+
+  it("em tela larga a linha do jogo é de uma linha só: jogo agendado mostra um traço no lugar do placar", () => {
+    stubWidth(1440);
+    view([MATCHES[1]]);
+    const row = listRows()[0];
+    expect(row).toHaveClass("min-h-14");
+    expect(within(row).getByText("–")).toBeInTheDocument();
+  });
+
+  it("no tablet (768 a 1199 px) a linha continua em duas linhas e o detalhe fica ao lado", () => {
+    stubWidth(800);
+    view();
+    expect(listRows()[0]).not.toHaveClass("min-h-14");
+    expect(screen.getByRole("complementary", { name: "Detalhe do jogo" })).toBeInTheDocument();
+  });
+});
+

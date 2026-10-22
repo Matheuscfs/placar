@@ -15,12 +15,15 @@ export function LeagueSection({
   priority = false,
   onSelect,
   selectedId,
+  wide = false,
 }: {
   group: LeagueGroup;
   showDate?: boolean;
   priority?: boolean;
   onSelect?: (id: string) => void;
   selectedId?: string | null;
+  /** Linha do jogo numa linha só (computador). */
+  wide?: boolean;
 }) {
   const id = useId();
   const { isLeague, toggleLeague, isTeam } = useFavorites();
@@ -39,7 +42,7 @@ export function LeagueSection({
       <div>
         {group.matches.map((m: Match, i) => (
           // Os escudos da primeira tela carregam já, sem esperar a rolagem: nada "pisca" ao abrir.
-          <MatchRow key={m.id} match={m} showDate={showDate} isFavorite={isTeam} priority={priority && i < 6} onSelect={onSelect} selected={selectedId === m.id} />
+          <MatchRow key={m.id} match={m} showDate={showDate} isFavorite={isTeam} priority={priority && i < 6} onSelect={onSelect} selected={selectedId === m.id} wide={wide} />
         ))}
       </div>
     </section>

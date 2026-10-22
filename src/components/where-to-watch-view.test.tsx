@@ -3,6 +3,7 @@ import { act, cleanup, fireEvent, render, screen, within } from "@testing-librar
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import type { LeagueId, Match, MatchStatus, ResponseMeta, Sourced } from "@/lib/domain/types";
 import { resetFavoritesStore } from "@/lib/ui/favorites-store";
+import { getLeagueFilterSnapshot, publishDayLeagues, resetLeagueFilter } from "@/lib/ui/league-filter";
 import { resetNowStores } from "@/lib/ui/use-now";
 import { AppHeader } from "./app-header";
 import { AppRail } from "./app-rail";
@@ -182,6 +183,35 @@ describe("navegação (barra inferior e trilho lateral)", () => {
     render(<TabBar esports={false} />);
     expect(screen.getByRole("link", { name: "Jogos" })).toHaveAttribute("aria-current", "page");
     expect(screen.getByRole("link", { name: "Favoritos" })).not.toHaveAttribute("aria-current");
+  });
+});
+
+describe("trilho lateral — campeonatos do dia", () => {
+  beforeEach(() => resetLeagueFilter());
+
+  it("não mostra o filtro sem a tela inicial informar campeonatos (ou com um só)", () => {
+    render(<AppRail esports={false} />);
+    expect(screen.queryByRole("checkbox")).not.toBeInTheDocument();
+    act(() => publishDayLeagues([{ id: "mls", name: "MLS", total: 1 }]));
+    expect(screen.queryByRole("checkbox")).not.toBeInTheDocument();
+  });
+
+  it("lista os campeonatos com caixa de seleção; desmarcar liga 'Mostrar todos'", () => {
+    render(<AppRail esports={false} />);
+    act(() =>
+      publishDayLeagues([
+        { id: "libertadores", name: "Libertadores", total: 1 },
+        { id: "mls", name: "MLS", total: 3 },
+      ]),
+    );
+    const boxes = screen.getAllByRole("checkbox");
+    expect(boxes.map((b) => b.getAttribute("aria-checked"))).toEqual(["true", "true"]);
+    expect(screen.queryByRole("button", { name: "Mostrar todos" })).not.toBeInTheDocument();
+    fireEvent.click(screen.getByRole("checkbox", { name: /MLS/ }));
+    expect(screen.getByRole("checkbox", { name: /MLS/ })).toHaveAttribute("aria-checked", "false");
+    expect(getLeagueFilterSnapshot().off).toEqual(["mls"]);
+    fireEvent.click(screen.getByRole("button", { name: "Mostrar todos" }));
+    expect(getLeagueFilterSnapshot().off).toEqual([]);
   });
 });
 

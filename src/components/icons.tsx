@@ -69,7 +69,13 @@ export const CloseIcon = (p: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-export const TvIcon = (p: SVGProps<SVGSVGElement>) => (
+export const CheckIcon = (p: SVGProps<SVGSVGElement>) => (
+  <svg {...base(p)}>
+    <path d="M5 12.5l4.5 4.5L19 7" />
+  </svg>
+);
+
+export const TvIcon =(p: SVGProps<SVGSVGElement>) => (
   <svg {...base(p)}>
     <rect x="3.5" y="5" width="17" height="11.5" rx="2.5" />
     <path d="M8.5 20h7M12 16.5V20" />

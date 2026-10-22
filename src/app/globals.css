@@ -271,7 +271,7 @@ main:has(> [data-wide]) {
   max-width: none;
   padding-inline: 0;
 }
-@media (min-width: 900px) {
+@media (min-width: 768px) {
   body:has([data-wide]) footer {
     max-width: none;
     margin-inline: 0;

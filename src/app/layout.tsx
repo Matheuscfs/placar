@@ -44,8 +44,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <a href="#conteudo" className="skip-link">
           Ir para o conteúdo
         </a>
-        {/* Trilho lateral a partir de 900 px; no celular, cabeçalho enxuto em cima e barra de seções embaixo. */}
-        <div className="min-[900px]:flex">
+        {/* Trilho lateral a partir de 768 px; no celular, cabeçalho enxuto em cima e barra de seções embaixo. */}
+        <div className="min-[768px]:flex">
           <AppRail esports={esports} />
           <div className="min-w-0 flex-1">
             <AppHeader />
