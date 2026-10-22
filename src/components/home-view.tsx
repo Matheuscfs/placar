@@ -90,7 +90,11 @@ export function HomeView({ today, initialDate, initial }: { today: IsoDate; init
     // data-wide: libera a largura da página (ver globals.css). No celular a coluna continua estreita; a partir de 768 px
     // a lista fica à esquerda e o detalhe do jogo escolhido à direita.
     <div data-wide className="min-[768px]:flex">
-      <div className="mx-auto w-full min-w-0 max-w-[40rem] px-5 pt-3 min-[768px]:mx-0 min-[768px]:max-w-none min-[768px]:flex-1 min-[768px]:px-5 min-[1200px]:px-8" {...swipe}>
+      <div
+        // Telas largas: a lista fica numa coluna de leitura centralizada entre o trilho e o detalhe (não grudada na esquerda); o painel usa a largura toda.
+        className={`mx-auto w-full min-w-0 max-w-[40rem] px-5 pt-3 min-[768px]:flex-1 min-[768px]:px-5 min-[1200px]:px-8 ${panel ? "min-[768px]:max-w-none" : "min-[768px]:max-w-[56rem]"}`}
+        {...swipe}
+      >
         <div className="flex items-end justify-between gap-4">
           {/* O dia da semana fica discreto e a data ganha o destaque: dois níveis claros em vez de uma frase que quebra no meio. */}
           <h1>
@@ -114,9 +118,7 @@ export function HomeView({ today, initialDate, initial }: { today: IsoDate; init
           ) : null}
         </div>
 
-        <div className="min-[768px]:max-w-[46rem]">
-          <DayStrip selected={date} today={today} onSelect={pick} />
-        </div>
+        <DayStrip selected={date} today={today} onSelect={pick} />
 
         {panel && api.data ? (
           <div className="mt-6">
@@ -125,7 +127,7 @@ export function HomeView({ today, initialDate, initial }: { today: IsoDate; init
         ) : null}
 
         <div hidden={panel}>
-          <div className="min-[768px]:max-w-[46rem]">
+          <div>
             {api.data ? <LiveStrip matches={liveMatches} selectedId={selectedId} onSelect={setSelectedId} /> : null}
 
             {api.data ? (
