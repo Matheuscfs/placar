@@ -9,10 +9,10 @@ PWA de placares de futebol ao vivo: minimalista, rápido e pensado primeiro para
 - **PWA** instalável, com modo offline para o que já foi visto. Tema claro/escuro automático.
 - **Sem API paga.** Três fontes gratuitas, com fallback automático e cache próprio.
 
-> **Estado do projeto:** todas as etapas do plano estão implementadas e testadas por simulação.
-> Três coisas **nunca foram exercitadas de verdade** e precisam do seu teste antes de confiar:
-> (1) o conector football-data.org com um token real; (2) o service worker e os avisos push num navegador
-> de verdade; (3) o app rodando na Vercel. Veja ["O que não foi verificado"](#o-que-não-foi-verificado).
+> **Estado do projeto:** todas as etapas do plano estão implementadas, testadas e **publicadas na Vercel**
+> (https://placar-orpin-five.vercel.app). Duas coisas **nunca foram exercitadas de verdade** e precisam do seu
+> teste antes de confiar: (1) o conector football-data.org com um token real; (2) os avisos push entregues a
+> um aparelho. Veja ["O que não foi verificado"](#o-que-não-foi-verificado).
 
 ## Sumário
 
@@ -187,9 +187,11 @@ Como ela se mantém rápida e honesta:
 
 **Como verificar o service worker:** `npm run build && npm start`, abra no Chrome → DevTools → Application →
 Service Workers (deve estar "activated"), marque *Offline* e recarregue uma página já visitada. A lógica do
-`sw.js` é testada em `tests/service-worker.test.ts` (Cache e `fetch` simulados), mas o registro em um navegador
-de verdade **não foi exercitado** no ambiente de desenvolvimento (o painel de navegador embutido não suporta
-service workers).
+`sw.js` é testada em `tests/service-worker.test.ts` (Cache e `fetch` simulados). No site publicado (HTTPS) ele
+foi visto de verdade em um navegador: registrado, ativo, controlando a página, e os três caches (`placar-pages`,
+`placar-api`, `placar-static`) se preenchem como esperado. O que **ainda não foi visto** é o fallback offline em si
+(página guardada ou `/offline` com a rede cortada): marque *Offline* no DevTools e confira. Em `http://localhost` o
+registro falhou no navegador embutido do ambiente de desenvolvimento; use HTTPS (ou o Chrome em localhost).
 
 ## Notificações push
 
@@ -238,7 +240,9 @@ Antes de adotar uma fonte nova, avalie cobertura, limites e ao vivo com ela de v
 
 ## Deploy na Vercel
 
-O app é Next.js padrão e não precisa de configuração especial. O projeto ainda **não é um repositório git**.
+O app é Next.js padrão e não precisa de configuração especial. **Já está publicado**: projeto `placar` na Vercel
+(plano Hobby), ligado ao repositório privado `auralink-dev/placar`, em https://placar-orpin-five.vercel.app.
+Cada `git push` na branch `main` publica sozinho. Os passos abaixo servem para refazer em outra conta.
 
 1. Crie um repositório (`git init`, commit) e envie para o GitHub, GitLab ou Bitbucket.
    Confira que `.env.local` **não** foi junto (já está no `.gitignore`).
@@ -261,9 +265,10 @@ O que muda em produção e merece atenção:
 - **Cache e cota por instância.** Cada função serverless tem o seu cache, a sua cota e o seu disjuntor. O
   `Cache-Control: s-maxage` das rotas `/api` faz o CDN da Vercel absorver quase todo o tráfego repetido, o
   que reduz o problema, mas a cota de 60 req/min da ESPN passa a valer por instância.
-- **A ESPN a partir de servidores da Vercel nunca foi testada** (todos os testes reais foram do seu computador).
-  Uma API não oficial pode tratar IPs de datacenter de outro jeito. Depois do deploy, olhe `/api/status`
-  (disjuntor, erros recentes) e veja se `meta.source` das respostas é `espn`.
+- **A ESPN a partir da Vercel funcionou** na primeira checagem (22/10/2026): jogos do dia, ao vivo, classificação
+  da Série A e da Libertadores vieram com `meta.source = "espn"`, sem fallback e sem falhas. É uma API não
+  oficial e pode tratar IPs de datacenter de outro jeito amanhã: depois de cada deploy, confira que
+  `meta.source` é `espn` e, com `STATUS_TOKEN` configurado, olhe `/api/status` (disjuntor, erros recentes).
 - **Região das funções.** Se a maioria do público está no Brasil, avalie escolher uma região próxima
   (São Paulo, `gru1`) nas configurações do projeto: confira na Vercel o que o seu plano permite.
 - **Avisos push** pedem armazenamento persistente (Supabase) e um agendador. O cron do plano Hobby roda
@@ -317,10 +322,10 @@ Dito com franqueza, para você não descobrir em produção:
 | Item | Situação |
 |---|---|
 | football-data.org com token real | Fixtures escritas pela **documentação**, nunca validadas contra a API. É a fonte reserva: se o formato real diferir, o fallback falha (e cai para o openfootball). Rode o teste real com o seu token. |
-| Service worker num navegador real | Só testado por simulação (`tests/service-worker.test.ts`). O painel embutido do ambiente não suporta service workers. |
+| Service worker num navegador real | Registro, ativação, controle da página e preenchimento dos caches foram vistos no site publicado (HTTPS). O **fallback offline** (rede cortada) só foi testado por simulação (`tests/service-worker.test.ts`). |
 | Avisos push de ponta a ponta | Nenhum aviso foi entregue a um aparelho. O job rodou contra a ESPN real, mas só com um inscrito fictício, sem envio. |
 | Android, iPhone e Safari | Nenhum teste em aparelho. No iPhone, push só funciona com o app instalado na tela de início. |
-| Deploy na Vercel | Nunca feito. `npm run build` passa; ESPN a partir da Vercel não foi testada. |
+| Deploy na Vercel | Feito em 22/10/2026 e verificado: site público, rotas `/api` com dados da ESPN, `/api/status` e `/api/cron/push` em 404 sem segredos, avisos desligados sem chaves. Variáveis de ambiente ainda **não foram cadastradas** na Vercel. |
 | Armazenamento dos avisos | Em memória. Perde tudo quando a função reinicia. Supabase é fase futura. |
 | Desempenho e acessibilidade | Sem Lighthouse nem leitor de tela. Foco, rótulos, contraste e movimento reduzido foram conferidos à mão e por testes de componente. |
 | Zonas da classificação | Vêm do catálogo (`leagues.ts`) quando a fonte não informa, e **mudam de ano para ano**: confira o regulamento da temporada. |

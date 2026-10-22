@@ -5,8 +5,8 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 /**
  * Testa o `public/sw.js` REAL, carregado numa caixa isolada (node:vm) com uma simulação em memória do
- * Cache API e do `fetch`. O painel de navegador embutido não suporta service workers, então esta é a
- * verificação automatizada da lógica; o registro de verdade se confere no Chrome (DevTools → Application).
+ * Cache API e do `fetch`. É a verificação automatizada da lógica (inclusive do fallback offline, que
+ * não dá para exercitar sem cortar a rede); o registro de verdade se confere no navegador, em HTTPS.
  */
 const SOURCE = readFileSync(join(process.cwd(), "public", "sw.js"), "utf8");
 const ORIGIN = "http://localhost";
