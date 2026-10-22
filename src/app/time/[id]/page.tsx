@@ -22,7 +22,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const id = safeId((await params).id);
   if (!id) return { title: "Time" };
   const r = await loadInitial(() => getOrchestrator().getTeam(id));
-  return r.ok ? { title: r.data.data.team.name, description: `Próximos jogos, últimos resultados e posição de ${r.data.data.team.name}.` } : { title: "Time" };
+  if (!r.ok) return { title: "Time" };
+  const name = r.data.data.team.name;
+  return { title: `${name}: próximos jogos, resultados e classificação`, description: `Próximos jogos, últimos resultados e posição na tabela de ${name}, com horários e onde assistir.` };
 }
 
 export default async function TeamPage({ params }: Props) {

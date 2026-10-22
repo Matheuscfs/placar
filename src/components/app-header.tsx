@@ -18,16 +18,20 @@ export function AppHeader() {
       <Link href="/" aria-label="Placar, página inicial" className="-m-2 p-2">
         <Wordmark />
       </Link>
-      <nav aria-label="Seções" className="flex items-center gap-5">
+      <nav aria-label="Seções" className="flex items-center gap-4 min-[400px]:gap-5">
+        <Link href="/onde-assistir" className="-m-2 p-2 text-[0.95rem] font-medium text-muted hover:text-ink">
+          Onde assistir
+        </Link>
         {/* Só aparece se este servidor tem a fonte de e-sports configurada: nada de link para uma tela vazia. */}
         {isEsportsConfigured() ? (
           <Link href="/esports" className="-m-2 p-2 text-[0.95rem] font-medium text-muted hover:text-ink">
             E-sports
           </Link>
         ) : null}
-        <Link href="/favoritos" className="-m-2 flex items-center gap-1.5 p-2 text-[0.95rem] font-medium text-muted hover:text-ink">
+        {/* Em telas estreitas só a estrela (o nome fica para leitores de tela), para os links caberem. */}
+        <Link href="/favoritos" aria-label="Favoritos" className="-m-2 flex items-center gap-1.5 p-2 text-[0.95rem] font-medium text-muted hover:text-ink">
           <StarIcon />
-          Favoritos
+          <span className="hidden min-[400px]:inline">Favoritos</span>
         </Link>
       </nav>
     </header>

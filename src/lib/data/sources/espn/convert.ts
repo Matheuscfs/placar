@@ -11,6 +11,7 @@ import { toIsoUtc } from "@/lib/domain/dates";
 import { makeId, parseId } from "@/lib/domain/ids";
 import { canonicalTeamName, normalizeTeamKey } from "@/lib/domain/team-key";
 import type {
+  FormGame,
   LeagueId,
   Lineup,
   LineupPlayer,
@@ -20,11 +21,13 @@ import type {
   MatchEventType,
   MatchSide,
   MatchStatus,
+  MeetingGame,
   StandingRow,
   Standings,
   StandingsGroup,
   StatLine,
   Team,
+  TeamForm,
   Zone,
   ZoneTone,
 } from "@/lib/domain/types";
@@ -34,7 +37,9 @@ import type {
   EspnDetail,
   EspnEvent,
   EspnKeyEvent,
+  EspnLastFive,
   EspnRoster,
+  EspnSeasonSeries,
   EspnRosterPlayer,
   EspnScore,
   EspnScoreboard,
@@ -420,6 +425,73 @@ export function statisticsFromBoxscore(teams: EspnBoxscoreTeam[] | undefined): S
   return lines.flatMap((l) => l ?? []);
 }
 
+// ───────────────────────── Forma e confrontos ─────────────────────────
+
+/** Mais recentes por quantos jogos a tela mostra (a ESPN já manda cinco). */
+const FORM_LIMIT = 5;
+const MEETINGS_LIMIT = 5;
+
+const RESULT_BY_LETTER: Record<string, FormGame["result"]> = { W: "win", D: "draw", L: "loss" };
+
+const wholeNumber = (v: string | undefined): number | null => {
+  if (v === undefined || !/^\d+$/.test(v.trim())) return null;
+  return Number(v.trim());
+};
+
+/**
+ * Forma recente dos dois times (`lastFiveGames`). Cada jogo vira o ponto de vista do time: gols a favor e contra,
+ * resultado, casa ou fora. Jogo com resultado ou placar que não dá para ler é descartado (não inventamos nada).
+ * Devolve `undefined` se a fonte não trouxe forma de nenhum dos dois.
+ */
+export function formFromLastFive(lastFive: EspnLastFive[] | undefined, homeId: string | null, awayId: string | null): TeamForm[] | undefined {
+  const out: TeamForm[] = [];
+  for (const entry of lastFive ?? []) {
+    const id = entry.team?.id;
+    const side = id !== undefined && id === homeId ? "home" : id !== undefined && id === awayId ? "away" : null;
+    if (!side) continue;
+    const games: FormGame[] = [];
+    for (const e of entry.events ?? []) {
+      const result = RESULT_BY_LETTER[(e.gameResult ?? "").toUpperCase()];
+      const date = toIsoUtc(e.gameDate);
+      const wasHome = e.homeTeamId === id;
+      const mine = wholeNumber(wasHome ? e.homeTeamScore : e.awayTeamScore);
+      const theirs = wholeNumber(wasHome ? e.awayTeamScore : e.homeTeamScore);
+      const opponent = e.opponent?.displayName?.trim();
+      if (!result || !date || mine === null || theirs === null || !opponent || (e.homeTeamId !== id && e.awayTeamId !== id)) continue;
+      games.push({ id: e.id ?? `${id}-${date}`, date, result, home: wasHome, opponent: { name: opponent, ...(e.opponent?.logo ? { logo: e.opponent.logo } : {}) }, goalsFor: mine, goalsAgainst: theirs });
+    }
+    games.sort((a, b) => b.date.localeCompare(a.date) || a.id.localeCompare(b.id));
+    if (games.length > 0) out.push({ side, games: games.slice(0, FORM_LIMIT) });
+  }
+  return out.length > 0 ? out : undefined;
+}
+
+/**
+ * Últimos confrontos diretos (`seasonseries` do tipo "head-to-head"): só os já encerrados, do mais recente para o mais
+ * antigo. Os textos prontos da ESPN ("FLA leads series 3-0-2") vêm em inglês e são ignorados: a tela recalcula o saldo.
+ */
+export function headToHeadFromSeries(series: EspnSeasonSeries[] | undefined): MeetingGame[] | undefined {
+  const h2h = series?.find((s) => s.type === "head-to-head");
+  const games: MeetingGame[] = [];
+  for (const e of h2h?.events ?? []) {
+    if (!(e.statusType?.completed === true || e.status === "post")) continue;
+    const home = e.competitors?.find((c) => c.homeAway === "home");
+    const away = e.competitors?.find((c) => c.homeAway === "away");
+    const date = toIsoUtc(e.date);
+    const homeScore = wholeNumber(home?.score);
+    const awayScore = wholeNumber(away?.score);
+    if (!e.id || !date || !home?.team?.id || !home.team.displayName || !away?.team?.id || !away.team.displayName || homeScore === null || awayScore === null) continue;
+    games.push({
+      id: e.id,
+      date,
+      home: { teamId: makeId("espn", home.team.id), name: home.team.displayName, score: homeScore },
+      away: { teamId: makeId("espn", away.team.id), name: away.team.displayName, score: awayScore },
+    });
+  }
+  games.sort((a, b) => b.date.localeCompare(a.date) || a.id.localeCompare(b.id));
+  return games.length > 0 ? games.slice(0, MEETINGS_LIMIT) : undefined;
+}
+
 // ───────────────────────── Detalhe da partida ─────────────────────────
 
 export function toMatchDetail(summary: EspnSummary | null | undefined, leagueId: LeagueId, espnSlug: string, eventId: string): MatchDetail | null {
@@ -445,6 +517,9 @@ export function toMatchDetail(summary: EspnSummary | null | undefined, leagueId:
     officials.find((o) => /^(main )?(referee|árbitro)$/i.test((o.position?.displayName ?? o.position?.name ?? "").trim())) ??
     (officials.length === 1 ? officials[0] : undefined);
 
+  const form = formFromLastFive(summary.lastFiveGames, homeId, awayId);
+  const headToHead = headToHeadFromSeries(summary.seasonseries);
+
   return {
     ...base,
     venue: summary.gameInfo?.venue?.fullName ?? base.venue,
@@ -453,6 +528,9 @@ export function toMatchDetail(summary: EspnSummary | null | undefined, leagueId:
     events,
     lineups: lineupsFromRosters(summary.rosters),
     statistics: statisticsFromBoxscore(summary.boxscore?.teams),
+    // Só entram quando a fonte trouxe: o campo ausente significa "não sabemos", nunca "lista vazia".
+    ...(form ? { form } : {}),
+    ...(headToHead ? { headToHead } : {}),
   };
 }
 

@@ -22,7 +22,10 @@ import { StateMessage } from "./state-message";
 import { StatusCell } from "./status-cell";
 import { Tabs, panelProps, type TabItem } from "./tabs";
 import { broadcastFor } from "@/lib/domain/broadcasts";
+import { matchAbout } from "@/lib/ui/match-text";
 import { matchShareText } from "@/lib/ui/share";
+import { Countdown } from "./match/countdown";
+import { MatchContext } from "./match/match-context";
 import { ShareButton } from "./share-button";
 
 type TabId = "resumo" | "escalacoes" | "estatisticas";
@@ -69,6 +72,7 @@ function Scoreboard({ m }: { m: MatchDetail }) {
         <p className="num text-[2.2rem] font-bold leading-none">{status.kind === "scheduled" ? formatTime(m.kickoff) : status.label}</p>
       )}
       {score ? <StatusCell status={status} align="center" /> : <p className="text-sm text-muted">{status.kind === "scheduled" ? formatShortDate(m.kickoff) : null}</p>}
+      {status.kind === "scheduled" ? <Countdown kickoff={m.kickoff} /> : null}
       {pens ? <p className="num text-sm text-muted">Pênaltis {m.home.penalties} – {m.away.penalties}</p> : null}
       {agg ? <p className="num text-sm text-muted">Agregado {m.home.aggregate} – {m.away.aggregate}</p> : null}
     </div>
@@ -188,11 +192,14 @@ export function MatchView({ id, initial }: { id: string; initial: Sourced<MatchD
 
         {tab === "resumo" ? (
           <div {...panelProps("jogo", "resumo")} className="outline-none">
+            {/* Antes do jogo o que interessa é como cada um chega; depois, os lances vêm primeiro. */}
+            {m.status === "scheduled" ? <MatchContext m={m} /> : null}
             {m.events.length > 0 ? (
               <Timeline events={m.events} live={live} homeName={m.home.team.name} awayName={m.away.team.name} />
             ) : (
               <StateMessage title="Sem lances por enquanto">{emptyReason(m, meta, "os lances", "O jogo ainda não começou. Gols, cartões e substituições aparecem aqui durante a partida.")}</StateMessage>
             )}
+            {m.status !== "scheduled" ? <MatchContext m={m} /> : null}
           </div>
         ) : null}
 
@@ -219,6 +226,13 @@ export function MatchView({ id, initial }: { id: string; initial: Sourced<MatchD
           </div>
         ) : null}
       </div>
+
+      <section aria-labelledby="sobre-a-partida" className="mt-10">
+        <h2 id="sobre-a-partida" className="text-[1.15rem] font-bold">
+          Sobre a partida
+        </h2>
+        <p className="mt-2 max-w-[62ch] text-[0.98rem] leading-relaxed text-muted">{matchAbout(m, league?.name ?? null)}</p>
+      </section>
     </article>
   );
 }

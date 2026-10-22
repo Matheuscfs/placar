@@ -187,6 +187,33 @@ export interface StatLine {
   awayText: string | null;
 }
 
+/** Um jogo recente de um time, visto do lado dele. */
+export interface FormGame {
+  /** Id do jogo na fonte (só serve de chave de lista). */
+  id: string;
+  date: IsoDateTime;
+  result: "win" | "draw" | "loss";
+  /** Jogou em casa. */
+  home: boolean;
+  opponent: { name: string; logo?: string };
+  goalsFor: number;
+  goalsAgainst: number;
+}
+
+/** Os últimos jogos de um dos dois times da partida, do mais recente para o mais antigo. */
+export interface TeamForm {
+  side: "home" | "away";
+  games: FormGame[];
+}
+
+/** Um confronto direto anterior entre os dois times. */
+export interface MeetingGame {
+  id: string;
+  date: IsoDateTime;
+  home: { teamId: string; name: string; score: number };
+  away: { teamId: string; name: string; score: number };
+}
+
 /** Partida com tudo o que a página do jogo mostra. Campos ausentes na fonte vêm vazios. */
 export interface MatchDetail extends Match {
   referee: string | null;
@@ -194,6 +221,10 @@ export interface MatchDetail extends Match {
   events: MatchEvent[];
   lineups: Lineup[];
   statistics: StatLine[];
+  /** Forma recente dos dois times, quando a fonte informa (hoje só a ESPN). */
+  form?: TeamForm[];
+  /** Últimos confrontos diretos entre os dois, do mais recente para o mais antigo, quando a fonte informa. */
+  headToHead?: MeetingGame[];
 }
 
 // ───────────────────────── Classificação ─────────────────────────

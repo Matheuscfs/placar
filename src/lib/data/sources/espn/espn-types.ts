@@ -139,7 +139,41 @@ export interface EspnBoxscoreTeam {
   statistics?: EspnBoxscoreStat[];
 }
 
+/** Um jogo recente em `lastFiveGames[].events[]` (valores vêm como texto). */
+export interface EspnFormEvent {
+  id?: string;
+  atVs?: string;
+  gameDate?: string;
+  homeTeamId?: string;
+  awayTeamId?: string;
+  homeTeamScore?: string;
+  awayTeamScore?: string;
+  gameResult?: string;
+  opponent?: { displayName?: string; logo?: string };
+}
+
+export interface EspnLastFive {
+  team?: { id?: string };
+  events?: EspnFormEvent[];
+}
+
+/** Um confronto direto em `seasonseries[].events[]`. */
+export interface EspnSeriesEvent {
+  id?: string;
+  date?: string;
+  status?: string;
+  statusType?: { completed?: boolean; state?: string };
+  competitors?: Array<{ homeAway?: string; score?: string; team?: { id?: string; displayName?: string } }>;
+}
+
+export interface EspnSeasonSeries {
+  type?: string;
+  events?: EspnSeriesEvent[];
+}
+
 export interface EspnSummary {
+  lastFiveGames?: EspnLastFive[];
+  seasonseries?: EspnSeasonSeries[];
   header?: {
     id?: string;
     season?: { year?: number; name?: string };

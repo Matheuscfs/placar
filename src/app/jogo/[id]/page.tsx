@@ -3,7 +3,8 @@ import { notFound } from "next/navigation";
 import { FavoritesSeed } from "@/components/favorites-seed";
 import { MatchView } from "@/components/match-view";
 import { getOrchestrator } from "@/lib/data/registry";
-import { hasScore } from "@/lib/ui/format";
+import { leagueById } from "@/lib/ui/leagues";
+import { matchAbout, matchTitle } from "@/lib/ui/match-text";
 import { loadInitial, readSeedFavorites } from "@/lib/ui/server";
 import { parseIdParam } from "@/lib/api/http";
 
@@ -26,8 +27,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const r = await loadInitial(() => getOrchestrator().getMatch(id));
   if (!r.ok) return { title: "Jogo" };
   const m = r.data.data;
-  const title = hasScore(m) ? `${m.home.team.name} ${m.home.score} x ${m.away.score} ${m.away.team.name}` : `${m.home.team.name} x ${m.away.team.name}`;
-  return { title, description: `Placar, lances, escalações e estatísticas de ${m.home.team.name} contra ${m.away.team.name}.` };
+  // Título e descrição dizem o que a página tem (e o que a pessoa buscou): onde assistir, horário, escalações; ou o resultado.
+  return { title: matchTitle(m), description: matchAbout(m, leagueById(m.leagueId)?.name ?? null) };
 }
 
 export default async function MatchPage({ params }: Props) {

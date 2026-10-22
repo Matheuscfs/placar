@@ -6,6 +6,8 @@ PWA de placares de futebol ao vivo: minimalista, rápido e pensado primeiro para
 - **Jogos do dia** agrupados por liga, com seletor de dia (ou arrastar para os lados), **filtros** (ao vivo, favoritos),
   **busca** por time ou campeonato e atualização só enquanto há jogo na tela.
 - **31 competições**: Brasil, América do Sul, Europa, Américas e seleções (lista abaixo).
+- **Página do jogo** com contagem regressiva, como cada time chega (forma e confrontos), escalações e estatísticas, e uma
+  página **Onde assistir** com os jogos do dia e onde cada campeonato costuma passar.
 - **Página do jogo** (resumo, escalações, estatísticas), **classificação**, **página do time**.
 - **Favoritos** no aparelho (times e ligas vão primeiro) e **avisos** de início, gols e fim de jogo.
 - **PWA** instalável, com modo offline para o que já foi visto. Tema claro/escuro automático.
@@ -160,12 +162,21 @@ amistosos) responde `404 unsupported` em `/api/standings/{liga}`: não é falha,
 | Página | O que mostra |
 |---|---|
 | `/` | jogos do dia agrupados por liga (favoritos primeiro), seletor de dia, `?d=AAAA-MM-DD` |
-| `/jogo/{id}` | placar, resumo (linha do tempo), escalações e estatísticas — o que a fonte tiver |
+| `/jogo/{id}` | placar, contagem regressiva, resumo (linha do tempo), "como cada um chega" (forma e confrontos), escalações, estatísticas e o texto "Sobre a partida" — o que a fonte tiver |
+| `/onde-assistir` | jogos do dia por campeonato, com onde cada campeonato costuma passar; busca, filtro por campeonato, `?d=AAAA-MM-DD` |
 | `/liga/{id}` | classificação com zonas; ligas com grupos (Libertadores) ganham abas |
 | `/time/{id}` | próximos jogos, últimos resultados e posição |
 | `/esports` | partidas de CS2, LoL e Valorant do dia (só aparece no menu com `PANDASCORE_TOKEN`), com filtro de torneios principais |
 | `/favoritos` | times e ligas favoritos, e o interruptor dos avisos |
 | `/sobre`, `/offline` | de onde vêm os dados, limites, privacidade; tela mostrada sem conexão |
+
+**Como cada um chega.** Antes do jogo (e abaixo dos lances depois dele), a página mostra a forma dos dois times (últimos
+5 jogos, com V, E e D, contra quem, em casa ou fora, e o placar do ponto de vista do time) e os **últimos confrontos
+diretos**, com o saldo calculado dos jogos exibidos. Vem do resumo do jogo da ESPN que o app já busca (campos
+`lastFiveGames` e `seasonseries`): **nenhuma chamada a mais**. Só a ESPN informa isso; nas outras fontes a seção some,
+em vez de mostrar uma lista vazia. **Sobre a partida** é um parágrafo gerado dos dados (data e hora de Brasília,
+local, competição, fase, árbitro, placar), também usado na descrição da página; os títulos de página dizem "onde
+assistir, horário e escalações" antes do jogo e "resultado, gols e estatísticas" depois.
 
 **Onde passa.** A página do jogo mostra "Costuma passar em …" **antes e durante** o jogo. É um catálogo por
 competição, mantido à mão em `src/lib/domain/broadcasts.ts` (com data da conferência e fontes), porque nenhuma
@@ -375,9 +386,13 @@ Este projeto é técnico, **não é aconselhamento jurídico**. Antes de publica
   de termos durante o desenvolvimento: confirme você mesmo se o seu uso (público, com ou sem receita) é permitido.
   Logos de times e campeonatos são marcas de seus titulares, como no futebol.
 - **openfootball.** Dados abertos em domínio público (confira a licença no repositório de cada arquivo usado).
-- **Nome "Placar".** O nome é provisório. "Placar" é um nome conhecido no jornalismo esportivo brasileiro
-  (existe uma revista com esse nome); **pesquise a marca no INPI** antes de usar publicamente ou troque o
-  nome. O logotipo e os ícones deste projeto são próprios (dois anéis sobre cobalto); não copie os de outros apps.
+- **Nome "Placar": trocar antes de divulgar.** Em 22/10/2026 conferi que `placar.com.br` é o site da **revista
+  Placar** (acervo desde 1970), que tem uma página de futebol ao vivo com o título "PLACAR | Brasileirão Série A |
+  Futebol Ao Vivo", quase igual ao nosso. `placar.com` é do mesmo dono (redireciona para lá, registrado desde 1997) e
+  `placar.app`, `placar.ai` e `placar.online` também estão ocupados. Livres na hora da consulta: `placar.net`,
+  `placar.live`, `placar.fun`, `placarapp.com`, `meuplacar.com`, mas qualquer nome com "placar" cai na mesma confusão de
+  marca num produto do mesmo ramo. Pesquise a marca no INPI e escolha outro nome. O logotipo e os ícones deste projeto
+  são próprios (dois anéis sobre cobalto); não copie os de outros apps ou sites.
 - **Privacidade (LGPD).** Sem avisos ligados, não há dado pessoal no servidor. Com avisos ligados, o servidor
   guarda o endereço de entrega do aparelho e as chaves dos times favoritos: se o app for público, publique uma
   política de privacidade, dê meio de apagar (o botão de desligar já apaga) e defina por quanto tempo guarda.
@@ -417,6 +432,8 @@ Dito com franqueza, para você não descobrir em produção:
 | Zonas da classificação | Vêm do catálogo (`leagues.ts`) quando a fonte não informa, e **mudam de ano para ano**: confira o regulamento da temporada. |
 | openfootball | Atualizado em lote (a Série A 2026 parou em 20/09; Libertadores só em TXT e defasada). A tabela dele é calculada e ignora confronto direto e punições. |
 | Competições novas (17) | Verificadas uma vez contra a ESPN real (22/10/2026): jogos de várias datas e tabelas de 10 delas via API; visualmente só MLS e FA Cup. **Sem reserva** (só ESPN). Zonas da tabela vazias, salvo as que a ESPN informa. |
+| Forma e confrontos | Montados dos campos `lastFiveGames` e `seasonseries` do resumo da ESPN, conferidos com um jogo real (Flamengo x Estudiantes). **Não sei se todas as competições da ESPN trazem esses campos** (copas e ligas pequenas podem não trazer; nesse caso a seção some). A ESPN também manda um "saldo" pronto (em inglês) que **não bate** com os jogos listados; usamos o calculado dos jogos exibidos. |
+| "Onde assistir" por jogo | Não temos: só por competição (catálogo manual). O campo de transmissão do resumo da ESPN é da **região EUA** (ex.: "beIn Sports"), então não serve para o Brasil. |
 | Gestos no celular real | O arrastar para trocar de dia foi testado com eventos de toque no navegador embutido e em testes, **não com um dedo num aparelho de verdade**. O botão Compartilhar não pôde ser testado na folha do sistema (só a cópia do link). |
 | Detalhes de jogos ao vivo | Observados em jogos reais em 22/10/2026 (placar, minuto, intervalo); pênaltis, prorrogação e adiados foram verificados com dados simulados e fixtures. |
 
