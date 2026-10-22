@@ -225,8 +225,8 @@ entre dois times, em série (melhor de N mapas), dentro de torneios que mudam o 
   PandaScore, só `https` passa.
 - **Como a tela é honesta:** diz que o plano gratuito não garante placar ao vivo; partida adiada ou cancelada não
   mostra o 0 x 0 que a fonte manda; adversário indefinido aparece como "A definir".
-- **Verificar com o seu token:** `PANDASCORE_TOKEN=... npx vitest run src/lib/esports/pandascore.live.test.ts`
-  (1 a 3 requisições). **Isso nunca foi feito**: as respostas de exemplo em `src/lib/esports/__fixtures__/` foram
+- **Verificar com o seu token:** ponha `PANDASCORE_TOKEN=...` no `.env.local` e rode `npm run test:esports-live`
+  (lê o token do arquivo, faz 1 a 3 requisições; sem token, o teste é pulado). **Isso nunca foi feito**: as respostas de exemplo em `src/lib/esports/__fixtures__/` foram
   escritas pela documentação (veja o `LEIA-ME.md` ali). Se o formato real diferir, o teste aponta e o conversor se ajusta.
 
 ## Notificações push

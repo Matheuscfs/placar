@@ -14,6 +14,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "check-sources": "node scripts/check-sources.ts",
+    "test:esports-live": "node --env-file-if-exists=.env.local node_modules/vitest/vitest.mjs run src/lib/esports/pandascore.live.test.ts",
     "push:keys": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/generate-vapid-keys.ts"
   },
   "dependencies": {
