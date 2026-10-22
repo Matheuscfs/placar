@@ -261,3 +261,20 @@ button {
   display: none;
 }
 }
+
+/*
+ * Fora das camadas de propósito: precisa vencer as classes do Tailwind do <main> e do rodapé.
+ * Páginas "largas" (a tela inicial, com lista + detalhe lado a lado) marcam um filho com `data-wide`.
+ * Aí a coluna estreita de 40rem some e a própria página cuida das margens.
+ */
+main:has(> [data-wide]) {
+  max-width: none;
+  padding-inline: 0;
+}
+@media (min-width: 900px) {
+  body:has([data-wide]) footer {
+    max-width: none;
+    margin-inline: 0;
+    padding-inline: 2rem;
+  }
+}

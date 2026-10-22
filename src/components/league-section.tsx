@@ -9,7 +9,19 @@ import { FavoriteButton } from "./favorite-button";
 import { MatchRow } from "./match-row";
 
 /** Uma liga e seus jogos. O nome leva à classificação; a estrela favorita a liga. */
-export function LeagueSection({ group, showDate = false, priority = false }: { group: LeagueGroup; showDate?: boolean; priority?: boolean }) {
+export function LeagueSection({
+  group,
+  showDate = false,
+  priority = false,
+  onSelect,
+  selectedId,
+}: {
+  group: LeagueGroup;
+  showDate?: boolean;
+  priority?: boolean;
+  onSelect?: (id: string) => void;
+  selectedId?: string | null;
+}) {
   const id = useId();
   const { isLeague, toggleLeague, isTeam } = useFavorites();
   const { league } = group;
@@ -27,7 +39,7 @@ export function LeagueSection({ group, showDate = false, priority = false }: { g
       <div>
         {group.matches.map((m: Match, i) => (
           // Os escudos da primeira tela carregam já, sem esperar a rolagem: nada "pisca" ao abrir.
-          <MatchRow key={m.id} match={m} showDate={showDate} isFavorite={isTeam} priority={priority && i < 6} />
+          <MatchRow key={m.id} match={m} showDate={showDate} isFavorite={isTeam} priority={priority && i < 6} onSelect={onSelect} selected={selectedId === m.id} />
         ))}
       </div>
     </section>

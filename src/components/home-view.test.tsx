@@ -279,3 +279,64 @@ describe("HomeView — estados", () => {
     expect(within(mls).getByRole("link")).toHaveAttribute("href", "/liga/mls");
   });
 });
+
+describe("HomeView — telas largas (lista + detalhe ao lado)", () => {
+  const stubWidth = (px: number) =>
+    vi.stubGlobal("matchMedia", (q: string) => {
+      const min = Number(/min-width:\s*(\d+)px/.exec(q)?.[1] ?? 0);
+      return { matches: px >= min, media: q, addEventListener: () => {}, removeEventListener: () => {} };
+    });
+
+  it("no celular não há detalhe ao lado nem 'Ao vivo agora', e tocar no jogo abre a página normalmente", () => {
+    view();
+    expect(screen.queryByRole("complementary", { name: "Detalhe do jogo" })).not.toBeInTheDocument();
+    expect(screen.queryByRole("heading", { name: /Ao vivo agora/ })).not.toBeInTheDocument();
+    const notPrevented = fireEvent.click(rows()[0]);
+    expect(notPrevented).toBe(true); // o link segue o seu caminho
+  });
+
+  it("em tela larga, tocar no jogo abre o detalhe ao lado, sem trocar de página", async () => {
+    stubWidth(1000);
+    fetchMock.mockResolvedValue(new Response(JSON.stringify({ error: { message: "Sem rede." } }), { status: 502 }));
+    view();
+    expect(screen.getByRole("complementary", { name: "Detalhe do jogo" })).toHaveTextContent("Escolha um jogo na lista");
+    const row = screen.getByRole("link", { name: /Corinthians/ });
+    let notPrevented = true;
+    await act(async () => {
+      notPrevented = fireEvent.click(row);
+    });
+    expect(notPrevented).toBe(false); // o clique foi tratado pela página
+    expect(fetchMock).toHaveBeenCalledWith("/api/matches/espn:x:2", expect.anything());
+    expect(screen.getByRole("link", { name: /Corinthians/ })).toHaveAttribute("aria-current", "true");
+  });
+
+  it("ctrl+clique continua abrindo o jogo em outra aba", () => {
+    stubWidth(1000);
+    view();
+    expect(fireEvent.click(rows()[0], { ctrlKey: true })).toBe(true);
+    expect(fetchMock).not.toHaveBeenCalled();
+  });
+
+  it("mostra 'Ao vivo agora' com os jogos em andamento", () => {
+    stubWidth(1000);
+    view();
+    expect(screen.getByRole("heading", { name: /Ao vivo agora/ })).toBeInTheDocument();
+  });
+
+  it("a partir de 1200 px dá para trocar para o modo painel (e voltar à lista)", () => {
+    stubWidth(1440);
+    view();
+    fireEvent.click(screen.getByRole("button", { name: "Painel" }));
+    expect(screen.getByRole("heading", { name: "A seguir" })).toBeInTheDocument();
+    expect(screen.queryByRole("complementary", { name: "Detalhe do jogo" })).not.toBeInTheDocument();
+    fireEvent.click(screen.getByRole("button", { name: "Lista" }));
+    expect(screen.queryByRole("heading", { name: "A seguir" })).not.toBeInTheDocument();
+    expect(screen.getByRole("complementary", { name: "Detalhe do jogo" })).toBeInTheDocument();
+  });
+
+  it("entre 900 e 1199 px não há botão de painel", () => {
+    stubWidth(1000);
+    view();
+    expect(screen.queryByRole("button", { name: "Painel" })).not.toBeInTheDocument();
+  });
+});

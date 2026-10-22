@@ -1,41 +1,18 @@
 import Link from "next/link";
-import { isEsportsConfigured } from "@/lib/esports/service";
-import { StarIcon } from "./icons";
 import { ThemeToggle } from "./theme-toggle";
+import { Wordmark } from "./wordmark";
 
-/** Marca: o nome em largura expandida e o ponto cobalto, o mesmo ponto que pulsa nos jogos ao vivo. */
-export function Wordmark({ className = "" }: { className?: string }) {
-  return (
-    <span className={`wordmark inline-flex items-baseline text-[1.35rem] ${className}`}>
-      placar
-      <span aria-hidden className="ml-0.5 inline-block h-[0.42em] w-[0.42em] rounded-full bg-live" />
-    </span>
-  );
-}
-
+/**
+ * Cabeçalho do celular: só a marca e o tema. As seções ficam na barra inferior (TabBar) e, em telas
+ * a partir de 900 px, no trilho lateral (AppRail), que substitui este cabeçalho.
+ */
 export function AppHeader() {
   return (
-    <header className="mx-auto flex w-full max-w-[40rem] items-center justify-between px-5 pb-2 pt-[max(1rem,env(safe-area-inset-top))]">
+    <header className="mx-auto flex w-full max-w-[40rem] items-center justify-between px-5 pb-2 pt-[max(1rem,env(safe-area-inset-top))] min-[900px]:hidden">
       <Link href="/" aria-label="Placar, página inicial" className="-m-2 p-2">
         <Wordmark />
       </Link>
-      <nav aria-label="Seções" className="flex items-center gap-4 min-[400px]:gap-5">
-        <Link href="/onde-assistir" className="-m-2 p-2 text-[0.95rem] font-medium text-muted hover:text-ink">
-          Onde assistir
-        </Link>
-        {/* Só aparece se este servidor tem a fonte de e-sports configurada: nada de link para uma tela vazia. */}
-        {isEsportsConfigured() ? (
-          <Link href="/esports" className="-m-2 p-2 text-[0.95rem] font-medium text-muted hover:text-ink">
-            E-sports
-          </Link>
-        ) : null}
-        {/* Em telas estreitas só a estrela (o nome fica para leitores de tela), para os links caberem. */}
-        <Link href="/favoritos" aria-label="Favoritos" className="-m-2 flex items-center gap-1.5 p-2 text-[0.95rem] font-medium text-muted hover:text-ink">
-          <StarIcon />
-          <span className="hidden min-[400px]:inline">Favoritos</span>
-        </Link>
-        <ThemeToggle />
-      </nav>
+      <ThemeToggle />
     </header>
   );
 }

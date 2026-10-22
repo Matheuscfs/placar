@@ -2,6 +2,9 @@ import type { Metadata, Viewport } from "next";
 import { Archivo } from "next/font/google";
 import { AppFooter } from "@/components/app-footer";
 import { AppHeader } from "@/components/app-header";
+import { AppRail } from "@/components/app-rail";
+import { TabBar } from "@/components/tab-bar";
+import { isEsportsConfigured } from "@/lib/esports/service";
 import { FavoritesCookieSync } from "@/components/favorites-cookie-sync";
 import { OfflineBanner } from "@/components/offline-banner";
 import { RegisterServiceWorker } from "@/components/register-sw";
@@ -30,6 +33,7 @@ export const viewport: Viewport = {
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
+  const esports = isEsportsConfigured();
   return (
     // suppressHydrationWarning: o script do <head> põe `data-theme` no <html> antes do React hidratar.
     <html lang="pt-BR" className={archivo.variable} suppressHydrationWarning>
@@ -40,12 +44,19 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <a href="#conteudo" className="skip-link">
           Ir para o conteúdo
         </a>
-        <AppHeader />
-        <OfflineBanner />
-        <main id="conteudo" tabIndex={-1} className="mx-auto w-full max-w-[40rem] px-5 outline-none">
-          {children}
-        </main>
-        <AppFooter />
+        {/* Trilho lateral a partir de 900 px; no celular, cabeçalho enxuto em cima e barra de seções embaixo. */}
+        <div className="min-[900px]:flex">
+          <AppRail esports={esports} />
+          <div className="min-w-0 flex-1">
+            <AppHeader />
+            <OfflineBanner />
+            <main id="conteudo" tabIndex={-1} className="mx-auto w-full max-w-[40rem] px-5 outline-none">
+              {children}
+            </main>
+            <AppFooter />
+          </div>
+        </div>
+        <TabBar esports={esports} />
         <RegisterServiceWorker />
         <FavoritesCookieSync />
       </body>

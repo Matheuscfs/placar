@@ -4,7 +4,7 @@ import { ThemePicker } from "./theme-toggle";
 
 export function AppFooter() {
   return (
-    <footer className="mx-auto mt-16 w-full max-w-[40rem] px-5 pb-[max(2.5rem,env(safe-area-inset-bottom))] text-sm text-muted">
+    <footer className="mx-auto mt-16 w-full max-w-[40rem] px-5 pb-[calc(5.5rem+env(safe-area-inset-bottom))] text-sm text-muted min-[900px]:pb-10">
       <p className="max-w-[34ch]">
         Dados de ESPN, openfootball e football-data.org{isEsportsConfigured() ? "; e-sports por PandaScore" : ""}. Escudos, logos e nomes de competições pertencem aos seus titulares.
       </p>

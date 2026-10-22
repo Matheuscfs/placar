@@ -69,7 +69,27 @@ export const CloseIcon = (p: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-export const SunIcon = (p: SVGProps<SVGSVGElement>) => (
+export const TvIcon = (p: SVGProps<SVGSVGElement>) => (
+  <svg {...base(p)}>
+    <rect x="3.5" y="5" width="17" height="11.5" rx="2.5" />
+    <path d="M8.5 20h7M12 16.5V20" />
+  </svg>
+);
+
+export const TableIcon = (p: SVGProps<SVGSVGElement>) => (
+  <svg {...base(p)}>
+    <path d="M4 6h16M4 12h16M4 18h10" />
+  </svg>
+);
+
+export const GamepadIcon = (p: SVGProps<SVGSVGElement>) => (
+  <svg {...base(p)}>
+    <rect x="3" y="8" width="18" height="9" rx="4.5" />
+    <path d="M8 12.5h3M9.5 11v3M15.5 11.6h.01M17.5 13.4h.01" />
+  </svg>
+);
+
+export const SunIcon =(p: SVGProps<SVGSVGElement>) => (
   <svg {...base(p)}>
     <circle cx="12" cy="12" r="4" />
     <path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6L7 7M17 17l1.4 1.4M5.6 18.4L7 17M17 7l1.4-1.4" />

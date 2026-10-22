@@ -5,7 +5,13 @@ import type { LeagueId, Match, MatchStatus, ResponseMeta, Sourced } from "@/lib/
 import { resetFavoritesStore } from "@/lib/ui/favorites-store";
 import { resetNowStores } from "@/lib/ui/use-now";
 import { AppHeader } from "./app-header";
+import { AppRail } from "./app-rail";
+import { TabBar } from "./tab-bar";
 import { WhereToWatchView } from "./where-to-watch-view";
+
+// A barra e o trilho leem a rota atual para marcar a seção.
+const nav = vi.hoisted(() => ({ pathname: "/" }));
+vi.mock("next/navigation", () => ({ usePathname: () => nav.pathname }));
 
 const TODAY = "2026-10-22";
 const meta: ResponseMeta = { source: "espn", sources: ["espn"], fetchedAt: "2026-10-22T15:00:00Z", cache: "hit", ttlSeconds: 30, fallback: false, missing: [], failures: [] };
@@ -48,6 +54,7 @@ afterEach(() => {
   resetNowStores();
   vi.unstubAllGlobals();
   vi.unstubAllEnvs();
+  nav.pathname = "/";
 });
 
 const view = (matches: Match[] = MATCHES) => render(<WhereToWatchView today={TODAY} initialDate={TODAY} initial={initial(matches)} />);
@@ -152,17 +159,37 @@ describe("WhereToWatchView", () => {
   });
 });
 
-describe("AppHeader", () => {
-  it("tem o link 'Onde assistir'; 'E-sports' só quando a fonte está configurada; Favoritos tem nome acessível mesmo só com a estrela", () => {
-    vi.stubEnv("PANDASCORE_TOKEN", "");
-    const { unmount } = render(<AppHeader />);
-    expect(screen.getByRole("link", { name: "Onde assistir" })).toHaveAttribute("href", "/onde-assistir");
-    expect(screen.queryByRole("link", { name: "E-sports" })).not.toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "Favoritos" })).toHaveAttribute("href", "/favoritos");
+describe("navegação (barra inferior e trilho lateral)", () => {
+  it.each([
+    ["barra inferior", (esports: boolean) => <TabBar esports={esports} />],
+    ["trilho lateral", (esports: boolean) => <AppRail esports={esports} />],
+  ])("%s: tem Jogos, Onde assistir, Tabelas e Favoritos; 'E-sports' só quando a fonte está configurada", (_nome, el) => {
+    const { unmount } = render(el(false));
+    const menu = within(screen.getAllByRole("navigation", { name: "Seções" })[0]);
+    expect(menu.getByRole("link", { name: "Jogos" })).toHaveAttribute("href", "/");
+    expect(menu.getByRole("link", { name: "Onde assistir" })).toHaveAttribute("href", "/onde-assistir");
+    expect(menu.getByRole("link", { name: "Tabelas" })).toHaveAttribute("href", "/liga");
+    expect(menu.getByRole("link", { name: "Favoritos" })).toHaveAttribute("href", "/favoritos");
+    expect(menu.queryByRole("link", { name: "E-sports" })).not.toBeInTheDocument();
     unmount();
 
-    vi.stubEnv("PANDASCORE_TOKEN", "t");
-    render(<AppHeader />);
+    render(el(true));
     expect(screen.getByRole("link", { name: "E-sports" })).toHaveAttribute("href", "/esports");
+  });
+
+  it("marca a seção atual com aria-current (um jogo pertence a 'Jogos')", () => {
+    nav.pathname = "/jogo/espn:1";
+    render(<TabBar esports={false} />);
+    expect(screen.getByRole("link", { name: "Jogos" })).toHaveAttribute("aria-current", "page");
+    expect(screen.getByRole("link", { name: "Favoritos" })).not.toHaveAttribute("aria-current");
+  });
+});
+
+describe("AppHeader", () => {
+  it("no celular só tem a marca e o botão de tema (as seções vão na barra inferior)", () => {
+    render(<AppHeader />);
+    expect(screen.getByRole("link", { name: /página inicial/ })).toHaveAttribute("href", "/");
+    expect(screen.getByRole("button", { name: /tema claro e escuro/i })).toBeInTheDocument();
+    expect(screen.queryByRole("link", { name: "Onde assistir" })).not.toBeInTheDocument();
   });
 });

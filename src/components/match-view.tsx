@@ -115,7 +115,12 @@ export function Facts({ m }: { m: MatchDetail }) {
   );
 }
 
-export function MatchView({ id, initial }: { id: string; initial: Sourced<MatchDetail> | null }) {
+/**
+ * `embedded`: o jogo aberto num painel ao lado da lista (telas largas). Troca o "voltar" por "Abrir a
+ * página" e o título principal por um de segundo nível, pois a página já tem o seu.
+ */
+export function MatchView({ id, initial, embedded = false }: { id: string; initial: Sourced<MatchDetail> | null; embedded?: boolean }) {
+  const Title = embedded ? "h2" : "h1";
   const [tab, setTab] = useState<TabId>("resumo");
   const { isTeam, toggleTeam } = useFavorites();
 
@@ -151,17 +156,23 @@ export function MatchView({ id, initial }: { id: string; initial: Sourced<MatchD
   return (
     <article className="pt-1">
       <div className="flex items-center justify-between">
-        <Link href={backHref} className="-ml-2 inline-flex h-11 items-center gap-1 rounded-full pr-3 text-[0.95rem] font-medium text-muted hover:text-ink">
-          <ChevronLeftIcon />
-          Jogos
-        </Link>
+        {embedded ? (
+          <Link href={`/jogo/${id}`} className="-ml-2 inline-flex h-11 items-center rounded-full px-3 text-[0.95rem] font-medium text-muted hover:text-ink">
+            Abrir a página do jogo
+          </Link>
+        ) : (
+          <Link href={backHref} className="-ml-2 inline-flex h-11 items-center gap-1 rounded-full pr-3 text-[0.95rem] font-medium text-muted hover:text-ink">
+            <ChevronLeftIcon />
+            Jogos
+          </Link>
+        )}
         <ShareButton title={`${m.home.team.name} x ${m.away.team.name} — Placar`} text={matchShareText(m)} />
       </div>
 
       <header className="mt-1">
-        <h1 className="sr-only">
+        <Title className="sr-only">
           {m.home.team.name} contra {m.away.team.name}
-        </h1>
+        </Title>
         {league ? (
           <p className="text-center">
             <Link href={`/liga/${league.id}`} className="text-[0.95rem] font-semibold hover:underline hover:decoration-line hover:underline-offset-4">
