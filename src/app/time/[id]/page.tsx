@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const r = await loadInitial(() => getOrchestrator().getTeam(id));
   if (!r.ok) return { title: "Time" };
   const name = r.data.data.team.name;
-  return { title: `${name}: próximos jogos, resultados e classificação`, description: `Próximos jogos, últimos resultados e posição na tabela de ${name}, com horários e onde assistir.` };
+  return { title: `${name}: próximos jogos, resultados e classificação`, description: `Próximos jogos, últimos resultados e posição na tabela de ${name}, com horários e onde assistir.`, alternates: { canonical: `/time/${id}` } };
 }
 
 export default async function TeamPage({ params }: Props) {

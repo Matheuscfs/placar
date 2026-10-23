@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "Sobre", description: "De onde vêm os dados do Placar, quais são os limites e como tratamos escudos e nomes de competições." };
+export const metadata: Metadata = {
+  title: "Sobre",
+  description: "De onde vêm os dados do Placar, quais são os limites e como tratamos escudos e nomes de competições.",
+  alternates: { canonical: "/sobre" },
+};
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (

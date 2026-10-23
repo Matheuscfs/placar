@@ -13,7 +13,7 @@ type Props = { params: Promise<{ id: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
   const league = isLeagueId(id) ? leagueById(id) : undefined;
-  return league ? { title: `Classificação do ${league.name}: tabela atualizada`, description: `Tabela de classificação de ${league.name}, com pontos, saldo de gols e as zonas de classificação e rebaixamento.` } : { title: "Liga" };
+  return league ? { title: `Classificação do ${league.name}: tabela atualizada`, description: `Tabela de classificação de ${league.name}, com pontos, saldo de gols e as zonas de classificação e rebaixamento.`, alternates: { canonical: `/liga/${league.id}` } } : { title: "Liga" };
 }
 
 export default async function LeaguePage({ params }: Props) {

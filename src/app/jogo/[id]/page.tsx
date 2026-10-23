@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!r.ok) return { title: "Jogo" };
   const m = r.data.data;
   // Título e descrição dizem o que a página tem (e o que a pessoa buscou): onde assistir, horário, escalações; ou o resultado.
-  return { title: matchTitle(m), description: matchAbout(m, leagueById(m.leagueId)?.name ?? null) };
+  return { title: matchTitle(m), description: matchAbout(m, leagueById(m.leagueId)?.name ?? null), alternates: { canonical: `/jogo/${id}` } };
 }
 
 export default async function MatchPage({ params }: Props) {

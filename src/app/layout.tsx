@@ -5,6 +5,7 @@ import { AppHeader } from "@/components/app-header";
 import { AppRail } from "@/components/app-rail";
 import { TabBar } from "@/components/tab-bar";
 import { isEsportsConfigured } from "@/lib/esports/service";
+import { SITE_NAME, SITE_TAGLINE, siteUrl } from "@/lib/site";
 import { FavoritesCookieSync } from "@/components/favorites-cookie-sync";
 import { OfflineBanner } from "@/components/offline-banner";
 import { RegisterServiceWorker } from "@/components/register-sw";
@@ -15,8 +16,12 @@ import "./globals.css";
 const archivo = Archivo({ subsets: ["latin"], axes: ["wdth"], variable: "--font-archivo", display: "swap" });
 
 export const metadata: Metadata = {
+  // Base dos links absolutos (canonical, imagem de compartilhamento). Ver src/lib/site.ts.
+  metadataBase: siteUrl(),
   title: { default: "Placar — futebol ao vivo", template: "%s — Placar" },
-  description: "Placares de futebol ao vivo, jogos do dia e classificação, sem ruído.",
+  description: SITE_TAGLINE,
+  openGraph: { type: "website", siteName: SITE_NAME, locale: "pt_BR" },
+  twitter: { card: "summary_large_image" },
   applicationName: "Placar",
   appleWebApp: { capable: true, title: "Placar", statusBarStyle: "default" },
   formatDetection: { telephone: false },

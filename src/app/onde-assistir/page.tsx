@@ -22,6 +22,8 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
   return {
     title: `Onde assistir aos jogos de ${label}: horários e canais`,
     description: `Todos os jogos de futebol de ${label} com horário e onde cada campeonato costuma passar: TV aberta, canais por assinatura e streaming.`,
+    // Cada dia é uma página própria (o título e os jogos mudam); hoje é o endereço sem parâmetro.
+    alternates: { canonical: date === today ? "/onde-assistir" : `/onde-assistir?d=${date}` },
   };
 }
 

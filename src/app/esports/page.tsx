@@ -9,7 +9,7 @@ import { isAllowedDate } from "@/lib/ui/days";
 
 export const dynamic = "force-dynamic";
 
-export const metadata: Metadata = { title: "E-sports", description: "Calendário e resultados de CS2, League of Legends e Valorant." };
+export const metadata: Metadata = { title: "E-sports", description: "Calendário e resultados de CS2, League of Legends e Valorant.", alternates: { canonical: "/esports" } };
 
 export default async function EsportsPage({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
   // Sem token do PandaScore o servidor não tem de onde tirar as partidas: diz isso em vez de abrir uma tela quebrada.

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { StateMessage } from "@/components/state-message";
 
-export const metadata: Metadata = { title: "Sem conexão" };
+export const metadata: Metadata = { title: "Sem conexão", robots: { index: false, follow: false } };
 
 // Página guardada pelo service worker: é o que aparece quando não há internet nem cópia da página pedida.
 export default function OfflinePage() {

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { FavoritesSeed } from "@/components/favorites-seed";
 import { HomeView } from "@/components/home-view";
 import { getOrchestrator } from "@/lib/data/registry";
@@ -6,6 +7,9 @@ import { isAllowedDate } from "@/lib/ui/days";
 import { loadInitial, readSeedFavorites } from "@/lib/ui/server";
 
 export const dynamic = "force-dynamic";
+
+// Qualquer dia (`/?d=…`) aponta para a página inicial como endereço principal.
+export const metadata: Metadata = { alternates: { canonical: "/" } };
 
 export default async function Home({ searchParams }: PageProps<"/">) {
   const params = await searchParams;

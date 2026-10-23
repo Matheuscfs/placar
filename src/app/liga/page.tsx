@@ -5,6 +5,7 @@ import { PUBLIC_LEAGUES } from "@/lib/ui/leagues";
 export const metadata: Metadata = {
   title: "Tabelas de classificação dos campeonatos",
   description: "Classificação atualizada dos campeonatos de futebol: Brasileirão, Libertadores, ligas europeias e mais.",
+  alternates: { canonical: "/liga" },
 };
 
 /** Os campeonatos agrupados por país (ou continente), na ordem do catálogo. Quem não tem tabela (copas) explica isso na própria página do campeonato. */
