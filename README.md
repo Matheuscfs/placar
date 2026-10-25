@@ -5,10 +5,11 @@ PWA de placares de futebol ao vivo: minimalista, rápido e pensado primeiro para
 
 - **Jogos do dia** agrupados por liga, com seletor de dia (ou arrastar para os lados), **filtros** (ao vivo, favoritos),
   **busca** por time ou campeonato e atualização só enquanto há jogo na tela.
+- **Busca de times** em qualquer tela (Ctrl/Cmd+K ou `/`): acha qualquer time de futebol pelo nome e leva à página dele.
 - **31 competições**: Brasil, América do Sul, Europa, Américas e seleções (lista abaixo).
-- **Página do jogo** com contagem regressiva, como cada time chega (forma e confrontos), escalações e estatísticas, e uma
-  página **Onde assistir** com os jogos do dia e onde cada campeonato costuma passar.
-- **Página do jogo** (resumo, escalações, estatísticas), **classificação**, **página do time**.
+- **Página do jogo** com contagem regressiva, resumo, como cada time chega (forma e confrontos), escalações e
+  estatísticas, e uma página **Onde assistir** com os jogos do dia e onde cada campeonato costuma passar.
+- **Classificação** e **página do time**.
 - **Favoritos** no aparelho (times e ligas vão primeiro) e **avisos** de início, gols e fim de jogo.
 - **PWA** instalável, com modo offline para o que já foi visto. Tema claro/escuro automático.
 - **Sem API paga.** Três fontes gratuitas, com fallback automático e cache próprio.
@@ -25,7 +26,7 @@ PWA de placares de futebol ao vivo: minimalista, rápido e pensado primeiro para
 [Arquitetura](#arquitetura) · [API](#api-api) · [Interface](#interface) · [PWA](#pwa) ·
 [Notificações push](#notificações-push) · [Como adicionar uma fonte](#como-adicionar-uma-fonte) ·
 [Deploy na Vercel](#deploy-na-vercel) · [Avisos legais](#avisos-legais) · [Testes](#testes) ·
-[O que não foi verificado](#o-que-não-foi-verificado)
+[Como contribuir](#como-contribuir) · [O que não foi verificado](#o-que-não-foi-verificado)
 
 ## Rodar localmente
 
@@ -139,6 +140,7 @@ O front-end só fala com estas rotas. Todas devolvem JSON; as de dados vêm como
 | `GET /api/matches/{id}` | detalhe: eventos, escalações, estatísticas, local, árbitro (o que a fonte tiver) |
 | `GET /api/standings/{liga}` | classificação, com as zonas (G4, rebaixamento…) |
 | `GET /api/teams/{id}?league={liga}` | próximos jogos, últimos resultados e posição |
+| `GET /api/teams/search?q=flamengo` | times cujo nome combina com `q` (de 2 a 60 caracteres), com o campeonato quando é do catálogo; cache de 6 h |
 | `GET /api/status` | saúde das fontes, cota restante, erros recentes (exige `STATUS_TOKEN` em produção) |
 | `GET /api/esports/matches?date=AAAA-MM-DD&games=cs2,lol,valorant` | partidas de e-sports do dia (calendário e resultados, sem ao vivo); 503 `esports_not_configured` sem `PANDASCORE_TOKEN` |
 | `GET /api/push/config` | se os avisos estão ligados e a chave VAPID **pública** |
@@ -195,6 +197,9 @@ Interações da tela inicial (e da de e-sports):
 - **Busca** pela lupa: acha por nome, nome curto ou sigla de qualquer time, nome/país do campeonato e fase, sem ligar
   para acento ou caixa; várias palavras valem em qualquer ordem ("fla liberta"). Esc fecha e limpa. Olha os jogos do
   dia escolhido.
+- **Busca de times** (botão no cabeçalho e no trilho lateral, ou **Ctrl/Cmd+K** e **`/`** fora de um campo de texto):
+  abre um diálogo que procura em todos os times de futebol da ESPN pela `/api/teams/search`, além dos campeonatos do
+  catálogo. Enter abre o primeiro resultado. Diferente da lupa da lista, não depende dos jogos do dia.
 - **Arrastar para os lados** (celular) troca de dia, sem sair da janela de datas que a API aceita. Ignora gestos que
   começam no campo de busca ou na faixa de dias, e rolagem vertical não conta.
 - **Compartilhar** na página do jogo: folha do sistema no celular; no computador copia o link (com plano B para
@@ -414,6 +419,12 @@ FOOTBALL_DATA_TOKEN=seu_token npx vitest run src/lib/data/sources/football-data/
 
 O do openfootball compara os times com os da ESPN: quem não casar precisa de um alias em
 `src/lib/domain/team-aliases.ts`. O do football-data (**nunca executado com token real**) faz o mesmo e lista os aliases que faltam.
+
+## Como contribuir
+
+Commits no padrão Conventional Commits (`feat:`, `fix:`, `docs:`…), uma branch por assunto, PRs pequenas com o
+modelo de `.github/pull_request_template.md` e lint, typecheck e testes passando antes de cada commit. Ferramentas de
+IA não entram como coautoras de commits nem de PRs. Detalhes em [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## O que não foi verificado
 

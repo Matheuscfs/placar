@@ -44,5 +44,6 @@ scripts/out/
 *.tsbuildinfo
 next-env.d.ts
 
-# configuração local do Claude Code
-/.claude/
+# configuração local do Claude Code (o settings.json do projeto vai junto: desliga a coautoria do Claude)
+/.claude/*
+!/.claude/settings.json
