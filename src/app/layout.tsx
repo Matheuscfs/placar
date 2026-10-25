@@ -3,6 +3,7 @@ import { Archivo } from "next/font/google";
 import { AppFooter } from "@/components/app-footer";
 import { AppHeader } from "@/components/app-header";
 import { AppRail } from "@/components/app-rail";
+import { SearchDialog } from "@/components/search-dialog";
 import { TabBar } from "@/components/tab-bar";
 import { isEsportsConfigured } from "@/lib/esports/service";
 import { SITE_NAME, SITE_TAGLINE, siteUrl } from "@/lib/site";
@@ -62,6 +63,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           </div>
         </div>
         <TabBar esports={esports} />
+        <SearchDialog />
         <RegisterServiceWorker />
         <FavoritesCookieSync />
       </body>

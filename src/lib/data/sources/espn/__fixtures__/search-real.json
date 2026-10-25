@@ -1,0 +1,1047 @@
+{
+ "items": [
+  {
+   "id": "86",
+   "displayName": "Real Madrid",
+   "name": "Real Madrid",
+   "location": "Real Madrid",
+   "abbreviation": "RMA",
+   "color": "ffffff",
+   "logos": [
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/soccer/500/86.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "default"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/86.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "dark"
+     ]
+    }
+   ],
+   "type": "team",
+   "sport": "soccer",
+   "defaultLeagueSlug": "esp.1"
+  },
+  {
+   "id": "10",
+   "displayName": "Montreal Canadiens",
+   "name": "Canadiens",
+   "location": "Montreal",
+   "abbreviation": "MTL",
+   "color": "c41230",
+   "logos": [
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/nhl/500/mtl.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "default"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/nhl/500-dark/mtl.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "dark"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/mtl.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "scoreboard"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/nhl/500-dark/scoreboard/mtl.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "scoreboard",
+      "dark"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/4110452f-e35d-14fe-8fbb-cdb21e269149/logos/primary_logo_on_white_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "primary_logo_on_white_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/4110452f-e35d-14fe-8fbb-cdb21e269149/logos/primary_logo_on_black_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "primary_logo_on_black_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/4110452f-e35d-14fe-8fbb-cdb21e269149/logos/primary_logo_on_primary_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "primary_logo_on_primary_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/4110452f-e35d-14fe-8fbb-cdb21e269149/logos/primary_logo_on_secondary_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "primary_logo_on_secondary_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/4110452f-e35d-14fe-8fbb-cdb21e269149/logos/primary_logo_black.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "primary_logo_black"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/4110452f-e35d-14fe-8fbb-cdb21e269149/logos/primary_logo_white.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "primary_logo_white"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/4110452f-e35d-14fe-8fbb-cdb21e269149/logos/secondary_logo_on_white_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "secondary_logo_on_white_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/4110452f-e35d-14fe-8fbb-cdb21e269149/logos/secondary_logo_on_black_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "secondary_logo_on_black_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/4110452f-e35d-14fe-8fbb-cdb21e269149/logos/secondary_logo_on_primary_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "secondary_logo_on_primary_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/4110452f-e35d-14fe-8fbb-cdb21e269149/logos/secondary_logo_on_secondary_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "secondary_logo_on_secondary_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/4110452f-e35d-14fe-8fbb-cdb21e269149/logos/secondary_logo_black.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "secondary_logo_black"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/4110452f-e35d-14fe-8fbb-cdb21e269149/logos/secondary_logo_white.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "secondary_logo_white"
+     ]
+    }
+   ],
+   "type": "team",
+   "sport": "hockey",
+   "defaultLeagueSlug": "nhl"
+  },
+  {
+   "id": "244",
+   "displayName": "Real Betis",
+   "name": "Real Betis",
+   "location": "Real Betis",
+   "abbreviation": "BET",
+   "color": "288A00",
+   "logos": [
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/soccer/500/244.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "default"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/244.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "dark"
+     ]
+    }
+   ],
+   "type": "team",
+   "sport": "soccer",
+   "defaultLeagueSlug": "esp.1"
+  },
+  {
+   "id": "102",
+   "displayName": "Villarreal",
+   "name": "Villarreal",
+   "location": "Villarreal",
+   "abbreviation": "VIL",
+   "color": "ffff00",
+   "logos": [
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/soccer/500/102.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "default"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/102.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "dark"
+     ]
+    }
+   ],
+   "type": "team",
+   "sport": "soccer",
+   "defaultLeagueSlug": "esp.1"
+  },
+  {
+   "id": "89",
+   "displayName": "Real Sociedad",
+   "name": "Real Sociedad",
+   "location": "Real Sociedad",
+   "abbreviation": "RSO",
+   "color": "3366CC",
+   "logos": [
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/soccer/500/89.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "default"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/89.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "dark"
+     ]
+    }
+   ],
+   "type": "team",
+   "sport": "soccer",
+   "defaultLeagueSlug": "esp.1"
+  },
+  {
+   "id": "9720",
+   "displayName": "CF Montréal",
+   "name": "CF Montréal",
+   "location": "CF Montréal",
+   "abbreviation": "MTL",
+   "color": "003da6",
+   "logos": [
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/soccer/500/9720.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "default"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/9720.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "dark"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/b61578f8-9912-0596-8d3f-2d320130b8b0/logos/primary_logo_on_white_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "primary_logo_on_white_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/b61578f8-9912-0596-8d3f-2d320130b8b0/logos/primary_logo_on_black_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "primary_logo_on_black_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/b61578f8-9912-0596-8d3f-2d320130b8b0/logos/primary_logo_on_primary_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "primary_logo_on_primary_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/b61578f8-9912-0596-8d3f-2d320130b8b0/logos/primary_logo_on_secondary_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "primary_logo_on_secondary_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/b61578f8-9912-0596-8d3f-2d320130b8b0/logos/primary_logo_black.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "primary_logo_black"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/b61578f8-9912-0596-8d3f-2d320130b8b0/logos/primary_logo_white.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "primary_logo_white"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/b61578f8-9912-0596-8d3f-2d320130b8b0/logos/secondary_logo_on_white_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "secondary_logo_on_white_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/b61578f8-9912-0596-8d3f-2d320130b8b0/logos/secondary_logo_on_black_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "secondary_logo_on_black_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/b61578f8-9912-0596-8d3f-2d320130b8b0/logos/secondary_logo_on_primary_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "secondary_logo_on_primary_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/b61578f8-9912-0596-8d3f-2d320130b8b0/logos/secondary_logo_on_secondary_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "secondary_logo_on_secondary_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/b61578f8-9912-0596-8d3f-2d320130b8b0/logos/secondary_logo_black.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "secondary_logo_black"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/b61578f8-9912-0596-8d3f-2d320130b8b0/logos/secondary_logo_white.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "secondary_logo_white"
+     ]
+    }
+   ],
+   "type": "team",
+   "sport": "soccer",
+   "defaultLeagueSlug": "usa.1"
+  },
+  {
+   "id": "21128",
+   "displayName": "Real Madrid",
+   "name": "Real Madrid",
+   "location": "Real Madrid",
+   "abbreviation": "RMA",
+   "color": "ffffff",
+   "logos": [
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/soccer/500/21128.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "default"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/21128.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "dark"
+     ]
+    }
+   ],
+   "type": "team",
+   "sport": "soccer",
+   "defaultLeagueSlug": "esp.w.1"
+  },
+  {
+   "id": "4771",
+   "displayName": "Real Salt Lake",
+   "name": "Real Salt Lake",
+   "location": "Real Salt Lake",
+   "abbreviation": "RSL",
+   "color": "a32035",
+   "logos": [
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/soccer/500/4771.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "default"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/4771.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "dark"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/6811fd61-2620-59df-cd4d-840f79458edb/logos/primary_logo_on_white_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "primary_logo_on_white_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/6811fd61-2620-59df-cd4d-840f79458edb/logos/primary_logo_on_black_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "primary_logo_on_black_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/6811fd61-2620-59df-cd4d-840f79458edb/logos/primary_logo_on_primary_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "primary_logo_on_primary_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/6811fd61-2620-59df-cd4d-840f79458edb/logos/primary_logo_on_secondary_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "primary_logo_on_secondary_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/6811fd61-2620-59df-cd4d-840f79458edb/logos/primary_logo_black.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "primary_logo_black"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/6811fd61-2620-59df-cd4d-840f79458edb/logos/primary_logo_white.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "primary_logo_white"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/6811fd61-2620-59df-cd4d-840f79458edb/logos/secondary_logo_on_white_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "secondary_logo_on_white_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/6811fd61-2620-59df-cd4d-840f79458edb/logos/secondary_logo_on_black_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "secondary_logo_on_black_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/6811fd61-2620-59df-cd4d-840f79458edb/logos/secondary_logo_on_primary_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "secondary_logo_on_primary_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/6811fd61-2620-59df-cd4d-840f79458edb/logos/secondary_logo_on_secondary_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "secondary_logo_on_secondary_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/6811fd61-2620-59df-cd4d-840f79458edb/logos/secondary_logo_black.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "secondary_logo_black"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/6811fd61-2620-59df-cd4d-840f79458edb/logos/secondary_logo_white.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "secondary_logo_white"
+     ]
+    }
+   ],
+   "type": "team",
+   "sport": "soccer",
+   "defaultLeagueSlug": "usa.1"
+  },
+  {
+   "id": "95",
+   "displayName": "Real Valladolid",
+   "name": "Real Valladolid",
+   "location": "Real Valladolid",
+   "abbreviation": "VLL",
+   "color": "7a2d9d",
+   "logos": [
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/soccer/500/95.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "default"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/95.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "dark"
+     ]
+    }
+   ],
+   "type": "team",
+   "sport": "soccer",
+   "defaultLeagueSlug": "esp.2"
+  },
+  {
+   "id": "92",
+   "displayName": "Real Oviedo",
+   "name": "Real Oviedo",
+   "location": "Real Oviedo",
+   "abbreviation": "OVI",
+   "color": "e23627",
+   "logos": [
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/soccer/500/92.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "default"
+     ]
+    }
+   ],
+   "type": "team",
+   "sport": "soccer",
+   "defaultLeagueSlug": "esp.2"
+  },
+  {
+   "id": "21428",
+   "displayName": "Real Sociedad",
+   "name": "Real Sociedad",
+   "location": "Real Sociedad",
+   "abbreviation": "RSO",
+   "color": "3366CC",
+   "logos": [
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/soccer/500/21428.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "default"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/21428.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "dark"
+     ]
+    }
+   ],
+   "type": "team",
+   "sport": "soccer",
+   "defaultLeagueSlug": "esp.w.1"
+  },
+  {
+   "id": "20983",
+   "displayName": "Real Sociedad II",
+   "name": "Real Sociedad II",
+   "location": "Real Sociedad II",
+   "abbreviation": "RSO2",
+   "color": "000000",
+   "logos": [
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/soccer/500/20983.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "default"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/20983.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "dark"
+     ]
+    }
+   ],
+   "type": "team",
+   "sport": "soccer",
+   "defaultLeagueSlug": "esp.2"
+  },
+  {
+   "id": "22439",
+   "displayName": "Real Ávila",
+   "name": "Real Ávila",
+   "location": "Real Ávila",
+   "abbreviation": "AVI",
+   "color": "000000",
+   "type": "team",
+   "sport": "soccer",
+   "defaultLeagueSlug": "esp.copa_del_rey"
+  },
+  {
+   "id": "8678",
+   "displayName": "Real Unión Irun",
+   "name": "Real Unión Irun",
+   "location": "Real Unión Irun",
+   "abbreviation": "RUN",
+   "color": "000000",
+   "type": "team",
+   "sport": "soccer",
+   "defaultLeagueSlug": "esp.2"
+  },
+  {
+   "id": "131259",
+   "displayName": "Montreal Roses FC",
+   "name": "Montreal Roses FC",
+   "location": "Montreal Roses FC",
+   "abbreviation": "MON",
+   "color": "647EFF",
+   "logos": [
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/soccer/500/131259.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "default"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/131259.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "dark"
+     ]
+    }
+   ],
+   "type": "team",
+   "sport": "soccer",
+   "defaultLeagueSlug": "can.w.nsl"
+  },
+  {
+   "id": "132407",
+   "displayName": "Real Madrid U19",
+   "name": "Real Madrid U19",
+   "location": "Real Madrid U19",
+   "abbreviation": "RMA",
+   "color": "ffffff",
+   "type": "team",
+   "sport": "soccer",
+   "defaultLeagueSlug": "global.u20.intercontinental_cup"
+  },
+  {
+   "id": "91",
+   "displayName": "Real Zaragoza",
+   "name": "Real Zaragoza",
+   "location": "Real Zaragoza",
+   "abbreviation": "ZAR",
+   "color": "000099",
+   "logos": [
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/soccer/500/91.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "default"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/91.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "dark"
+     ]
+    }
+   ],
+   "type": "team",
+   "sport": "soccer",
+   "defaultLeagueSlug": "esp.2"
+  },
+  {
+   "id": "9945",
+   "displayName": "Real Estelí",
+   "name": "Real Estelí",
+   "location": "Real Estelí",
+   "abbreviation": "EST",
+   "color": "000000",
+   "type": "team",
+   "sport": "soccer",
+   "defaultLeagueSlug": "concacaf.league"
+  },
+  {
+   "id": "7245",
+   "displayName": "Real España",
+   "name": "Real España",
+   "location": "Real España",
+   "abbreviation": "ESP",
+   "color": "000000",
+   "logos": [
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/soccer/500/7245.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "default"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/7245.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "dark"
+     ]
+    }
+   ],
+   "type": "team",
+   "sport": "soccer",
+   "defaultLeagueSlug": "hon.1"
+  },
+  {
+   "id": "21138",
+   "displayName": "Real Oviedo",
+   "name": "Real Oviedo",
+   "location": "Real Oviedo",
+   "abbreviation": "OVI",
+   "color": "000000",
+   "type": "team",
+   "sport": "soccer",
+   "defaultLeagueSlug": "esp.copa_de_la_reina"
+  },
+  {
+   "id": "20890",
+   "displayName": "Real Tomayapo",
+   "name": "Real Tomayapo",
+   "location": "Real Tomayapo",
+   "abbreviation": "TOM",
+   "color": "000000",
+   "logos": [
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/soccer/500/20890.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "default"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/20890.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "dark"
+     ]
+    }
+   ],
+   "type": "team",
+   "sport": "soccer",
+   "defaultLeagueSlug": "bol.1"
+  },
+  {
+   "id": "83",
+   "displayName": "Montreal Alouettes",
+   "name": "Alouettes",
+   "location": "Montreal",
+   "abbreviation": "MTA",
+   "type": "team",
+   "sport": "football",
+   "defaultLeagueSlug": "cfl"
+  },
+  {
+   "id": "9322",
+   "displayName": "Villarreal B",
+   "name": "Villarreal B",
+   "location": "Villarreal B",
+   "abbreviation": "VLB",
+   "color": "000000",
+   "logos": [
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/soccer/500/9322.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "default"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/9322.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "dark"
+     ]
+    }
+   ],
+   "type": "team",
+   "sport": "soccer",
+   "defaultLeagueSlug": "esp.2"
+  },
+  {
+   "id": "131589",
+   "displayName": "Real RR U20",
+   "name": "Real RR U20",
+   "location": "Real RR U20",
+   "abbreviation": "RRR",
+   "color": "000000",
+   "type": "team",
+   "sport": "soccer",
+   "defaultLeagueSlug": "bra.saopaulo_youth_cup"
+  },
+  {
+   "id": "132349",
+   "displayName": "Real Bedford",
+   "name": "Real Bedford",
+   "location": "Real Bedford",
+   "abbreviation": "RBF",
+   "color": "000000",
+   "type": "team",
+   "sport": "soccer",
+   "defaultLeagueSlug": "eng.fa_qual"
+  },
+  {
+   "id": "21373",
+   "displayName": "Real Betis",
+   "name": "Real Betis",
+   "location": "Real Betis",
+   "abbreviation": "BET",
+   "color": "288A00",
+   "logos": [
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/soccer/500/21373.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "default"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/21373.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "dark"
+     ]
+    }
+   ],
+   "type": "team",
+   "sport": "soccer",
+   "defaultLeagueSlug": "esp.w.1"
+  },
+  {
+   "id": "22395",
+   "displayName": "Vila Real",
+   "name": "Vila Real",
+   "location": "Vila Real",
+   "abbreviation": "VILA",
+   "color": "000000",
+   "type": "team",
+   "sport": "soccer",
+   "defaultLeagueSlug": "por.taca.portugal"
+  },
+  {
+   "id": "131613",
+   "displayName": "Real SC U20",
+   "name": "Real SC U20",
+   "location": "Real SC U20",
+   "abbreviation": "REA",
+   "color": "000000",
+   "type": "team",
+   "sport": "soccer",
+   "defaultLeagueSlug": "bra.saopaulo_youth_cup"
+  },
+  {
+   "id": "21497",
+   "displayName": "Real Brasilia U17",
+   "name": "Real Brasilia U17",
+   "location": "Real Brasilia U17",
+   "abbreviation": "BRA",
+   "color": "000000",
+   "type": "team",
+   "sport": "soccer",
+   "defaultLeagueSlug": "bra.copa_do_brazil_u17"
+  },
+  {
+   "id": "21371",
+   "displayName": "Villarreal",
+   "name": "Villarreal",
+   "location": "Villarreal",
+   "abbreviation": "VIL",
+   "color": "ffff00",
+   "logos": [
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/soccer/500/21371.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "default"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/21371.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "dark"
+     ]
+    }
+   ],
+   "type": "team",
+   "sport": "soccer",
+   "defaultLeagueSlug": "esp.w.1"
+  }
+ ]
+}

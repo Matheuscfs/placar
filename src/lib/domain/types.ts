@@ -266,6 +266,14 @@ export interface Standings {
   groups: StandingsGroup[];
 }
 
+// ───────────────────────── Busca de times ─────────────────────────
+
+/** Um resultado da busca de times: o time e, quando é de um campeonato do catálogo, o nome dele. */
+export interface TeamSearchHit {
+  team: Team;
+  leagueName: string | null;
+}
+
 // ───────────────────────── Time (página) ─────────────────────────
 
 export interface TeamDetail {

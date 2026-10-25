@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SearchIconButton } from "./search-button";
 import { ThemeToggle } from "./theme-toggle";
 import { Wordmark } from "./wordmark";
 
@@ -12,7 +13,10 @@ export function AppHeader() {
       <Link href="/" aria-label="Placar, página inicial" className="-m-2 p-2">
         <Wordmark />
       </Link>
-      <ThemeToggle />
+      <div className="flex items-center gap-5">
+        <SearchIconButton />
+        <ThemeToggle />
+      </div>
     </header>
   );
 }

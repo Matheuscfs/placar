@@ -27,6 +27,7 @@ import type {
   StandingsGroup,
   StatLine,
   Team,
+  TeamSearchHit,
   TeamForm,
   Zone,
   ZoneTone,
@@ -43,6 +44,7 @@ import type {
   EspnRosterPlayer,
   EspnScore,
   EspnScoreboard,
+  EspnSearchItem,
   EspnStandingEntry,
   EspnStandings,
   EspnStatus,
@@ -53,6 +55,28 @@ import type {
 // ───────────────────────── Básicos ─────────────────────────
 
 export { toIsoUtc };
+
+/** Time de base (U20, S17…): existe na ESPN, mas quem busca "Corinthians" quer o profissional. */
+const YOUTH = /\b[US]\d{2}\b/i;
+
+/**
+ * Resultado da busca da ESPN → times de futebol. Descarta outros esportes e times de base, tira repetidos
+ * e põe primeiro os de campeonatos do catálogo (mantendo a ordem de relevância da ESPN dentro de cada grupo).
+ */
+export function teamHitsFromSearch(items: EspnSearchItem[] | undefined, max = 12): TeamSearchHit[] {
+  const seen = new Set<string>();
+  const inCatalog: TeamSearchHit[] = [];
+  const others: TeamSearchHit[] = [];
+  for (const item of items ?? []) {
+    if (item.sport !== "soccer" || YOUTH.test(item.displayName ?? item.name ?? "")) continue;
+    const team = toTeam(item);
+    if (!team || seen.has(team.id)) continue;
+    seen.add(team.id);
+    const league = item.defaultLeagueSlug ? findLeagueBySourceCode("espn", item.defaultLeagueSlug) : undefined;
+    (league ? inCatalog : others).push({ team, leagueName: league?.name ?? null });
+  }
+  return [...inCatalog, ...others].slice(0, max);
+}
 
 export function toTeam(t: EspnTeam | undefined): Team | null {
   if (!t?.id) return null;

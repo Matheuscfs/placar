@@ -1,3 +1,4 @@
+import { MAX_SEARCH_LENGTH, MIN_SEARCH_LENGTH } from "@/lib/api/search";
 import { DATE_WINDOW_DAYS } from "@/lib/config";
 import { isAllSourcesFailedError, isDataSourceError, isLocalQuotaError } from "@/lib/data/errors";
 import { addDays, isIsoDate, todayIso } from "@/lib/domain/dates";
@@ -47,6 +48,14 @@ export function parseLeaguesParam(raw: string | null): LeagueId[] | undefined {
 export function parseLeagueId(raw: string): LeagueId {
   if (!isLeagueId(raw)) throw new ApiError(404, "unknown_league", `Liga desconhecida: ${raw}.`);
   return raw;
+}
+
+/** Texto da busca de times: de 2 a 60 caracteres úteis. Limite curto para a consulta não virar um jeito de gastar a cota das fontes. */
+export function parseSearchQuery(raw: string | null): string {
+  const q = (raw ?? "").trim().replace(/\s+/g, " ");
+  if (q.length < MIN_SEARCH_LENGTH) throw badRequest(`Digite pelo menos ${MIN_SEARCH_LENGTH} letras para buscar.`);
+  if (q.length > MAX_SEARCH_LENGTH) throw badRequest(`A busca aceita até ${MAX_SEARCH_LENGTH} caracteres.`);
+  return q;
 }
 
 const MAX_ID_LENGTH = 120;

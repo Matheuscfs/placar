@@ -1,9 +1,10 @@
 import { SOURCE_TIMEOUT_MS } from "@/lib/config";
 import { requestJson, type FetchLike, type HttpOptions } from "@/lib/data/http";
-import type { EspnScoreboard, EspnStandings, EspnSummary, EspnTeamSchedule } from "./espn-types";
+import type { EspnScoreboard, EspnSearchResult, EspnStandings, EspnSummary, EspnTeamSchedule } from "./espn-types";
 
 const SITE = "https://site.api.espn.com/apis/site/v2/sports/soccer";
 const V2 = "https://site.api.espn.com/apis/v2/sports/soccer";
+const SEARCH = "https://site.web.api.espn.com/apis/common/v3/search";
 
 export type { FetchLike };
 
@@ -54,6 +55,11 @@ export class EspnClient {
   /** Jogos de um dia (`YYYYMMDD`) de UMA liga. Sem data, a ESPN devolve a janela "atual" (inclui jogos em andamento). */
   scoreboard(slug: string, yyyymmdd?: string): Promise<EspnScoreboard> {
     return this.getJson(`${SITE}/${slug}/scoreboard${yyyymmdd ? `?dates=${yyyymmdd}` : ""}`);
+  }
+
+  /** Busca de times por nome, em todos os esportes (o filtro de futebol é do conversor). `limit` alto porque há muito time de base e de outros esportes. */
+  searchTeams(query: string): Promise<EspnSearchResult> {
+    return this.getJson(`${SEARCH}?query=${encodeURIComponent(query)}&limit=30&type=team&lang=pt&region=br`);
   }
 
   summary(slug: string, eventId: string): Promise<EspnSummary> {

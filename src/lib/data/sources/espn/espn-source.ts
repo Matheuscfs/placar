@@ -3,10 +3,10 @@ import type { DataSource, SourceCapabilities, TeamQuery } from "@/lib/data/data-
 import { isIsoDate, isOnDate } from "@/lib/domain/dates";
 import { parseId } from "@/lib/domain/ids";
 import { findLeagueBySourceCode, getLeagueDef, leaguesForSource, toPublicLeague, type LeagueDef } from "@/lib/domain/leagues";
-import type { IsoDate, League, LeagueId, Match, MatchDetail, Standings, StandingRow, TeamDetail } from "@/lib/domain/types";
+import type { IsoDate, League, LeagueId, Match, MatchDetail, Standings, StandingRow, TeamDetail, TeamSearchHit } from "@/lib/domain/types";
 import { currentLeague, splitTeamMatches, byKickoff } from "@/lib/data/team-helpers";
 import { ALL_FEED_LIMIT, EspnClient } from "./client";
-import { matchesFromAllFeed, matchesFromScoreboard, matchesFromSchedule, standingsFromEspn, toMatchDetail, toTeam } from "./convert";
+import { matchesFromAllFeed, matchesFromScoreboard, matchesFromSchedule, standingsFromEspn, teamHitsFromSearch, toMatchDetail, toTeam } from "./convert";
 
 /** `2026-10-24` → `20261024`, formato que a ESPN espera. */
 const compact = (d: IsoDate) => d.replaceAll("-", "");
@@ -126,6 +126,10 @@ export class EspnSource implements DataSource {
     const { recent, upcoming, leagueIds } = splitTeamMatches([...all.values()]);
 
     return { team, leagueIds, upcoming, recent, standing: await this.standingOf(team.id, query.leagueId ?? currentLeague(upcoming, recent)) };
+  }
+
+  async searchTeams(query: string): Promise<TeamSearchHit[]> {
+    return teamHitsFromSearch((await this.client.searchTeams(query)).items);
   }
 
   /** Linha do time na tabela. Falha aqui não derruba a página do time. */

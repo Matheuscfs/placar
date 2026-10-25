@@ -20,6 +20,7 @@ import type {
   SourceId,
   Standings,
   TeamDetail,
+  TeamSearchHit,
 } from "@/lib/domain/types";
 
 export interface OrchestratorOptions {
@@ -396,6 +397,24 @@ export class Orchestrator {
     const src = this.sourceOf(id);
     const failures: SourceFailure[] = [];
     const piece = await this.single(src, failures, "team", `team|${id}|${query.leagueId ?? "-"}`, () => src.getTeam(id, query), () => ({ ttlSeconds: TTL.team, staleSeconds: STALE.team }));
+    return { data: piece.value, meta: this.meta([piece], failures, []) };
+  }
+
+  /**
+   * Busca de times por nome. Qualquer fonte que saiba buscar serve (hoje só a ESPN), então há fallback entre elas.
+   * A consulta entra no cache sem diferenciar maiúsculas e espaços repetidos: "Flamengo" e " flamengo" gastam UMA chamada.
+   */
+  async searchTeams(query: string): Promise<Sourced<TeamSearchHit[]>> {
+    const q = query.trim().replace(/\s+/g, " ");
+    const candidates = this.sources.filter((s) => s.searchTeams !== undefined);
+    if (candidates.length === 0) throw new DataSourceError("unsupported", "Nenhuma fonte ativa busca times.");
+    const failures: SourceFailure[] = [];
+    const piece = await this.firstThatAnswers(
+      candidates,
+      failures,
+      (src) => this.via(src, "team-search", `team-search|${src.id}|${q.toLowerCase()}`, () => src.searchTeams!(q), () => ({ ttlSeconds: TTL.teamSearch, staleSeconds: STALE.teamSearch })),
+    );
+    if (!piece) throw new AllSourcesFailedError("Nenhuma fonte respondeu (busca de times)", failures);
     return { data: piece.value, meta: this.meta([piece], failures, []) };
   }
 

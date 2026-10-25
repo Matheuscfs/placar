@@ -1,4 +1,4 @@
-import type { IsoDate, League, LeagueId, Match, MatchDetail, SourceId, Standings, TeamDetail } from "@/lib/domain/types";
+import type { IsoDate, League, LeagueId, Match, MatchDetail, SourceId, Standings, TeamDetail, TeamSearchHit } from "@/lib/domain/types";
 
 /**
  * O que cada fonte sabe fazer. O orquestrador usa isto para escolher a fonte
@@ -58,4 +58,7 @@ export interface DataSource {
 
   /** `id` é o `Team.id` qualificado. */
   getTeam(id: string, query?: TeamQuery): Promise<TeamDetail>;
+
+  /** Opcional: busca de times por nome. Só quem tem esse recurso o implementa; o orquestrador pula as demais. */
+  searchTeams?(query: string): Promise<TeamSearchHit[]>;
 }

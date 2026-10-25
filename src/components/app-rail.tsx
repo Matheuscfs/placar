@@ -7,6 +7,7 @@ import { useLeagueFilter } from "@/lib/ui/use-league-filter";
 import { Crest } from "./crest";
 import { CheckIcon } from "./icons";
 import { navItems, useActiveHref } from "./nav-items";
+import { SearchRailButton } from "./search-button";
 import { ThemeToggle } from "./theme-toggle";
 import { Wordmark } from "./wordmark";
 
@@ -26,7 +27,9 @@ export function AppRail({ esports }: { esports: boolean }) {
         <Wordmark className="max-[1199px]:text-[0px] max-[1199px]:[&>span]:ml-0 max-[1199px]:[&>span]:h-3.5 max-[1199px]:[&>span]:w-3.5" />
       </Link>
 
-      <nav aria-label="Seções" className="flex flex-col gap-0.5">
+      <SearchRailButton />
+
+      <nav aria-label="Seções" className="-mt-3 flex flex-col gap-0.5">
         {items.map(({ href, label, Icon }) => (
           <Link
             key={href}

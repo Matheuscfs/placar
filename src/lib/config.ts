@@ -19,6 +19,8 @@ export const TTL = {
   matchFinished: 60 * 60,
   standings: 10 * 60,
   team: 30 * 60,
+  /** Busca de times por nome: o catálogo de times quase não muda. */
+  teamSearch: 6 * 60 * 60,
   leagues: 24 * 60 * 60,
   /** Consulta que a fonte respondeu "não existe": guardada pouco, para um id inválido repetido não gastar a cota. */
   notFound: 60,
@@ -38,6 +40,7 @@ export const STALE = {
   matchFinished: 24 * 60 * 60,
   standings: 60 * 60,
   team: 6 * 60 * 60,
+  teamSearch: 24 * 60 * 60,
 } as const;
 
 /** Disjuntor: após N falhas seguidas a fonte é pulada por um tempo (evita esperar timeouts a cada requisição). */

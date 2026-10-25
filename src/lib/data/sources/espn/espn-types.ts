@@ -23,6 +23,17 @@ export interface EspnTeam {
   logos?: EspnLogo[];
 }
 
+/** Item da busca da ESPN (`/apis/common/v3/search`): um time com o esporte e a liga principal dele. */
+export interface EspnSearchItem extends EspnTeam {
+  type?: string;
+  sport?: string;
+  defaultLeagueSlug?: string | null;
+}
+
+export interface EspnSearchResult {
+  items?: EspnSearchItem[];
+}
+
 export interface EspnStatusType {
   name?: string;
   state?: "pre" | "in" | "post" | string;
